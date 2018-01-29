@@ -1,0 +1,63 @@
+/* ---------------------------------------------- /*
+ * Typography
+/* ---------------------------------------------- */
+h1 {
+  font-family: $default-font;
+  font-size: 40px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2,
+h3 {
+  font-family: $default-font;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 700;
+  margin: 5px 0 5px;
+  color: $dark-color;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 0 0 30px;
+}
+
+h3 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin: 0 0 5px;
+}
+
+// ----------------------------------------------
+// Общие стили
+// ----------------------------------------------
+
+
+.container {
+  min-width: $panel-width;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: $tablet-mini-width) {
+    max-width: 450px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 750px;
+  }
+
+  @media (min-width: $desktop-mini-width) {
+    max-width: 1000px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1170px;
+  }
+}

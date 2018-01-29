@@ -1,0 +1,156 @@
+.header {
+  width: 100%;
+  min-height: 590px;
+  background-image: url('../images/header-bg.jpg');
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  background-color: #101010;
+}
+
+.header__panel {
+  max-width: 1320px;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  outline: 1px solid red;
+}
+
+.header__toggle {
+  margin-left: 30px;
+  margin-right: auto;
+  padding: 10px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: 0;
+  opacity: 1;
+  z-index: 1;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #d2d2d2;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.header__toggle {
+  .header__icon {
+    background: #393939;
+    display: block;
+    width: 30px;
+    height: 5px;
+    border-radius: 2px;
+  }
+}
+
+.header__toggle .header__icon + .header__icon {
+  margin-top: 6px;
+}
+
+.header__toggle--cross {
+  .header__icon {
+
+    &:nth-child(4) {
+      display: none;
+    }
+
+    &:nth-child(2) {
+      transform: rotate(45deg) translateX(2px) translateY(2px);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg) translateX(2px) translateY(-2px);
+    }
+  }
+}
+
+.header__link {
+  text-transform: uppercase;
+  color: $gray-color;
+  margin-right: 77px;
+
+  &:hover,
+  &--active,
+  &--phone {
+    color: $palegolden-color;
+  }
+
+  &:active {
+    color: $beige-color;
+  }
+
+  &--phone {
+    font-size: 20px;
+    margin-right: 39px;
+  }
+
+  &:first-of-type {
+    margin-right: 32px;
+  }
+}
+
+.header__lang-btn {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  background-color: #a2a1a1;
+  border-color: transparent;
+  color: $darktext-color;
+
+  &:hover {
+    color: $teal-color;
+    background-color: #d2d2d2;
+  }
+
+  &--active {
+    color: $teal-color;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.header__menu {
+  max-width: 1320px;
+  height: 480px;
+  margin: 0 auto;
+  background-color: rgba(138, 136, 136, 0.3);
+}
+
+.header__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 58px 226px 42px;
+}
+
+.header__column {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+
+  &--right {
+    .header__info-link,
+    .header__text {
+      text-align: right;
+    }
+  }
+}
+
+.header__info-link {
+  color: $light-color;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: -4px;
+}
+
+.header__text {
+  color: $gray-color;
+  margin-bottom: 24px;
+}
