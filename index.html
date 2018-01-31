@@ -200,25 +200,29 @@
         <p class="content__text">Хотите стать одним из них? Просто заполните форму заказа! Мы свяжемся с вами в кратчайшие сроки</p>
       </div>
 
-      <form class="order">
-        <h2 class="order__title">Заказать проект/Задать вопрос</h2>
-        <label for="name" class="order__label">Вас зовут</label>
-        <input class="order__input" type="text" id="name" name="name" placeholder="Вас зовут" required>
-        <label for="email" class="order__label">Эл. адрес</label>
-        <input class="order__input" type="email" id="email" name="email" placeholder="Эл. адрес" required>
-        <label for="phone" class="order__label">Телефон</label>
-        <input class="order__input" type="text" id="phone" placeholder="Телефон" name="phone">
-        <label for="message" class="order__label">Здесь вы можете: сделать запрос на оказание услуги, отправить заполненный бриф, задать нам вопрос, уточнить интересующую информацию...</label>
-        <input class="order__input" type="textarea" id="message" name="message">
-        <input class="order__checkbox" type="checkbox" id="consent" required>
-        <label for="consent">Я соглашаюсь на <a class="order__link" href="">обработку персональных данных</a></label>
-        <span class="order__filename">my_file.doc</span>
-        <button class="order__delete-file">Удалить</button>
-        <div class="order__btn-container">
-          <button class="order__submit">Заказать</button>
-          <button class="order__load-file">Прикрепить файл</button>
-        </div>
-      </form>
+      <section class="order">
+        <h2 class="order__title">Заказать проект / Задать вопрос</h2>
+        <form class="order__form">
+          <input class="order__input" type="text" id="name" name="name" placeholder="Вас зовут" required>
+          <label for="name" class="order__label">Вас зовут</label>
+          <input class="order__input" type="email" id="email" name="email" placeholder="Эл. адрес" required>
+          <label for="email" class="order__label">Эл. адрес</label>
+          <input class="order__input" type="text" id="phone" placeholder="Телефон" name="phone">
+          <label for="phone" class="order__label">Телефон</label>
+          <textarea class="order__textarea" id="message" name="message" placeholder="Здесь вы можете: сделать запрос на оказание услуги, отправить заполненный бриф, задать нам вопрос, уточнить интересующую информацию..."></textarea>
+          <label for="message" class="order__label"></label>
+          <input class="order__checkbox" type="checkbox" id="consent" required checked>
+          <label for="consent" class="order__text">Я соглашаюсь на <a class="order__link" href="">обработку персональных данных</a></label>
+          <div class="order__btn-container">
+            <span class="order__filename">my_file.doc</span>
+            <button class="order__delete-file">Удалить</button>
+          </div>
+          <div class="order__btn-container">
+            <button class="order__btn">Прикрепить файл</button>
+            <button class="order__btn">Заказать</button>
+          </div>
+        </form>
+      </section>
     </main>
 
     <footer class="footer">

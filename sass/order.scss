@@ -1,0 +1,148 @@
+.order {
+  padding-top: 130px;
+  width: 100%;
+  min-height: 700px;
+  background-image: url('../images/order-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.order__title {
+  margin-bottom: 35px;
+  text-align: center;
+  font-size: 23px;
+  color: $light-color;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.order__form {
+  max-width: 645px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.order__input,
+.order__textarea {
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.order__textarea {
+  padding: 10px;
+  min-height: 250px;
+}
+
+.order__label {
+  font-style: italic;
+  font-size: 18px;
+  line-height: 20px;
+  color: transparent;
+  position: absolute;
+  right: 10px;
+  top: -30px;
+}
+
+.order__input:nth-of-type(1):focus + .order__label {
+  color: $light-color;
+  top: -30px;
+}
+
+.order__input:nth-of-type(2):focus + .order__label {
+  color: $light-color;
+  top: 55px;
+}
+
+.order__input:nth-of-type(3):focus + .order__label {
+  color: $light-color;
+  top: 135px;
+}
+
+.order__checkbox {
+  display: none;
+}
+
+.order__text {
+  align-self: center;
+  padding-left: 30px;
+  color: $light-color;
+  position: relative;
+}
+
+.order__checkbox + .order__text::before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $light-color;
+    cursor: pointer;
+}
+
+.order__checkbox:checked + .order__text::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  border-bottom: 1px solid $light-color;
+  border-right: 1px solid $light-color;
+  transform: rotate(45deg);
+  left: 6px;
+  top: 2px;
+  cursor: pointer;
+}
+
+.order__link {
+  color: $teal-color;
+
+  &:active {
+    color: $tealgray-color;
+  }
+}
+
+.order__btn-container {
+  margin-top: 30px;
+  min-width: 445px;
+  align-self: center;
+  display: flex;
+  align-items: flex-start;
+}
+
+.order__filename {
+  color: $light-color;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-right: 7px;
+}
+
+.order__delete-file {
+  min-width: 98px;
+  min-height: 30px;
+  font-size: 13px;
+  color: $light-color;
+  text-transform: uppercase;
+  border: 1px solid $light-color;
+  background-color: transparent;
+}
+
+.order__btn {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 208px;
+  height: 50px;
+  background-color: #000000;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: $light-color;
+  border: transparent;
+}
