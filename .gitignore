@@ -11,5 +11,5 @@ img
 *.sublime*
 node_modules/
 npm-debug.*
-maket/*.*
+maket/*.psd
 Thumbs.db
