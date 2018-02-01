@@ -723,8 +723,8 @@ ul {
   -webkit-box-shadow: 0 1px 3px 0 rgba(189, 189, 189, 0.4);
           box-shadow: 0 1px 3px 0 rgba(189, 189, 189, 0.4); }
   .service__item--1:hover {
-    background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
-    background: linear-gradient(#eeeeee, #dddddd);
+    background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#d0d0d0));
+    background: linear-gradient(#eeeeee, #d0d0d0);
     -webkit-box-shadow: inset rgba(0, 0, 0, 0.5) 0 -1px 1px, inset rgba(0, 0, 0, 0.2) 0 1px, inset #fff 0 2px, rgba(0, 0, 0, 0.2) 0 1px 1px;
             box-shadow: inset rgba(0, 0, 0, 0.5) 0 -1px 1px, inset rgba(0, 0, 0, 0.2) 0 1px, inset #fff 0 2px, rgba(0, 0, 0, 0.2) 0 1px 1px; }
   .service__item--1:active {
