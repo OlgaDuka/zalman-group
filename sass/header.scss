@@ -5,6 +5,7 @@
   background-position: center bottom;
   background-repeat: repeat-x;
   background-color: #101010;
+  background-size: auto;
 }
 
 .header__panel {
@@ -129,8 +130,8 @@
 
 .header__info {
   display: flex;
-  justify-content: space-between;
-  padding: 58px 226px 42px;
+  justify-content: space-around;
+  padding: 58px 40px 42px;
 }
 
 .header__column {

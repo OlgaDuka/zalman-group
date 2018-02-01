@@ -2,6 +2,13 @@
   width: 100%;
 }
 
+.content__row {
+  display: flex;
+  outline: 1px solid magenta;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .content__block {
   min-height: 50px;
   background-color: rgb(33, 33, 33);

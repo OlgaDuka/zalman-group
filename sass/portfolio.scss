@@ -1,16 +1,15 @@
 .portfolio {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 10px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   outline: 1px solid red;
+  align-items: center;
 }
 
 .portfolio__project {
   padding: 0;
-  margin: 0 0 10px 0;
+  margin: 5px;
   position: relative;
 }
 
@@ -22,7 +21,9 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 20px 100px 0;
+  justify-content: space-around;
+  padding-left: 10%;
+  padding-right: 10%;
   transition: all 0.125s ease-in-out 0s;
 
   &:hover {
@@ -50,7 +51,6 @@
 }
 
 .portfolio__title {
-  margin-bottom: 30px;
   font-size: 20px;
   color: $gray-color;
   text-align: center;
@@ -58,13 +58,9 @@
   line-height: 20px;
 }
 
-.portfolio__list {
-  margin-bottom: 20px;
-}
-
 .portfolio__item {
   color: transparent;
-  margin-bottom: 20px;
+  line-height: 25px;
 }
 
 .portfolio__link {
@@ -74,6 +70,7 @@
   width: 208px;
   height: 50px;
   padding-top: 15px;
+  padding-bottom: 15px;
   align-self: center;
   text-transform: uppercase;
   text-align: center;
