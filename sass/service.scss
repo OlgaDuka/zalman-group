@@ -23,13 +23,63 @@
   border-top-color: $light-color;
   box-shadow: 0 1px 3px 0 rgba(189, 189, 189, 0.4);
 
-  &:hover {
-    background-color: $teal-color;
+  &--1 {
+
+    &:hover {
+      background-color: $teal-color;
+    }
+
+    &:active {
+      background-color: $tealgray-color;
+    }
   }
 
-  &:active {
-    background-color: $tealgray-color;
+  &--2 {
+
+    &:hover {
+      background-color: rgba(200, 200, 200, 0.7);
+    }
+
+    &:active {
+      background-color: $tealgray-color;
+      text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;
+      box-shadow: 0 -1px 3px rgba(0,0,0,.3), 0 1px 1px #fff, inset 0 1px 2px rgba(0,0,0,.8), inset 0 -1px 0 rgba(0,0,0,.05);
+    }
   }
+
+  &--3 {
+
+    &:hover {
+      background: linear-gradient(#eeeeee, #dddddd);
+      box-shadow:
+           inset rgba(0,0,0,.5) 0 -1px 1px,
+           inset rgba(0,0,0,.2) 0 1px,
+           inset #fff 0 2px,
+           rgba(0,0,0,.2) 0 1px 1px;
+    }
+
+    &:active {
+      background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.1));
+      box-shadow:
+       inset rgba(0,0,0,.8) 0 1px 2px,
+       inset rgba(0,0,0,.05) 0 -1px 0,
+       #fff 0 1px 1px;
+    }
+  }
+
+  &--4 {
+
+    &:hover {
+      background-color: rgba(200, 200, 200, 0.7);
+    }
+
+    &:active {
+      color: $light-color;
+      background-color: $tealgray-color;
+      box-shadow: 0 -1px 3px rgba(0,0,0,.3), 0 1px 1px #fff, inset 0 1px 2px rgba(0,0,0,.8), inset 0 -1px 0 rgba(0,0,0,.05);
+    }
+  }
+
 }
 
 .service__title {
