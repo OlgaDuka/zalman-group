@@ -723,33 +723,50 @@ ul {
   -webkit-box-shadow: 0 1px 3px 0 rgba(189, 189, 189, 0.4);
           box-shadow: 0 1px 3px 0 rgba(189, 189, 189, 0.4); }
   .service__item--1:hover {
-    background-color: #057d7d; }
+    background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+    background: linear-gradient(#eeeeee, #dddddd);
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.5) 0 -1px 1px, inset rgba(0, 0, 0, 0.2) 0 1px, inset #fff 0 2px, rgba(0, 0, 0, 0.2) 0 1px 1px;
+            box-shadow: inset rgba(0, 0, 0, 0.5) 0 -1px 1px, inset rgba(0, 0, 0, 0.2) 0 1px, inset #fff 0 2px, rgba(0, 0, 0, 0.2) 0 1px 1px; }
   .service__item--1:active {
-    background-color: #5c7979; }
+    color: #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#057d7b), to(rgba(92, 121, 121, 0.4)));
+    background: linear-gradient(to bottom, #057d7b, rgba(92, 121, 121, 0.4));
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.8) 0 1px 2px, inset rgba(0, 0, 0, 0.05) 0 -1px 0, #fff 0 1px 1px;
+            box-shadow: inset rgba(0, 0, 0, 0.8) 0 1px 2px, inset rgba(0, 0, 0, 0.05) 0 -1px 0, #fff 0 1px 1px; }
   .service__item--2:hover {
-    background-color: rgba(200, 200, 200, 0.7); }
+    background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+    background: linear-gradient(#eeeeee, #dddddd);
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.5) 0 -1px 1px, inset rgba(0, 0, 0, 0.2) 0 1px, inset #fff 0 2px, rgba(0, 0, 0, 0.2) 0 1px 1px;
+            box-shadow: inset rgba(0, 0, 0, 0.5) 0 -1px 1px, inset rgba(0, 0, 0, 0.2) 0 1px, inset #fff 0 2px, rgba(0, 0, 0, 0.2) 0 1px 1px; }
   .service__item--2:active {
-    background-color: #5c7979;
-    text-shadow: 0 -1px rgba(0, 0, 0, 0.3), 0 0 5px #ffd, 0 0 8px #fff;
-    -webkit-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.3), 0 1px 1px #fff, inset 0 1px 2px rgba(0, 0, 0, 0.8), inset 0 -1px 0 rgba(0, 0, 0, 0.05);
-            box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.3), 0 1px 1px #fff, inset 0 1px 2px rgba(0, 0, 0, 0.8), inset 0 -1px 0 rgba(0, 0, 0, 0.05); }
+    color: #ffffff;
+    font-weight: 300;
+    background: -webkit-gradient(linear, left bottom, left top, from(#057d7b), to(rgba(92, 121, 121, 0.4)));
+    background: linear-gradient(to top, #057d7b, rgba(92, 121, 121, 0.4));
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.8) 0 1px 2px, inset rgba(0, 0, 0, 0.05) 0 -1px 0, #fff 0 1px 1px;
+            box-shadow: inset rgba(0, 0, 0, 0.8) 0 1px 2px, inset rgba(0, 0, 0, 0.05) 0 -1px 0, #fff 0 1px 1px; }
   .service__item--3:hover {
     background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
     background: linear-gradient(#eeeeee, #dddddd);
     -webkit-box-shadow: inset rgba(0, 0, 0, 0.5) 0 -1px 1px, inset rgba(0, 0, 0, 0.2) 0 1px, inset #fff 0 2px, rgba(0, 0, 0, 0.2) 0 1px 1px;
             box-shadow: inset rgba(0, 0, 0, 0.5) 0 -1px 1px, inset rgba(0, 0, 0, 0.2) 0 1px, inset #fff 0 2px, rgba(0, 0, 0, 0.2) 0 1px 1px; }
   .service__item--3:active {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.1)));
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+    color: #787878;
+    background: -webkit-gradient(linear, left bottom, left top, from(#057d7b), to(rgba(92, 121, 121, 0.4)));
+    background: linear-gradient(to top, #057d7b, rgba(92, 121, 121, 0.4));
     -webkit-box-shadow: inset rgba(0, 0, 0, 0.8) 0 1px 2px, inset rgba(0, 0, 0, 0.05) 0 -1px 0, #fff 0 1px 1px;
             box-shadow: inset rgba(0, 0, 0, 0.8) 0 1px 2px, inset rgba(0, 0, 0, 0.05) 0 -1px 0, #fff 0 1px 1px; }
   .service__item--4:hover {
-    background-color: rgba(200, 200, 200, 0.7); }
+    background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+    background: linear-gradient(#eeeeee, #dddddd);
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.5) 0 -1px 1px, inset rgba(0, 0, 0, 0.2) 0 1px, inset #fff 0 2px, rgba(0, 0, 0, 0.2) 0 1px 1px;
+            box-shadow: inset rgba(0, 0, 0, 0.5) 0 -1px 1px, inset rgba(0, 0, 0, 0.2) 0 1px, inset #fff 0 2px, rgba(0, 0, 0, 0.2) 0 1px 1px; }
   .service__item--4:active {
-    color: #ffffff;
-    background-color: #5c7979;
-    -webkit-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.3), 0 1px 1px #fff, inset 0 1px 2px rgba(0, 0, 0, 0.8), inset 0 -1px 0 rgba(0, 0, 0, 0.05);
-            box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.3), 0 1px 1px #fff, inset 0 1px 2px rgba(0, 0, 0, 0.8), inset 0 -1px 0 rgba(0, 0, 0, 0.05); }
+    color: #5c7979;
+    background: -webkit-gradient(linear, left top, left bottom, from(#057d7b), to(rgba(92, 121, 121, 0.4)));
+    background: linear-gradient(to bottom, #057d7b, rgba(92, 121, 121, 0.4));
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.8) 0 1px 2px, inset rgba(0, 0, 0, 0.05) 0 -1px 0, #fff 0 1px 1px;
+            box-shadow: inset rgba(0, 0, 0, 0.8) 0 1px 2px, inset rgba(0, 0, 0, 0.05) 0 -1px 0, #fff 0 1px 1px; }
 
 .service__title {
   margin-bottom: 0;
