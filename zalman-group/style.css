@@ -1,4 +1,3 @@
-
 /*
 Theme Name: Zalman-group
 Theme URI: zalman-group/
@@ -7,6 +6,7 @@ Author: Ольга
 Author URI: zalman-group/
 Version: 1.0
 */
+
 @charset "UTF-8";
 /* stylelint-disable */
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -391,25 +391,25 @@ template {
   font-family: "Lato";
   font-weight: 400;
   font-style: normal;
-  src: url("../fonts/9622.woff") format("woff"); }
+  src: url("fonts/9622.woff") format("woff"); }
 
 @font-face {
   font-family: "Lato";
   font-weight: 300;
   font-style: normal;
-  src: url("../fonts/9625.woff") format("woff"); }
+  src: url("fonts/9625.woff") format("woff"); }
 
 @font-face {
   font-family: "Lato";
   font-weight: 700;
   font-style: normal;
-  src: url("../fonts/9623.woff") format("woff"); }
+  src: url("fonts/9623.woff") format("woff"); }
 
 @font-face {
   font-family: "Lato";
   font-weight: 400;
   font-style: italic;
-  src: url("../fonts/9624.woff") format("woff"); }
+  src: url("fonts/9624.woff") format("woff"); }
 
 body {
   min-width: 320px;
@@ -521,7 +521,7 @@ ul {
 .header {
   width: 100%;
   min-height: 590px;
-  background-image: url("../images/header-bg.jpg");
+  background-image: url("images/header-bg.jpg");
   background-position: center bottom;
   background-repeat: repeat-x;
   background-color: #101010;
@@ -873,10 +873,12 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
-  .slider__slide--active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+
+.slider__slide--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}          
 
 .slider__title {
   margin-bottom: 53px;
@@ -948,20 +950,20 @@ ul {
   background-color: transparent;
   background-repeat: no-repeat;
   cursor: pointer; }
-  .slider__btn--left {
-    left: 83px;
-    background-image: url("../images/arrow-left.png"); }
-  .slider__btn--right {
-    right: 83px;
-    background-image: url("../images/arrow-right.png"); }
   .slider__btn--hidden {
     display: none; }
+  .slider__btn--left {
+    left: 83px;
+    background-image: url("images/arrow-left.png"); }
+  .slider__btn--right {
+    right: 83px;
+    background-image: url("images/arrow-right.png"); }
 
 .order {
   padding-top: 130px;
   width: 100%;
   min-height: 700px;
-  background-image: url("../images/order-bg.jpg");
+  background-image: url("images/order-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
 
@@ -1119,9 +1121,8 @@ ul {
   .social__btn {
     display: inline-block;
     margin: 5px;
-    padding-top: 5px;
-    width: 50px;
-    height: 45px;
+    width: 36px;
+    height: 36px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 3px;
     line-height: 35px;

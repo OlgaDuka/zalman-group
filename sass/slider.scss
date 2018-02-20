@@ -11,9 +11,13 @@
 
 .slider__slide {
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: center;
+
+  &--active {
+    display: flex;
+  }
 }
 
 .slider__title {
@@ -69,6 +73,7 @@
 }
 
 .slider__btn {
+  display: block;
   position: absolute;
   width: 26px;
   height: 57px;
@@ -86,5 +91,9 @@
   &--right {
     right: 83px;
     background-image: url('../images/arrow-right.png');
+  }
+
+  &--hidden {
+    display: none;
   }
 }

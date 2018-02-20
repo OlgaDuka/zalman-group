@@ -1,77 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>Zalman-group</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.min.css">
-    <!-- Pixel Glass -->
-    <style>
-      HTML {
-        background-repeat: no-repeat;
-        background-position:  50% 0;
-        /* По умолчанию показывается мобильный макет */
-      <!--  background-image: url( "maket/index-mobile.png" ); -->
-      }
-      /* Десктоп */
-      @media ( min-width: 1320px ) {
-        HTML {
-          /* Десктопный макет */
-          background-image: url( "maket/zalman-index-desktop.jpg" );
-        }
-      }
-    </style>
-    <link href="maket/styles.css" rel="stylesheet">
-    <script src="maket/script.js"></script>
-    <!-- // Pixel Glass -->
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__panel">
-        <button class="header__toggle" type="button">
-          <span class="visually-hidden">Переключатель навигации</span>
-          <span class="header__icon"></span>
-          <span class="header__icon"></span>
-          <span class="header__icon"></span>
-        </button>
-        <div class="header__logo"></div>
-        <a href="" class="header__link">Скачать</a>
-        <a href="" class="header__link header__link--active">Заказать</a>
-        <a href="tel:+79257682232" class="header__link header__link--phone">+79257682232</a>
-        <button class="header__lang-btn header__lang-btn--active">ru</button>
-        <button class="header__lang-btn">en</button>
-      </div>
-      <nav class="header__menu menu">
-        <ul class="menu__first-list">
-          <li class="menu-item"><a href="">О нас</a></li>
-          <li class="menu-item"><a href="">Портфолио</a></li>
-          <li class="menu-item"><a href="">Вакансии</a></li>
-          <li class="menu-item"><a href="">Контакты</a></li>
-        </ul>
-        <section class="header__info">
-          <h2 class="visually-hidden">Информация для клиента</h2>
-          <div class="header__column">
-            <a href="" class="header__info-link">Разработка веб-проектов</a>
-            <p class="header__text">Создание сайтов. Дизайн интерфейсов. Айдентика.</p>
-            <a href="" class="header__info-link">Модернизация и продвижение</a>
-            <p class="header__text">Внутренняя и внешняя оптимизация. Продвижение. Юзабилити-аудит. Редизайн.</p>
-          </div>
-          <div class="header__column header__column--right">
-            <a href="" class="header__info-link">Мобильные приложения</a>
-            <p class="header__text">Преимущества. Разработка. Интеграция.&nbsp;Поддержка. Развитие</p>
-            <a href="" class="header__info-link">Поддержка и обслуживание</a>
-            <p class="header__text">Администрирование. Доработка сайтов. Абонентское обслуживание.</p>
-          </div>
-        </section>
-        <ul class="menu__second-list">
-          <li class="menu-item"><a href="">Скачать презентацию</a></li>
-          <li class="menu-item"><a href="">Заказать проект</a></li>
-          <li class="menu-item"><a href="">Заполнить бриф</a></li>
-        </ul>
-      </nav>
-    </header>
-
+<?php get_header(); ?>
     <main class="content">
 
       <section class="service">
@@ -105,7 +32,7 @@
         <div class="content__row">
 
           <figure class="portfolio__project">
-            <img src="images/portfolio1.jpg" alt="" class="portfolio__img" width="645" height="362">
+            <img src="<?php bloginfo('template_url') ?>/images/portfolio1.jpg" alt="" class="portfolio__img" width="645" height="362">
             <figcaption class="portfolio__info">
               <h3 class="portfolio__title">Сайт компании «Термомир» (производство и продажа изделий из древесины)</h3>
               <ul class="portfolio__list">
@@ -118,7 +45,7 @@
           </figure>
 
           <figure class="portfolio__project">
-            <img src="images/portfolio2.jpg" alt="" class="portfolio__img" width="645" height="362">
+            <img src="<?php bloginfo('template_url') ?>/images/portfolio2.jpg" alt="" class="portfolio__img" width="645" height="362">
             <figcaption class="portfolio__info">
               <h3 class="portfolio__title">Информационно-новостной портал «Портал&nbsp;евреев Северного Кавказа»</h3>
               <ul class="portfolio__list">
@@ -135,7 +62,7 @@
         <div class="content__row">
 
           <figure class="portfolio__project">
-            <img src="images/portfolio3.jpg" alt="" class="portfolio__img" width="645" height="362">
+            <img src="<?php bloginfo('template_url') ?>/images/portfolio3.jpg" alt="" class="portfolio__img" width="645" height="362">
             <figcaption class="portfolio__info">
               <h3 class="portfolio__title">Сайт компании Voguevip (продажа мужских и&nbsp;женских сумок, аксессуаров)</h3>
               <ul class="portfolio__list">
@@ -148,7 +75,7 @@
           </figure>
 
           <figure class="portfolio__project">
-            <img src="images/portfolio4.jpg" alt="" class="portfolio__img" width="645" height="362">
+            <img src="<?php bloginfo('template_url') ?>/images/portfolio4.jpg" alt="" class="portfolio__img" width="645" height="362">
             <figcaption class="portfolio__info">
               <h3 class="portfolio__title">Сайт фабрики «Мазаль» (производство чулочно-носочных изделий)</h3>
               <ul class="portfolio__list">
@@ -165,7 +92,7 @@
         <div class="content__row">
 
           <figure class="portfolio__project">
-            <img src="images/portfolio5.jpg" alt="" class="portfolio__img" width="645" height="362">
+            <img src="<?php bloginfo('template_url') ?>/images/portfolio5.jpg" alt="" class="portfolio__img" width="645" height="362">
             <figcaption class="portfolio__info">
               <h3 class="portfolio__title">Сайт немецкой интернет-аптеки «Аптека&nbsp;-&nbsp;Мамед»</h3>
               <ul class="portfolio__list">
@@ -178,7 +105,7 @@
           </figure>
 
           <figure class="portfolio__project">
-            <img src="images/portfolio6.jpg" alt="" class="portfolio__img" width="645" height="362">
+            <img src="<?php bloginfo('template_url') ?>/images/portfolio6.jpg" alt="" class="portfolio__img" width="645" height="362">
             <figcaption class="portfolio__info">
               <h3 class="portfolio__title">Сайт компании Versavi (дистрибьютор элитной косметики)</h3>
               <ul class="portfolio__list">
@@ -195,40 +122,36 @@
       <div class="content__block">
         <a href="" class="content__page-link">Смотреть все проекты</a>
       </div>
+      
+      <?php $slider = new WP_Query(array(
+        'post_type' => 'slider',
+        'order' => 'ASC',
+        'meta_query' => array(
+          array('key' => 'name_client'),
+          array('key' => 'manager'),
+          array('key' => 'name_firm'),
+        )
+      )); ?>
 
       <section class="slider">
         <h2 class="slider__title">Что говорят о нас наши клиенты:</h2>
-        <div class="slider__slide">
-          <div class="slider__quote">
-            <p class="slider__text">«Я очень доволен качественной и оперативной работой команды Залман Груп. Сайт получился отличный, а благодаря грамотной раскрутке мы очень быстро нашли своего потребителя. Спасибо!»</p>
+        <?php if ($slider->have_posts()) :  while ($slider->have_posts()) : $slider->the_post(); ?>
+          <div class="slider__slide slider__slide--active">
+            <div class="slider__quote">
+              <p class="slider__text"><?php the_content(); ?></p>
+            </div>
+            <div class="slider__persona">
+              <span class="slider__name"><?php echo get_post_meta(get_the_ID(), 'name_client', 1); ?></span>
+              <span class="slider__firm"><?php echo get_post_meta(get_the_ID(), 'manager', 1); ?></span>
+              <span class="slider__firm"><?php echo get_post_meta(get_the_ID(), 'name_firm', 1); ?></span>
+              <?php the_post_thumbnail('full'); ?>
+            </div>
           </div>
-          <div class="slider__persona">
-            <span class="slider__name">Иван Иванов</span>
-            <span class="slider__firm">Генеральный директор<br/> ООО «Хорст»</span>
-            <img src="images/logo-firm1.png" alt="" class="slider__logo">
-          </div>
-        </div>
-        <div class="slider__slide">
-          <div class="slider__quote">
-            <p class="slider__text">«Я очень доволен качественной и оперативной работой команды Залман Груп. Сайт получился отличный, а благодаря грамотной раскрутке мы очень быстро нашли своего потребителя. Спасибо!»</p>
-          </div>
-          <div class="slider__persona">
-            <span class="slider__name">Иван И. Иванов</span>
-            <span class="slider__firm">Генеральный директор<br/> ООО «Хорст»</span>
-            <img src="images/logo-firm1.png" alt="" class="slider__logo">
-          </div>
-        </div>
-        <div class="slider__slide">
-          <div class="slider__quote">
-            <p class="slider__text">«Я очень доволен качественной и оперативной работой команды Залман Груп. Сайт получился отличный, а благодаря грамотной раскрутке мы очень быстро нашли своего потребителя. Спасибо!»</p>
-          </div>
-          <div class="slider__persona">
-            <span class="slider__name">Иван Иваныч Иванов</span>
-            <span class="slider__firm">Генеральный директор<br/> ООО «Хорст»</span>
-            <img src="images/logo-firm1.png" alt="" class="slider__logo">
-          </div>
-        </div>
-
+        <?php endwhile; ?>
+        <!-- post navigation -->
+        <?php else: ?>
+          <div><h2>Место для слайдера</h2></div> <!-- no posts found -->
+        <?php endif; ?> 
         <button type="button" class="slider__btn slider__btn--left"><span class="visually-hidden">Назад</span></button>
         <button type="button" class="slider__btn slider__btn--right"><span class="visually-hidden">Вперед</span></button>
       </section>
@@ -262,40 +185,4 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <nav class="footer__menu menu">
-        <ul class="menu__third-list">
-          <li class="menu-item"><a href="">О нас</a></li>
-          <li class="menu-item"><a href="">Портфолио</a></li>
-          <li class="menu-item"><a href="">Вакансии</a></li>
-          <li class="menu-item"><a href="">Контакты</a></li>
-        </ul>
-      </nav>
-      <section class="footer__social social">
-        <h2 class="visually-hidden">Ссылки на социальные сети</h2>
-        <a class="social__btn" href="#">
-          <svg class="social__img social__img--fb" width="16" height="28" aria-label="Facebook">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-fb"></use>
-          </svg>
-        </a>
-        <a class="social__btn" href="#">
-          <svg class="social__img social__img--tw" width="34" height="28" aria-label="Twitter">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tw"></use>
-          </svg>
-        </a>
-        <a class="social__btn" href="#">
-          <svg class="social__img social__img--vk" width="49" height="28" aria-label="VKontacte">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-vk"></use>
-          </svg>
-        </a>
-        <a class="social__btn" href="#">
-          <svg class="social__img social__img--insta" width="28" height="28" aria-label="Instagramm">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-insta"></use>
-          </svg>
-        </a>
-      </section>
-      <div class="footer__copyright">Copyright @ 2017 Zalman Group</div>
-    </footer>
-    <script src="js/custom.js"></script>
-  </body>
-</html>
+<?php get_footer(); ?>
