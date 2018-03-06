@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Zalman-group</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* По умолчанию показывается мобильный макет */
+      <!--  background-image: url( "maket/index-mobile.png" ); -->
+      }
+      /* Десктоп */
+      @media ( min-width: 1320px ) {
+        HTML {
+          /* Десктопный макет */
+          background-image: url( "maket/zalman-index-desktop.jpg" );
+        }
+      }
+    </style>
+    <link href="maket/styles.css" rel="stylesheet">
+    <script src="maket/script.js"></script>
+    <!-- // Pixel Glass -->
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__panel">
+        <button class="header__toggle" type="button">
+          <span class="visually-hidden">Переключатель навигации</span>
+          <span class="header__icon"></span>
+          <span class="header__icon"></span>
+          <span class="header__icon"></span>
+        </button>
+        <div class="header__logo"></div>
+        <a href="" class="header__link">Выбрать</a>
+        <a href="" class="header__link header__link--active">Заказать</a>
+        <a href="tel:+79257682232" class="header__link header__link--phone">+79257682232</a>
+        <button class="header__lang-btn header__lang-btn--active">ru</button>
+        <button class="header__lang-btn">en</button>
+        <button class="header__lang-btn">עב</button>
+      </div>
+      <nav class="header__menu menu">
+        <ul class="menu__first-list">
+          <li class="menu-item"><a href="">О нас</a></li>
+          <li class="menu-item"><a href="">Портфолио</a></li>
+          <li class="menu-item"><a href="">Вакансии</a></li>
+          <li class="menu-item"><a href="">Контакты</a></li>
+        </ul>
+        <section class="header__info">
+          <h2 class="visually-hidden">Информация для клиента</h2>
+          <div class="header__column">
+            <a href="#" class="header__info-link">Разработка веб-проектов</a>
+            <p class="header__text">Создание сайтов. Дизайн интерфейсов. Айдентика.</p>
+            <a href="" class="header__info-link">Модернизация и продвижение</a>
+            <p class="header__text">Внутренняя и внешняя оптимизация. Продвижение. Юзабилити-аудит. Редизайн.</p>
+          </div>
+          <div class="header__column header__column--right">
+            <a href="" class="header__info-link">Мобильные приложения</a>
+            <p class="header__text">Преимущества. Разработка. Интеграция.&nbsp;Поддержка. Развитие</p>
+            <a href="" class="header__info-link">Поддержка и обслуживание</a>
+            <p class="header__text">Администрирование. Доработка сайтов. Абонентское обслуживание.</p>
+          </div>
+        </section>
+        <ul class="menu__second-list">
+          <li class="menu-item"><a href="">Скачать презентацию</a></li>
+          <li class="menu-item"><a href="">Быстрый заказ</a></li>
+          <li class="menu-item"><a href="">Готовые сайты</a></li>
+          <li class="menu-item"><a href="">Заполнить бриф</a></li>
+        </ul>
+      </nav>
+      <h1 class="header__title">Разработка Веб-проектов</h1>
+    </header>
+
+    <main class="content">
+
+      <section class="creation">
+        <h2 class="visually-hidden">Создание сайта</h2>
+        <p class="creation"><span>Создание сайта</span> - достаточно сложный и трудоемкий процесс, каждая ступень которого  - начиная от развития идеи и заканчивая тестированием готового проекта - это важная деталь, необходимая для корректной работы всего механизма. </p>
+        <p class="creation">Подробно ознакомиться с условиями и каждым из этапов нашей работы вы можете загрузив нашу презентацию. В упрощенном виде процесс нашей работы с заказчиком выглядит следующим образом:</p>
+
+        <div class="creation__container">
+          <div class="creation__item">
+            <div class="creation__tile">
+              <div class="creation__icon creation__icon--1">
+                <h3 class="creation__title">Идея</h3>
+              </div>
+            </div>
+            <p class="creation__desc">То, с чего начинается любой проект. Формирует ответ на вопрос о том ЗАЧЕМ нужен  сайт, каковы его цели и задачи</p>
+          </div>
+          <div class="creation__item">
+            <div class="creation__tile">
+              <div class="creation__icon creation__icon--2">
+                <h3 class="creation__title">Бриф</h3>
+              </div>
+            </div>
+            <p class="creation__desc">Важный документ, необходимый для максимально полного отражения всех ПОЖЕЛАНИЙ заказчика.
+            <a href="creation__link">Cкачать бриф</a></p>
+          </div>
+          <div class="creation__item">
+            <div class="creation__tile">
+              <div class="creation__icon creation__icon--3">
+                <h3 class="creation__title">Техзадание</h3>
+              </div>
+            </div>
+            <p class="creation__desc">Идея + бриф = основа для нашего (и вашего) ОСНОВНОГО ДОКУМЕНТА - технического задания</p>
+          </div>
+          <div class="creation__item">
+            <div class="creation__tile">
+              <div class="creation__icon creation__icon--4">
+                <h3 class="creation__title">Прототип</h3>
+              </div>
+            </div>
+            <p class="creation__desc">КАРКАС сайта, схематичное отражение задач и требований, отраженных в техническом задании</p>
+          </div>
+          <div class="creation__item">
+            <div class="creation__tile">
+              <div class="creation__icon creation__icon--5">
+                <h3 class="creation__title">Дизайн</h3>
+              </div>
+            </div>
+            <p class="creation__desc">Создание МАКЕТА - визуальной части вашего сайта, формирующей образ, привлекательный для посетителей</p>
+          </div>
+          <div class="creation__item">
+            <div class="creation__tile">
+              <div class="creation__icon creation__icon--6">
+                <h3 class="creation__title">Верстка</h3>
+              </div>
+            </div>
+            <p class="creation__desc">Преобразование макета в html и css-код, превращающие статичный дизайн в ВЕБ-СТРАНИЦУ</p>
+          </div>
+          <div class="creation__item">
+            <div class="creation__tile">
+              <div class="creation__icon creation__icon--7">
+                <h3 class="creation__title">Контент</h3>
+              </div>
+            </div>
+            <p class="creation__desc">Наполнение структуры ИНФОРМАЦИЕЙ - различным текстовым и графическим материалом</p>
+          </div>
+          <div class="creation__item">
+            <div class="creation__tile">
+              <div class="creation__icon creation__icon--8">
+                <h3 class="creation__title">Публикация</h3>
+              </div>
+            </div>
+            <p class="creation__desc">Подбор/создание CMS, настройка, программирование, тестирование и размещение сайта на ХОСТИНГЕ</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="service">
+        <h2 class="visually-hidden">Услуги</h2>
+        <h3 class="service__title">Мы делаем проекты любой сложности:</h3>
+        <ul class="service__list">
+          <li class="service__item">Сайты-визитки</li>
+          <li class="service__item">Single page sites</li>
+          <li class="service__item">Интернет-магазины</li>
+          <li class="service__item">Имиджевые</li>
+        </ul>
+        <ul class="service__list service__list--time">
+          <li class="service__item">от 5 дней</li>
+          <li class="service__item">от 10 дней</li>
+          <li class="service__item">от 15 дней</li>
+          <li class="service__item">от 20 дней</li>
+        </ul>
+        <ul class="service__list">
+          <li class="service__item">Landing pages</li>
+          <li class="service__item">Промо-сайты</li>
+          <li class="service__item">Онлайн-каталоги</li>
+          <li class="service__item">Тематические</li>
+        </ul>
+        <h3 class="service__title">Что получают наши клиенты:</h3>
+        <ul class="service__list service__list--result">
+          <li class="service__result">Оптимизация для мобильных</li>
+          <li class="service__result">Неограниченное кол-во страниц</li>
+          <li class="service__result">Дизайн и контент</li>
+          <li class="service__result">Корпоративный почтовый ящик</li>
+          <li class="service__result">Современная система управления</li>
+          <li class="service__result">Домен и хостинг</li>
+          <li class="service__result">Все необходимые модули</li>
+          <li class="service__result">Установка счетчиков</li>
+          <li class="service__result">Регистрация в поисковиках</li>
+          <li class="service__result">Управление структурой</li>
+          <li class="service__result">Обучение управлению сайтом</li>
+          <li class="service__result">Продвижение и поддержка</li>
+        </ul>
+      </section>
+
+      <section class="add-service">
+        <h2 class="visually-hidden">Сопутствующие услуги</h2>
+        <p class="add-service__desc">А что делать, если вам нужен только <span>дизайн</span> или <span>логотип</span>? Нет проблем, мы готовы сделать эту работу, используя уже имеющееся у вас техническое задание или составив новое.</p>
+        <p class="add-service__desc">Просто внимательно заполните соответствующий раздел нашего <a class="add-service__link" href="">брифа</a> , и отправьте его нам, приложив к форме быстрого заказа, или по электронной почте. В числе работ, которые мы выполняем:</p>
+        <ul class="add-service__list">
+          <li class="add-service__item">Разработка фирменного стиля (формирование визуального образа компании).</li>
+          <li class="add-service__item">Разработка логотипа. Нейминг (эффективный слоган для вашей компании).</li>
+          <li class="add-service__item">Прототипирование и изготовление дизайн-макета.</li>
+        </ul>
+      </section>
+
+      <section class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <p class="contacts__text">В любой момент вы можете задать интересующий вас вопрос или решить возникшую проблему, связавшись с нами по:</p>
+        <ul class="contacts__list">
+          <li class="contacts__item"><a  class="contacts__email" href="mailto:support@zalman-group.com">
+            <svg class="contacts__icon" width="40px" height="40" aria-label="Email">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#email"></use>
+            </svg>
+            support@zalman-group.com</a>
+          </li>
+          <li class="contacts__item"><a  class="contacts__phone" href="tel:+7-913-962-53-18">
+            <svg class="contacts__icon" width="40px" height="40" aria-label="Phone">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#phone"></use>
+            </svg>
+            +7 (925) 768 - 22 - 32</a>
+          </li>
+        </ul>
+        <p class="contacts__text">или через форму на странице</p>
+      </section>
+
+      <div class="content__block content__block--width content__block--green ">
+        <p class="content__text">Хотите стать одним из них? Просто заполните форму заказа! Мы свяжемся с вами в кратчайшие сроки</p>
+      </div>
+
+      <section class="order">
+        <h2 class="order__title">Заказать проект / Задать вопрос</h2>
+        <form class="order__form">
+          <input class="order__input" type="text" id="name" name="name" placeholder="Вас зовут" required>
+          <label for="name" class="order__label">Вас зовут</label>
+          <input class="order__input" type="email" id="email" name="email" placeholder="Эл. адрес" required>
+          <label for="email" class="order__label">Эл. адрес</label>
+          <input class="order__input" type="text" id="phone" placeholder="Телефон" name="phone">
+          <label for="phone" class="order__label">Телефон</label>
+          <textarea class="order__textarea" id="message" name="message" placeholder="Здесь вы можете: сделать запрос на оказание услуги, отправить заполненный бриф, задать нам вопрос, уточнить интересующую информацию..."></textarea>
+          <label for="message" class="order__label"></label>
+          <input class="order__checkbox" type="checkbox" id="consent" required checked>
+          <label for="consent" class="order__text">Я соглашаюсь на <a class="order__link" href="">обработку персональных данных</a></label>
+          <div class="order__btn-container">
+            <span class="order__filename">my_file.doc</span>
+            <button class="order__delete-file order__delete-file--hidden">Удалить</button>
+          </div>
+          <div class="order__btn-container">
+            <button class="order__btn">Отправить</button>
+            <button class="order__btn">Прикрепить файл</button>
+          </div>
+        </form>
+        <p class="order__info">Если вы готовы предоставить подробную информацию о проекте, вы можете <a href="" class="order__link">заполнить</a> наш бриф на сайте (или <a href="" class="order__link">скачать</a> его в формате MS Word).</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav class="footer__menu menu">
+        <ul class="menu__third-list">
+          <li class="menu-item"><a href="">О нас</a></li>
+          <li class="menu-item"><a href="">Портфолио</a></li>
+          <li class="menu-item"><a href="">Вакансии</a></li>
+          <li class="menu-item"><a href="">Контакты</a></li>
+        </ul>
+      </nav>
+      <section class="footer__social social">
+        <h2 class="visually-hidden">Ссылки на социальные сети</h2>
+        <a class="social__btn" href="#">
+          <svg class="social__img social__img--fb" width="16" height="28" aria-label="Facebook">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-fb"></use>
+          </svg>
+        </a>
+        <a class="social__btn" href="#">
+          <svg class="social__img social__img--vk" width="49" height="28" aria-label="VKontacte">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-vk"></use>
+          </svg>
+        </a>
+        <a class="social__btn" href="#">
+          <svg class="social__img social__img--insta" width="28" height="28" aria-label="Instagramm">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-insta"></use>
+          </svg>
+        </a>
+      </section>
+      <div class="footer__copyright">Copyright @ 2017 Zalman Group</div>
+    </footer>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
