@@ -1,44 +1,64 @@
 .order {
-  padding-top: 130px;
+  padding: 12px 10px 30px;
   width: 100%;
   min-height: 700px;
   background-image: url('../images/order-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 130px;
+    min-height: 700px;
+  }
 }
 
 .order__title {
-  margin-bottom: 35px;
+  margin-bottom: 37px;
   text-align: center;
-  font-size: 23px;
+  font-size: 15px;
   color: $light-color;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    font-size: 23px;
+    margin-bottom: 35px;
+  }
 }
 
 .order__form {
-  max-width: 645px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   position: relative;
+
+  @media (min-width: $desktop-width) {
+    max-width: 645px;
+  }
 }
 
 .order__input,
 .order__textarea {
   width: 100%;
   height: 50px;
-  padding-left: 10px;
+  font-family: inherit;
+  padding-left: 20px;
   border: none;
   border-radius: 5px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-style: italic;
   font-size: 18px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .order__textarea {
-  padding: 10px;
-  min-height: 250px;
+  padding: 15px 20px;
+  min-height: 270px;
+  line-height: 20px;
 }
 
 .order__label {
@@ -53,17 +73,17 @@
 
 .order__input:nth-of-type(1):focus + .order__label {
   color: $light-color;
-  top: -30px;
+  top: -25px;
 }
 
 .order__input:nth-of-type(2):focus + .order__label {
   color: $light-color;
-  top: 55px;
+  top: 50px;
 }
 
 .order__input:nth-of-type(3):focus + .order__label {
   color: $light-color;
-  top: 135px;
+  top: 120px;
 }
 
 .order__checkbox {
@@ -71,10 +91,16 @@
 }
 
 .order__text {
-  align-self: center;
+  font-size: 11px;
+  font-weight: 300;
+  align-self: left;
   padding-left: 30px;
   color: $light-color;
   position: relative;
+
+  @media (min-width: $desktop-width) {
+    align-self: center;
+  }
 }
 
 .order__checkbox + .order__text::before {
@@ -82,6 +108,7 @@
     content: "";
     position: absolute;
     left: 0;
+    top: -10px;
     width: 18px;
     height: 18px;
     border: 1px solid $light-color;
@@ -92,13 +119,13 @@
   display: block;
   content: "";
   position: absolute;
-  width: 6px;
-  height: 12px;
-  border-bottom: 1px solid $light-color;
-  border-right: 1px solid $light-color;
-  transform: rotate(45deg);
-  left: 6px;
-  top: 2px;
+  width: 15px;
+  height: 13px;
+  background-image: url('../images/check.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 3px;
+  top: -7px;
   cursor: pointer;
 }
 
@@ -110,40 +137,101 @@
   }
 }
 
-.order__btn-container {
-  margin-top: 30px;
-  min-width: 445px;
+.order__file-container {
+  margin-top: 20px;
+  min-width: 140px;
   align-self: center;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
+
+  &--hidden .order__filename {
+    color: transparent;
+  }
+
+  &--hidden .order__delete-file {
+    background-image: none;
+
+    @media (min-width: $desktop-width) {
+      color: transparent;
+      border-color: transparent;
+    }
+  }
 }
 
 .order__filename {
   color: $light-color;
   font-size: 18px;
-  margin-left: 10px;
-  margin-right: 7px;
 }
 
 .order__delete-file {
-  min-width: 98px;
-  min-height: 30px;
-  font-size: 13px;
-  color: $light-color;
-  text-transform: uppercase;
-  border: 1px solid $light-color;
+  font-size: 0;
+  width: 17px;
+  height: 13px;
   background-color: transparent;
+  border-color: transparent;
+  background-image: url('../images/cross-file.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    min-width: 98px;
+    min-height: 30px;
+    font-size: 13px;
+    color: $light-color;
+    text-transform: uppercase;
+    border: 1px solid $light-color;
+    background-color: transparent;
+  }
+}
+
+.order__btn-container {
+  margin: 25px 0 12px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $desktop-width) {
+    min-width: 445px;
+    flex-direction: row;
+  }
 }
 
 .order__btn {
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-bottom: 120px;
-  width: 208px;
+  margin: 0 5px 10px;
+  width: 220px;
   height: 50px;
   background-color: #000000;
   font-size: 16px;
   text-transform: uppercase;
   color: $light-color;
   border: transparent;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $teal-color;
+    color: $light-color;
+  }
+
+  &:active {
+    background-color: $tealgray-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 120px;
+  }
+}
+
+.order__info {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 300;
+  color: $light-color;
+  text-align: center;
+
+  a {
+    font-size: 16px;
+  }
 }

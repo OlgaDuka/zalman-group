@@ -29,35 +29,3 @@ h3 {
   letter-spacing: 1px;
   margin: 0 0 5px;
 }
-
-// ----------------------------------------------
-// Общие стили
-// ----------------------------------------------
-
-
-.container {
-  min-width: $panel-width;
-  padding: 0;
-  margin-right: auto;
-  margin-left: auto;
-
-  @media (min-width: $tablet-mini-width) {
-    max-width: 450px;
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding-right: 15px;
-    padding-left: 15px;
-    max-width: 750px;
-  }
-
-  @media (min-width: $desktop-mini-width) {
-    max-width: 1000px;
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: 1170px;
-  }
-}
