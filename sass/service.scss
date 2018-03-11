@@ -9,31 +9,9 @@
   background-color: #E8E8E8;
   transition: 1s;
 
-  &--hidden {
-    display: none;
-  }
-
   @media (min-width: $desktop-width) {
     width: $desktop-width;
     margin: 5px auto 0;
-  }
-
-  &--mobile-menu-open {
-    min-height: 235px;
-    background-color: rgba(0, 0, 0, 0.93);
-    justify-content: flex-start;
-    transition: 1s;
-
-    .service__item {
-      height: 40px;
-      align-items: flex-start;
-      padding-left: 20px;
-      background-color: rgba(0, 0, 0, 0.93);
-      color: $light-color;
-      font-size: 13px;
-      border: none;
-      box-shadow: none;
-    }
   }
 }
 

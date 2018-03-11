@@ -18,7 +18,7 @@
       @media ( min-width: 1330px ) {
         HTML {
           /* Десктопный макет */
-          background-image: url( "maket/index-desktop-menu-close.jpg" );
+          background-image: url( "maket/index-desktop-menu-open.jpg" );
         }
       }
     </style>
@@ -28,55 +28,61 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__panel">
-        <button class="header__toggle header__toggle--close header__toggle--collapse" type="button"></button>
-        <div class="header__logo"></div>
-        <a href="" class="header__link">Выбрать</a>
-        <a href="" class="header__link header__link--active">Заказать</a>
-        <a href="tel:+79257682232" class="header__link header__link--phone-number">+79257682232</a>
-        <a href="tel:+79257682232" class="header__link header__link--phone-icon">
-<!--          <svg class="header__img" width="16" height="16" aria-label="Phone">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#phone-m"></use>
-          </svg> -->
-          <img src="images/svg/phone-m.svg" alt="Phone" class="header__img" width="28" height="28">
-        </a>
-        <button class="header__lang-btn header__lang-btn--active">ru</button>
-        <button class="header__lang-btn header__lang-btn--hidden">en</button>
-        <button class="header__lang-btn header__lang-btn--hidden">עב</button>
+      <div class="header__container header__container--black">
+        <div class="header__panel">
+          <button class="header__toggle header__toggle--close header__toggle--collapse" type="button"></button>
+          <div class="header__logo"></div>
+          <a href="" class="header__link">Выбрать</a>
+          <a href="" class="header__link header__link--active">Заказать</a>
+          <a href="tel:+79257682232" class="header__link header__link--phone-number">+79257682232</a>
+          <a href="tel:+79257682232" class="header__link header__link--phone-icon">
+  <!--          <svg class="header__img" width="16" height="16" aria-label="Phone">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#phone-m"></use>
+            </svg> -->
+            <img src="images/svg/phone-m.svg" alt="Phone" class="header__img" width="28" height="28">
+          </a>
+          <button class="header__lang-btn header__lang-btn--active">ru</button>
+          <button class="header__lang-btn header__lang-btn--hidden">en</button>
+          <button class="header__lang-btn header__lang-btn--hidden">עב</button>
+        </div>
       </div>
       <nav class="header__menu menu menu--nojs">
-        <ul class="menu__first-list">
-          <li class="menu-item"><a href="">О нас</a></li>
-          <li class="menu-item"><a href="">Портфолио</a></li>
-          <li class="menu-item  menu-item--hidden"><a href="">Вакансии</a></li>
-          <li class="menu-item"><a href="">Контакты</a></li>
-        </ul>
-        <section class="header__info">
-          <h2 class="visually-hidden">Информация для клиента</h2>
-          <div class="header__column">
-            <a href="develop.html" class="header__info-link">Разработка веб-проектов</a>
-            <p class="header__text">Создание сайтов. Дизайн интерфейсов. Айдентика.</p>
-            <a href="" class="header__info-link">Модернизация и продвижение</a>
-            <p class="header__text">Внутренняя и внешняя оптимизация. Продвижение. Юзабилити-аудит. Редизайн.</p>
-          </div>
-          <div class="header__column header__column--right">
-            <a href="" class="header__info-link">Мобильные приложения</a>
-            <p class="header__text">Преимущества. Разработка. Интеграция.&nbsp;Поддержка. Развитие</p>
-            <a href="" class="header__info-link">Поддержка и обслуживание</a>
-            <p class="header__text">Администрирование. Доработка сайтов. Абонентское обслуживание.</p>
-          </div>
-        </section>
-        <ul class="menu__second-list">
-          <li class="menu-item"><a href="">Скачать презентацию</a></li>
-          <li class="menu-item"><a href="">Заполнить бриф</a></li>
-          <li class="menu-item"><a href="">Быстрый заказ</a></li>
-          <li class="menu-item"><a href="">Готовые сайты</a></li>
-        </ul>
+        <div class="header__container header__container--white">
+          <ul class="menu__first-list">
+            <li class="menu-item"><a href="">О нас</a></li>
+            <li class="menu-item"><a href="">Портфолио</a></li>
+            <li class="menu-item  menu-item--desktop-only"><a href="">Вакансии</a></li>
+            <li class="menu-item"><a href="">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="header__container header__container--black-opacity">
+          <section class="header__info">
+            <h2 class="visually-hidden">Информация для клиента</h2>
+            <div class="header__column">
+              <a href="develop.html" class="header__info-link">Разработка веб-проектов</a>
+              <p class="header__text">Создание сайтов. Дизайн интерфейсов. Айдентика.</p>
+              <a href="" class="header__info-link">Модернизация. Продвижение</a>
+              <p class="header__text">Внутренняя и внешняя оптимизация. Продвижение. Юзабилити-аудит. Редизайн.</p>
+            </div>
+            <div class="header__column header__column--right">
+              <a href="" class="header__info-link">Мобильные приложения</a>
+              <p class="header__text">Преимущества. Разработка. Интеграция.&nbsp;Поддержка. Развитие</p>
+              <a href="" class="header__info-link">Поддержка. Обслуживание</a>
+              <p class="header__text">Администрирование. Доработка сайтов. Абонентское обслуживание.</p>
+            </div>
+          </section>
+          <ul class="menu__second-list">
+            <li class="menu-item"><a href="">Скачать презентацию</a></li>
+            <li class="menu-item"><a href="">Заполнить бриф</a></li>
+            <li class="menu-item"><a href="">Быстрый заказ</a></li>
+            <li class="menu-item"><a href="">Готовые сайты</a></li>
+          </ul>
+        </div>
       </nav>
 
       <h1 class="header__title">Zalman Group. Мы делаем сайты. Вы получаете удовольствие.</h1>
 
-      <section class="service service--mobile-menu-open">
+      <section class="service">
         <h2 class="visually-hidden">Наши услуги</h2>
         <a href="develop.html" class="service__item">
           <h3 class="service__title">Разработка веб-проектов</h3>
@@ -304,6 +310,8 @@
       </section>
       <div class="footer__copyright">@ Zalman Group 2018</div>
     </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
     <script src="js/custom.js"></script>
   </body>
 </html>

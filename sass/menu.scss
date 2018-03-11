@@ -11,12 +11,19 @@
 .menu__first-list,
 .menu__second-list,
 .menu__third-list {
+  width: $panel-width;
+  margin: 0 auto;
   min-height: 50px;
   background-color: rgba(232, 232, 232, 0.76);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    margin: 0 auto;
+  }
 }
 
 .menu__first-list {
@@ -42,8 +49,12 @@
   font-size: 16px;
   font-weight: 400;
 
-  &--hidden {
+  &--desktop-only {
     display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -54,10 +65,16 @@
 .menu__second-list {
   padding-bottom: 20px;
   padding-top: 15px;
-  background-color: rgba(0, 0, 0, 0.93);
+  background-color: rgba(32, 32, 32, 0.2);
   flex-direction: column;
   align-items: flex-start;
+  flex-wrap: nowrap;
   position: relative;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    min-height: 115px;
+  }
 
   &::after {
     content: "";
@@ -65,9 +82,16 @@
     background-color: rgb(25, 25, 25);
     position: absolute;
     left: 20px;
-    bottom: 0;
+    bottom: -2px;
     width: 280px;
     height: 3px;
+
+    @media (min-width: $desktop-width) {
+      width: 860px;
+      bottom: 112px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   .menu-item a {
@@ -81,7 +105,8 @@
     line-height: 40px;
 
     @media (min-width: $desktop-width) {
-      margin: 0 71px;
+      margin: 0 40px;
+      padding: 22px 0 0;
     }
   }
 }
