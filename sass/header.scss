@@ -10,11 +10,15 @@
   background-size: 604px 150px;
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    min-height: 760px;
+    background-position: center 90px;
+    background-size: auto;
+  }
+
   @media (min-width: $desktop-width) {
     min-height: 1180px;
-    width: 100%;
     background-position: center 110px;
-    background-size: auto;
   }
 }
 
@@ -29,6 +33,13 @@
   font-size: 18px;
   color: #ffffff;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 40px;
+    width: 750px;
+    min-height: 500px;
+    padding-top: 140px;
+  }
 
   @media (min-width: $desktop-width) {
     font-size: 50px;

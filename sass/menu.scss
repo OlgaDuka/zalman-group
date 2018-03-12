@@ -20,9 +20,13 @@
   justify-content: center;
   align-items: center;
 
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    margin: 0 auto;
+  }
+
   @media (min-width: $desktop-width) {
     width: $desktop-width;
-    margin: 0 auto;
   }
 }
 
@@ -121,9 +125,19 @@
     font-weight: 300;
   }
 
+  @media (min-width: $tablet-width) {
+    min-height: 60px;
+    flex-direction: row;
+
+    .menu-item {
+      margin: 0 30px;
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+
   @media (min-width: $desktop-width) {
     min-height: 80px;
-    flex-direction: row;
 
     .menu-item {
       margin: 0 40px;
