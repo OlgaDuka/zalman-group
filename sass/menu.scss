@@ -11,7 +11,6 @@
 .menu__first-list,
 .menu__second-list,
 .menu__third-list {
-  width: $panel-width;
   margin: 0 auto;
   min-height: 50px;
   background-color: rgba(232, 232, 232, 0.76);
@@ -19,24 +18,18 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
-  @media (min-width: $tablet-width) {
-    width: $tablet-width;
-    margin: 0 auto;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: $desktop-width;
-  }
 }
 
 .menu__first-list {
+  width: $panel-width;
   margin-top: 0;
   flex-direction: row;
   justify-content: space-around;
 
   .menu-item a {
     font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
     color: $dark-color;
 
     &:hover {
@@ -47,12 +40,13 @@
       color: $tealgray-color;
     }
   }
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
 }
 
 .menu-item {
-  font-size: 16px;
-  font-weight: 400;
-
   &--desktop-only {
     display: none;
 
@@ -60,13 +54,10 @@
       display: block;
     }
   }
-
-  @media (min-width: $desktop-width) {
-    margin: 0 51px;
-  }
 }
 
 .menu__second-list {
+  width: $panel-width;
   padding-bottom: 20px;
   padding-top: 15px;
   background-color: rgba(32, 32, 32, 0.2);
@@ -75,9 +66,36 @@
   flex-wrap: nowrap;
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
+
   @media (min-width: $desktop-width) {
+    width: $desktop-width;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     min-height: 115px;
+    padding: 0 230px;
+  }
+
+  &::before {
+    display: none;
+    content: "";
+    background-color: rgb(25, 25, 25);
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 3px;
+    height: 200px;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
   }
 
   &::after {
@@ -90,7 +108,12 @@
     width: 280px;
     height: 3px;
 
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
     @media (min-width: $desktop-width) {
+      display: block;
       width: 860px;
       bottom: 112px;
       left: 50%;
@@ -100,6 +123,7 @@
 
   .menu-item a {
     color: $light-color;
+    text-transform: uppercase;
   }
 
   .menu-item {
@@ -109,54 +133,50 @@
     line-height: 40px;
 
     @media (min-width: $desktop-width) {
-      margin: 0 40px;
-      padding: 22px 0 0;
+      padding: 40px 0 0;
     }
   }
 }
 
 .menu__third-list {
+  width: $panel-width;
   flex-direction: column;
   background-color: #212121;
 
   .menu-item {
-    padding: 7px;
+    margin: 5px 28px;
+  }
+
+  .menu-item a {
     font-size: 14px;
     font-weight: 300;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   @media (min-width: $tablet-width) {
+    width: $tablet-width;
     min-height: 60px;
     flex-direction: row;
 
-    .menu-item {
-      margin: 0 30px;
+    .menu-item a {
       font-size: 16px;
-      font-weight: 300;
     }
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 80px;
+    min-height: 70px;
 
-    .menu-item {
-      margin: 0 40px;
+    .menu-item a {
       font-size: 20px;
-      font-weight: 300;
     }
-  }
-}
-
-.menu-item a {
-  text-transform: uppercase;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.8);
-
-  &:hover {
-    color: rgba(255, 255, 255, 0.6);
-  }
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
   }
 }

@@ -1,20 +1,33 @@
 .order {
-  padding: 12px 10px 30px;
+  padding: 12px 10px 42px;
   width: 100%;
   margin: 0 auto;
   min-height: 700px;
-  background-image: url('../images/order-bg.jpg');
+  background-image: url('../images/order_bg-mobile@1x.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
 
-  @media (min-width: $tablet-width) {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../images/order_bg-mobile@2x.jpg");
+  }
 
+  @media (min-width: $tablet-width) {
+    background-image: url("../images/order_bg-tablet@1x.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../images/order_bg-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 130px;
-    min-height: 700px;
+    padding-bottom: 45px;
+    background-image: url("../images/order_bg-desktop@1x.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../images/order_bg-desktop@2x.jpg");
+    }
   }
 }
 
@@ -28,7 +41,7 @@
 
   @media (min-width: $desktop-width) {
     font-size: 23px;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
   }
 }
 
@@ -59,7 +72,9 @@
   margin-bottom: 20px;
   font-style: italic;
   font-size: 18px;
+}
 
+.order__textarea {
   @media (min-width: $desktop-width) {
     margin-bottom: 30px;
   }
@@ -69,6 +84,10 @@
   padding: 15px 20px;
   min-height: 270px;
   line-height: 20px;
+
+  @media (min-width: $desktop-width) {
+    min-height: 250px;
+  }
 }
 
 .order__label {
@@ -108,8 +127,13 @@
   color: $light-color;
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+  }
+
   @media (min-width: $desktop-width) {
     align-self: center;
+    font-size: 16px;
   }
 }
 
@@ -123,6 +147,10 @@
     height: 18px;
     border: 1px solid $light-color;
     cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      top: 0;
+    }
 }
 
 .order__checkbox:checked + .order__text::after {
@@ -137,6 +165,10 @@
   left: 3px;
   top: -7px;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    top: 0
+  }
 }
 
 .order__link {
@@ -166,6 +198,11 @@
       color: transparent;
       border-color: transparent;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 35px;
+    min-width: 200px;
   }
 }
 
@@ -197,7 +234,7 @@
 }
 
 .order__btn-container {
-  margin: 25px 0 12px;
+  margin: 25px 0 27px;
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -208,7 +245,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 445px;
+    margin-bottom: 50px;
   }
 }
 
@@ -231,10 +268,6 @@
   &:active {
     background-color: $tealgray-color;
   }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 120px;
-  }
 }
 
 .order__info {
@@ -251,11 +284,11 @@
   }
 
   @media (min-width: $tablet-width) {
-    max-width: 500px;
+    max-width: 580px;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 700px;
+    font-size: 16px;
   }
 
 }
