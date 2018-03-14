@@ -1142,6 +1142,16 @@ ul {
   border-top: 1px solid #ffffff;
   -webkit-box-shadow: 0 1px 3px 0 rgba(189, 189, 189, 0.4);
           box-shadow: 0 1px 3px 0 rgba(189, 189, 189, 0.4); }
+  .service__item:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+    background: linear-gradient(#eeeeee, #dddddd);
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.2) 0 -1px 1px, inset rgba(0, 0, 0, 0.2) 0 1px, inset #fff 0 2px, rgba(0, 0, 0, 0.2) 0 1px 1px;
+            box-shadow: inset rgba(0, 0, 0, 0.2) 0 -1px 1px, inset rgba(0, 0, 0, 0.2) 0 1px, inset #fff 0 2px, rgba(0, 0, 0, 0.2) 0 1px 1px; }
+  .service__item:active {
+    background: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#eeeeee));
+    background: linear-gradient(#dddddd, #eeeeee);
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.2) 0 1px 2px, inset rgba(0, 0, 0, 0.1) 0 -1px 0, #fff 0 1px 2px;
+            box-shadow: inset rgba(0, 0, 0, 0.2) 0 1px 2px, inset rgba(0, 0, 0, 0.1) 0 -1px 0, #fff 0 1px 2px; }
   @media (min-width: 768px) {
     .service__item {
       margin: 4px;
@@ -1156,17 +1166,7 @@ ul {
       color: #282828;
       background-color: #e8e8e8;
       border: 1px solid #dddddd;
-      border-top-color: #ffffff; }
-      .service__item:hover {
-        background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
-        background: linear-gradient(#eeeeee, #dddddd);
-        -webkit-box-shadow: inset rgba(0, 0, 0, 0.2) 0 -1px 1px, inset rgba(0, 0, 0, 0.2) 0 1px, inset #fff 0 2px, rgba(0, 0, 0, 0.2) 0 1px 1px;
-                box-shadow: inset rgba(0, 0, 0, 0.2) 0 -1px 1px, inset rgba(0, 0, 0, 0.2) 0 1px, inset #fff 0 2px, rgba(0, 0, 0, 0.2) 0 1px 1px; }
-      .service__item:active {
-        background: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#eeeeee));
-        background: linear-gradient(#dddddd, #eeeeee);
-        -webkit-box-shadow: inset rgba(0, 0, 0, 0.2) 0 1px 2px, inset rgba(0, 0, 0, 0.1) 0 -1px 0, #fff 0 1px 2px;
-                box-shadow: inset rgba(0, 0, 0, 0.2) 0 1px 2px, inset rgba(0, 0, 0, 0.1) 0 -1px 0, #fff 0 1px 2px; } }
+      border-top-color: #ffffff; } }
   @media (min-width: 1330px) {
     .service__item {
       margin: 5px;
