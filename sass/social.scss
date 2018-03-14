@@ -1,42 +1,71 @@
 .social {
-  text-align: center;
-  background-color: #212121;
-  list-style: none;
+  margin: 15px auto 10px;
+  width: 108px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
   padding: 0;
-  margin: 0 0 10px;
 
   &__btn {
-    display: inline-block;
-    margin: 5px;
-    padding-top: 5px;
-    width: 50px;
-    height: 45px;
-    line-height: 35px;
+    width: 25px;
+    height: 25px;
+    color: #ffffff;
     text-align: center;
-    color: rgba(255, 255, 255, 0.2);
   }
 
   &__img {
     &--fb {
-      padding-left: 2px;
-      padding-top: 4px;
+      width: 20px;
+      margin-top: 2px;
     }
 
     &--vk {
-      padding-top: 5px;
+      width: 32px;
+      height: 40px;
+      margin-top: -5px;
+      margin-left: -8px;
     }
 
-    &--github {
-      padding-top: 3px;
-    }
-
-    &--cert {
-      padding-top: 5px;
+    &--insta {
+      width: 22px;
+      height: 22px;
+      margin-top: 5px;
     }
 
     &:hover,
     &:active {
       opacity: 0.5;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 138px;
+    margin: 20px auto 45px;
+
+    &__btn {
+      width: 45px;
+      height: 45px;
+    }
+
+    &__img {
+      &--fb {
+        width: 36px;
+        margin-top: 7px;
+      }
+
+      &--vk {
+        width: 45px;
+        height: 45px;
+        margin-top: -3px;
+        margin-left: -8px;
+      }
+
+      &--insta {
+        width: 27px;
+        height: 27px;
+        margin-top: 6px;
+      }
     }
   }
 }

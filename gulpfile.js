@@ -55,6 +55,13 @@ gulp.task('sprite', function () {
       .pipe(gulp.dest('images'));
 });
 
+// Создание SVG-спрайта
+gulp.task('svg-file', function () {
+  return gulp.src('images/svg-file/*.svg')
+      .pipe(svgmin())
+      .pipe(gulp.dest('images/svg-file'));
+});
+
 // Минификация JS-скриптов
 gulp.task('jsmin', function () {
   return gulp.src(['js/*.js',

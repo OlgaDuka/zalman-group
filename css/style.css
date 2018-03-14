@@ -712,7 +712,7 @@ ul {
   padding: 0;
   border-color: transparent;
   background-color: transparent;
-  background-image: url("../images/svg/menu-close.svg");
+  background-image: url("../images/svg-file/menu-close.svg");
   background-repeat: no-repeat;
   background-position: left;
   background-size: 32px 28px;
@@ -721,11 +721,11 @@ ul {
   outline: none;
   cursor: pointer; }
   .header__toggle:hover {
-    color: rgba(255, 255, 255, 0.5); }
+    opacity: 0.6; }
   .header__toggle:active {
     opacity: 0.5; }
   .header__toggle--collapse {
-    background-image: url("../images/svg/menu-collapse.svg"); }
+    background-image: url("../images/svg-file/menu-collapse.svg"); }
   @media (min-width: 768px) {
     .header__toggle {
       margin-left: 30px; } }
@@ -737,7 +737,12 @@ ul {
   display: none; }
   .header__link--phone-icon {
     display: block;
-    margin-right: 20px; }
+    margin-right: 20px;
+    color: #ffffff; }
+    .header__link--phone-icon:hover {
+      color: #ccc039; }
+    .header__link--phone-icon:active {
+      color: #057d7d; }
   @media (min-width: 768px) {
     .header__link {
       display: block;
@@ -1499,25 +1504,38 @@ ul {
   position: absolute;
   width: 20px;
   height: 40px;
-  top: 315px;
-  border: none;
+  bottom: 85px;
+  border-color: transparent;
   background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer; }
+  color: #d0cfcf;
+  cursor: pointer;
+  outline: none; }
   .slider__btn--left {
-    left: 10px;
-    background-image: url("../images/arrow-left.png"); }
+    left: -18px; }
   .slider__btn--right {
-    right: 10px;
-    background-image: url("../images/arrow-right.png"); }
+    right: 38px; }
   .slider__btn--hidden {
     display: none; }
+  .slider__btn:hover {
+    color: #057d7d;
+    opacity: 0.6; }
+  .slider__btn:active {
+    color: #5c7979;
+    opacity: 0.6; }
+  @media (min-width: 768px) {
+    .slider__btn {
+      top: 35%; } }
   @media (min-width: 1330px) {
     .slider__btn {
-      width: 26px;
-      height: 57px;
-      top: 265px; } }
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      width: 60px;
+      height: 115px; }
+      .slider__btn--left {
+        left: 55px; }
+      .slider__btn--right {
+        right: 75px; } }
 
 .order {
   padding: 12px 10px 42px;
@@ -1669,7 +1687,7 @@ ul {
   cursor: pointer; }
   @media (min-width: 768px) {
     .order__checkbox:checked + .order__text::after {
-      top: 0; } }
+      top: 2px; } }
 
 .order__link {
   color: #057d7d; }
@@ -1800,28 +1818,54 @@ ul {
       padding-bottom: 25px; } }
 
 .social {
-  text-align: center;
-  background-color: #212121;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 10px; }
+  margin: 15px auto 10px;
+  width: 108px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  padding: 0; }
   .social__btn {
-    display: inline-block;
-    margin: 5px;
-    padding-top: 5px;
-    width: 50px;
-    height: 45px;
-    line-height: 35px;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.2); }
+    width: 25px;
+    height: 25px;
+    color: #ffffff;
+    text-align: center; }
   .social__img--fb {
-    padding-left: 2px;
-    padding-top: 4px; }
+    width: 20px;
+    margin-top: 2px; }
   .social__img--vk {
-    padding-top: 5px; }
-  .social__img--github {
-    padding-top: 3px; }
-  .social__img--cert {
-    padding-top: 5px; }
+    width: 32px;
+    height: 40px;
+    margin-top: -5px;
+    margin-left: -8px; }
+  .social__img--insta {
+    width: 22px;
+    height: 22px;
+    margin-top: 5px; }
   .social__img:hover, .social__img:active {
     opacity: 0.5; }
+  @media (min-width: 768px) {
+    .social {
+      width: 138px;
+      margin: 20px auto 45px; }
+      .social__btn {
+        width: 45px;
+        height: 45px; }
+      .social__img--fb {
+        width: 36px;
+        margin-top: 7px; }
+      .social__img--vk {
+        width: 45px;
+        height: 45px;
+        margin-top: -3px;
+        margin-left: -8px; }
+      .social__img--insta {
+        width: 27px;
+        height: 27px;
+        margin-top: 6px; } }

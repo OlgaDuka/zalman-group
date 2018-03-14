@@ -150,30 +150,51 @@
   position: absolute;
   width: 20px;
   height: 40px;
-  top: 315px;
-  border: none;
+  bottom: 85px;
+  border-color: transparent;
   background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: contain;
+  color: #d0cfcf;
   cursor: pointer;
+  outline: none;
 
   &--left {
-    left: 10px;
-    background-image: url("../images/arrow-left.png");
+    left: -18px;
   }
 
   &--right {
-    right: 10px;
-    background-image: url('../images/arrow-right.png');
+    right: 38px;
   }
 
   &--hidden {
     display: none;
   }
 
+  &:hover {
+    color: $teal-color;
+    opacity: 0.6;
+  }
+
+  &:active {
+    color: $tealgray-color;
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 35%;
+  }
+
   @media (min-width: $desktop-width) {
-    width: 26px;
-    height: 57px;
-    top: 265px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 115px;
+
+    &--left {
+      left: 55px;
+    }
+
+    &--right {
+      right: 75px;
+    }
   }
 }
