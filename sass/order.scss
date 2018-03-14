@@ -174,8 +174,13 @@
 .order__link {
   color: $teal-color;
 
+  &:hover {
+    text-decoration: underline;
+  }
+
   &:active {
     color: $tealgray-color;
+    text-decoration: none;
   }
 }
 

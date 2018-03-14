@@ -148,21 +148,26 @@
 .slider__btn {
   display: block;
   position: absolute;
-  width: 20px;
-  height: 40px;
-  bottom: 85px;
-  border-color: transparent;
+  width: 25px;
+  height: 25px;
+  bottom: 55px;
+  border: none;
+  border-bottom: 5px solid #d0cfcf;
+  border-right: 5px solid #d0cfcf;
+  border-radius: 3px;
   background-color: transparent;
-  color: #d0cfcf;
   cursor: pointer;
   outline: none;
+  transition: 0.5s;
 
   &--left {
-    left: -18px;
+    transform: rotate(135deg);
+    left: 12px;
   }
 
   &--right {
-    right: 38px;
+    transform: rotate(-45deg);
+    right: 12px;
   }
 
   &--hidden {
@@ -170,12 +175,12 @@
   }
 
   &:hover {
-    color: $teal-color;
+    border-color: $teal-color;
     opacity: 0.6;
   }
 
   &:active {
-    color: $tealgray-color;
+    border-color: $tealgray-color;
     opacity: 0.6;
   }
 
@@ -184,17 +189,16 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: 50%;
-    transform: translateY(-50%);
-    width: 60px;
-    height: 115px;
+    width: 30px;
+    height: 30px;
+    top: 47%;
 
     &--left {
       left: 55px;
     }
 
     &--right {
-      right: 75px;
+      right: 55px;
     }
   }
 }

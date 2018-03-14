@@ -13,7 +13,7 @@
 .menu__third-list {
   margin: 0 auto;
   min-height: 50px;
-  background-color: rgba(232, 232, 232, 0.76);
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -25,6 +25,7 @@
   margin-top: 0;
   flex-direction: row;
   justify-content: space-around;
+  background-color: transparent;
 
   .menu-item a {
     font-size: 14px;
@@ -60,7 +61,6 @@
   width: $panel-width;
   padding-bottom: 20px;
   padding-top: 15px;
-  background-color: rgba(32, 32, 32, 0.2);
   flex-direction: column;
   align-items: flex-start;
   flex-wrap: nowrap;
