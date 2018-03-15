@@ -1,0 +1,71 @@
+.add-work {
+  width: $panel-width;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.add-work__desc {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: justify;
+
+  span {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: $teal-color;
+    font-weight: 700;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $tealgray-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.add-work__list {
+  padding: 10px 0 20px;
+  border-bottom: 2px solid #aaa9a9;
+}
+
+.add-work__item {
+  padding-left: 30px;
+  line-height: 40px;
+  font-weight: 300;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 5px;
+    top: 10px;
+    background-image: url('../images/check-green.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.add-work__mobile-only {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.add-work__desktop-only {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}

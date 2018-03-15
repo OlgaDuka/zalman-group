@@ -2,6 +2,16 @@
   width: 100%;
 }
 
+.content__container {
+  width: 100%;
+
+  &--work {
+    background-image: url('../images/work_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 .content__block {
   min-height: 40px;
   background-color: rgb(33, 33, 33);

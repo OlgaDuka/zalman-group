@@ -10,6 +10,12 @@
   background-size: 604px 150px;
   position: relative;
 
+  &--page {
+    min-height: 140px;
+    background-image: url('../images/banner_develop.jpg');
+    background-size: contain;
+  }
+
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../images/banner_top-mobile@2x.jpg");
   }
@@ -47,6 +53,16 @@
   font-size: 18px;
   color: #ffffff;
   text-align: center;
+
+  &--opacity {
+    color: #bababa;
+  }
+
+  &--page {
+    height: 70px;
+    padding-top: 20px;
+    text-transform: uppercase;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 40px;
@@ -153,12 +169,12 @@
     content: "";
     display: block;
     position: absolute;
-    top: 20px;
+    top: 15px;
     left: 0;
     width: 34px;
     height: 3px;
-    border: 1px solid #fff;
-    background-color: #fff;
+    border: 1px solid #6e6e6e;
+    background-color: #6e6e6e;
     border-radius: 2px;
     transition: 0.5s;
   }
@@ -167,22 +183,14 @@
     content: "";
     display: block;
     position: absolute;
-    top: 30px;
+    top: 24px;
     left: 0;
     width: 34px;
     height: 3px;
-    border: 1px solid #fff;
-    background-color: #fff;
+    border: 1px solid #6e6e6e;
+    background-color: #6e6e6e;
     border-radius: 2px;
     transition: 0.5s;
-  }
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.5;
   }
 
   &--collapse {
@@ -196,8 +204,8 @@
       height: 22px;
       border: none;
       background-color: transparent;
-      border-top: 5px solid #fff;
-      border-left: 5px solid #fff;
+      border-top: 5px solid #6e6e6e;
+      border-left: 5px solid #6e6e6e;
       border-radius: 3px;
       transform: rotate(45deg);
       transition: 0.5s;
@@ -207,14 +215,14 @@
       content: "";
       display: block;
       position: absolute;
-      top: 10px;
+      top: 12px;
       left: 5px;
       width: 22px;
       height: 22px;
       border: none;
       background-color: transparent;
-      border-top: 5px solid #fff;
-      border-right: 5px solid #fff;
+      border-top: 5px solid #6e6e6e;
+      border-right: 5px solid #6e6e6e;
       border-radius: 3px;
       transform: rotate(-45deg);
       transition: 0.5s;
