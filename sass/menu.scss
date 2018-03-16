@@ -51,7 +51,7 @@
   &--desktop-only {
     display: none;
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $tablet-width) {
       display: block;
     }
   }

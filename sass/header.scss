@@ -10,12 +10,6 @@
   background-size: 604px 150px;
   position: relative;
 
-  &--page {
-    min-height: 140px;
-    background-image: url('../images/banner_develop.jpg');
-    background-size: contain;
-  }
-
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../images/banner_top-mobile@2x.jpg");
   }
@@ -40,6 +34,22 @@
       background-image: url("../images/banner_top-desktop@2x.jpg");
     }
   }
+
+  &--page {
+    min-height: 140px;
+    background-image: url('../images/banner_develop.jpg');
+    background-size: contain;
+
+    @media (min-width: $tablet-width) {
+      min-height: 173px;
+      background-image: url('../images/banner_develop-tablet.jpg');
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 300px;
+      background-image: url('../images/banner_develop-desktop.jpg');
+    }
+  }
 }
 
 .header__title {
@@ -58,12 +68,6 @@
     color: #bababa;
   }
 
-  &--page {
-    height: 70px;
-    padding-top: 20px;
-    text-transform: uppercase;
-  }
-
   @media (min-width: $tablet-width) {
     font-size: 40px;
     width: 750px;
@@ -76,6 +80,24 @@
     width: 870px;
     min-height: 480px;
     padding-top: 170px;
+  }
+
+  &--page {
+    height: 70px;
+    padding-top: 20px;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 50px;
+      min-height: 173px;
+      font-size: 34px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 118px;
+      min-height: 300px;
+      font-size: 50px;
+    }
   }
 }
 

@@ -9,6 +9,16 @@
     background-image: url('../images/work_bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (min-width: $tablet-width) {
+      min-height: 375px;
+      background-image: url('../images/work_bg-tablet.jpg');
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 650px;
+      background-image: url('../images/work_bg-desktop.jpg');
+    }
   }
 }
 
@@ -118,6 +128,7 @@
   @media (min-width: $desktop-width) {
     max-width: 930px;
     font-size: 25px;
+    line-height: 40px;
     padding: 0;
   }
 }
