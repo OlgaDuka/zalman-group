@@ -1,0 +1,115 @@
+.partner {
+  background-color: #ffffff;
+  padding-bottom: 22px;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 60px;
+  }
+}
+
+.partner__title {
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 0;
+  font-family: $title-font;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $darktext-color;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 48px;
+    line-height: 60px;
+    padding-top: 60px;
+    padding-bottom: 25px;
+  }
+}
+
+.swiper-container--1 {
+  width: $panel-width;
+  height: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    width: 740px;
+    padding-left: 10px;
+    padding-right: 10px;  }
+
+  @media (min-width: $desktop-width) {
+    width: 1140px;
+  }
+}
+
+.swiper-slide {
+  &--slide1,
+  &--slide2,
+  &--slide3,
+  &--slide4, {
+    max-width: 280px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    align-self: center;
+
+    @media (min-width: $tablet-width) {
+      max-width: 240px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 280px;
+    }
+  }
+
+  &--slide1 {
+    background-image: url('../images/auchan.jpg');
+  }
+
+  &--slide2 {
+    background-image: url('../images/multiplex.jpg');
+  }
+
+  &--slide3 {
+    background-image: url('../images/eurovision.jpg');
+  }
+
+  &--slide4 {
+    background-image: url('../images/yarich.jpg');
+  }
+}
+
+.swiper-button-next--1,
+.swiper-button-prev--1 {
+  width: 20px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 20px;
+    height: 35px;
+  }
+}
+
+.swiper-button-prev--1 {
+  left: 10px;
+  background-image: url('../images/left-arrow.svg');
+}
+
+.swiper-button-next--1 {
+  right: 10px;
+  background-image: url('../images/right-arrow.svg');
+}

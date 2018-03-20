@@ -48,6 +48,20 @@
   }
 }
 
+.content__restrict-width {
+  width: $panel-width;
+  margin: 0 auto;
+  background-color: $bg_main-color;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+}
+
 .content__page-link {
   padding-right: 20px;
   color: $light-color;
@@ -102,6 +116,25 @@
   }
 }
 
+.content__title {
+  margin: 0 auto;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 300;
+  color: $light-color;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
+}
+
 .content__text {
   margin: 0 auto;
   padding: 0 30px;
@@ -128,7 +161,7 @@
   @media (min-width: $desktop-width) {
     max-width: 930px;
     font-size: 25px;
-    line-height: 40px;
+    line-height: 41px;
     padding: 0;
   }
 }

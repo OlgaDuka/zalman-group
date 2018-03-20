@@ -1,0 +1,185 @@
+.info {
+  width: $panel-width;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: $bg_main-color;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 30px 40px 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    padding: 62px 120px 25px;
+  }
+
+  &--about {
+    padding: 20px;
+
+    @media (min-width: $desktop-width) {
+      padding: 58px 120px 102px;
+    }
+  }
+
+  &--vacancy {
+    padding: 20px 20px 0;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 58px 120px 60px;
+    }
+  }
+}
+
+.info__container {
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 3px;
+    padding-bottom: 68px;
+  }
+}
+
+.info__text {
+  margin: 0;
+  padding: 5px 0 15px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: justify;
+
+  span {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 15px 0;
+    font-size: 18px;
+  }
+}
+
+.info__list {
+  padding: 5px 0 24px;
+
+  &--develop {
+    padding: 15px 0 14px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+
+    &--about {
+      padding-top: 15px;
+      margin-right: 67px;
+      margin-bottom: 5px;
+    }
+
+    &--develop {
+      padding: 55px 0 0;
+      margin-bottom: -7px;
+    }
+  }
+}
+
+.info__item {
+  margin-bottom: 20px;
+  padding-left: 45px;
+  line-height: 20px;
+  font-size: 15px;
+  font-weight: 300;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 12px;
+    top: 0;
+    background-image: url('../images/check-green.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 28px;
+    font-size: 16px;
+
+    &::before {
+      left: -5px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.info__link {
+  color: $teal-color;
+  font-weight: 700;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $tealgray-color;
+    text-decoration: none;
+  }
+}
+
+
+.info__btn-link {
+  min-width: 210px;
+  min-height: 50px;
+  margin: 0 0 38px;
+  padding-top: 15px;
+  align-self: center;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $light-color;
+  background-color: #6b6b6b;
+
+  @media (min-width: $tablet-width) {
+    margin: 21px 0;
+  }
+}
+
+.info__mobile-only {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.info__desktop-only {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}

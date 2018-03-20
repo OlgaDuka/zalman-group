@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #E8E8E8;
+  background-color: $bg_main-color;
   transition: 1s;
 
   @media (min-width: $tablet-width) {

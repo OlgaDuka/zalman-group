@@ -35,10 +35,10 @@
     }
   }
 
-  &--page {
+  &--develop {
     min-height: 140px;
-    background-image: url('../images/banner_develop.jpg');
-    background-size: contain;
+    background-image: url('../images/banner_develop-mobile.jpg');
+    background-size: cover;
 
     @media (min-width: $tablet-width) {
       min-height: 173px;
@@ -48,6 +48,38 @@
     @media (min-width: $desktop-width) {
       min-height: 300px;
       background-image: url('../images/banner_develop-desktop.jpg');
+    }
+  }
+
+  &--about {
+    min-height: 140px;
+    background-image: url('../images/banner_about-mobile.jpg');
+    background-size: cover;
+
+    @media (min-width: $tablet-width) {
+      min-height: 173px;
+      background-image: url('../images/banner_about-tablet.jpg');
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 300px;
+      background-image: url('../images/banner_about-desktop.jpg');
+    }
+  }
+
+  &--vacancy {
+    min-height: 140px;
+    background-image: url('../images/banner_vacancy-mobile.jpg');
+    background-size: cover;
+
+    @media (min-width: $tablet-width) {
+      min-height: 173px;
+      background-image: url('../images/banner_vacancy-tablet.jpg');
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 300px;
+      background-image: url('../images/banner_vacancy-desktop.jpg');
     }
   }
 }
@@ -129,7 +161,7 @@
   width: 100%;
 
   @media (min-width: $desktop-width) {
-    background-color: #E8E8E8;
+    background-color: $bg_main-color;
   }
 
   &--black {
