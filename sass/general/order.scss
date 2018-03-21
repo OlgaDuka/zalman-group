@@ -1,6 +1,6 @@
 .order {
   padding: 12px 10px 42px;
-  width: $panel-width;
+  min-width: $panel-width;
   margin: 0 auto;
   min-height: 700px;
   background-image: url('../images/order_bg-mobile@1x.jpg');
@@ -13,7 +13,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: $tablet-width;
+    min-width: $tablet-width;
     background-image: url("../images/order_bg-tablet@1x.jpg");
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -22,7 +22,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-width;
+    min-width: $desktop-width;
     padding-top: 128px;
     padding-bottom: 48px;
     background-image: url("../images/order_bg-desktop@1x.jpg");

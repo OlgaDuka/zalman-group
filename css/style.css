@@ -1255,7 +1255,7 @@ ul {
     padding: 20px; }
     @media (min-width: 1330px) {
       .info--about {
-        padding: 58px 120px 102px; } }
+        padding: 58px 120px 60px; } }
   .info--vacancy {
     padding: 20px 20px 0; }
     @media (min-width: 768px) {
@@ -1284,6 +1284,20 @@ ul {
       padding-top: 3px;
       padding-bottom: 68px; } }
 
+.info__title {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .info__title {
+      font-size: 20px; } }
+  @media (min-width: 1330px) {
+    .info__title {
+      margin: 60px 0 20px;
+      font-size: 25px; } }
+
 .info__text {
   margin: 0;
   padding: 5px 0 15px;
@@ -1303,6 +1317,8 @@ ul {
   padding: 5px 0 24px; }
   .info__list--develop {
     padding: 15px 0 14px; }
+  .info__list--about {
+    padding: 5px 0; }
   @media (min-width: 768px) {
     .info__list {
       padding: 0;
@@ -1358,7 +1374,7 @@ ul {
 .info__btn-link {
   min-width: 210px;
   min-height: 50px;
-  margin: 0 0 38px;
+  margin: 10px 0 20px;
   padding-top: 15px;
   -ms-flex-item-align: center;
       align-self: center;
@@ -1367,10 +1383,14 @@ ul {
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
-  background-color: #6b6b6b; }
+  background-color: rgba(24, 24, 24, 0.6); }
   @media (min-width: 768px) {
     .info__btn-link {
       margin: 21px 0; } }
+  .info__btn-link:hover {
+    background-color: rgba(5, 125, 125, 0.6); }
+  .info__btn-link:active {
+    background-color: rgba(92, 121, 121, 0.6); }
 
 .info__mobile-only {
   display: block; }
@@ -1386,7 +1406,7 @@ ul {
 
 .order {
   padding: 12px 10px 42px;
-  width: 320px;
+  min-width: 320px;
   margin: 0 auto;
   min-height: 700px;
   background-image: url("../images/order_bg-mobile@1x.jpg");
@@ -1398,14 +1418,14 @@ ul {
       background-image: url("../images/order_bg-mobile@2x.jpg"); } }
   @media (min-width: 768px) {
     .order {
-      width: 768px;
+      min-width: 768px;
       background-image: url("../images/order_bg-tablet@1x.jpg"); } }
   @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
     .order {
       background-image: url("../images/order_bg-tablet@2x.jpg"); } }
   @media (min-width: 1330px) {
     .order {
-      width: 1330px;
+      min-width: 1330px;
       padding-top: 128px;
       padding-bottom: 48px;
       background-image: url("../images/order_bg-desktop@1x.jpg"); } }
