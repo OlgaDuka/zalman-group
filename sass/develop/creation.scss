@@ -49,7 +49,8 @@
 
 .creation__accordion {
   width: 320px;
-  margin: 30px auto 25px;
+  margin: 30px auto 0;
+  padding-bottom: 25px;
 }
 
 .creation__accordion input {
@@ -69,7 +70,7 @@
   display: block;
   z-index: 20;
   cursor: pointer;
-  background-color: $bg_main-color;
+  background-color: #f0f0f0;
   outline: 3px solid $teal-color;
   outline-offset: -13px;
   border-top: 1px solid $light-color;

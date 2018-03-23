@@ -16,20 +16,9 @@
     padding: 62px 120px 25px;
   }
 
-  &--about {
-    padding: 20px;
-
-    @media (min-width: $desktop-width) {
-      padding: 58px 120px 60px;
-    }
-  }
-
-  &--vacancy {
-    padding: 20px 20px 0;
-
-    @media (min-width: $tablet-width) {
-      padding-bottom: 40px;
-    }
+  &--about,
+  &--modern {
+    padding: 20px 20px 5px;
 
     @media (min-width: $desktop-width) {
       padding: 58px 120px 60px;

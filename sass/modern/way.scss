@@ -1,0 +1,139 @@
+.way {
+  width: $panel-width;
+  margin: 0 auto;
+  background-color: $bg_main-color;
+}
+
+.way__title {
+  margin: 0;
+  padding: 0 30px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  span {
+    color: $teal-color;
+    font-weight: 700;
+  }
+}
+
+.way__list {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.way__item {
+
+}
+
+.way__subtitle {
+  padding-left: 40px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  position: relative;
+
+  &::before {
+    content: attr(data-number);
+    width: 30px;
+    height: 26px;
+    padding-top: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 50%;
+    background-color: $teal-color;
+    color: $light-color;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    z-index: 3;
+  }
+
+  &::after {
+    content: "";
+    height: 1px;
+    width: 270px;
+    border-top: 2px solid $bg_body-color;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    z-index: 2;
+  }
+}
+
+.way__wrapper-text {
+  height: 160px;
+  overflow-y: hidden;
+  transition: height 2s;
+  position: relative;
+
+  &--open {
+    height: auto;
+    overflow-y: visible;
+    transition: height 2s;
+  }
+}
+
+.way__text {
+  font-size: 15px;
+  font-weight: 300;
+  text-align: justify;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.way__readmore {
+  border-color: transparent;
+  color: $teal-color;
+  background-color: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+  outline: none;
+
+  &::after {
+    content: " >";
+    font-weight: 700;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.way__collapse {
+  @include triangle-top(7px, $light-color);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $teal-color;
+  border: transparent;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    color: #000000;
+  }
+
+  &--visible {
+    display: block;
+  }
+}
