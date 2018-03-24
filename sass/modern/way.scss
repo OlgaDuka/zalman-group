@@ -20,16 +20,17 @@
 }
 
 .way__list {
-  padding: 0 20px;
+  padding: 10px 20px 18px;
   display: flex;
   flex-direction: column;
 }
 
 .way__item {
-
+  margin-top: 0;
 }
 
 .way__subtitle {
+  margin: 19px 0 20px;
   padding-left: 40px;
   font-size: 15px;
   font-weight: 400;
@@ -80,7 +81,9 @@
 }
 
 .way__text {
+  margin: 0;
   font-size: 15px;
+  line-height: 20px;
   font-weight: 300;
   text-align: justify;
 
@@ -89,7 +92,16 @@
   }
 }
 
+.way__container-btn {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .way__readmore {
+  font-size: 15px;
+  font-weight: 300;
+  padding: 12px 0 0;
   border-color: transparent;
   color: $teal-color;
   background-color: transparent;
@@ -111,12 +123,12 @@
   }
 
   &--hidden {
-    display: none;
+    color: transparent;
   }
 }
 
 .way__collapse {
-  @include triangle-top(7px, $light-color);
+  display: none;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -124,16 +136,22 @@
   border: transparent;
   cursor: pointer;
   outline: none;
+  position: relative;
 
   &:hover {
     opacity: 0.6;
   }
 
-  &:active {
-    color: #000000;
-  }
-
   &--visible {
     display: block;
+  }
+}
+
+.way__arrow-up {
+  @include zero-centered;
+  @include triangle-top(7px, $light-color);
+
+  &:active {
+    @include triangle-top(7px, $darktext-color);
   }
 }
