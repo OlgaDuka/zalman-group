@@ -78,6 +78,10 @@
   &--modern {
     padding-top: 27px;
 
+    @media (min-width: $tablet-width) {
+      padding-top: 70px;
+    }
+
     @media (min-width: $desktop-width) {
       padding-top: 118px;
     }

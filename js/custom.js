@@ -92,11 +92,14 @@
   // Показать список этапов по направлению работ
   // ------------------------------------------------
 
+  var tabletWidth = 768;
+  var desktopWidth = 1330;
   var stage = document.querySelector('.stage');
   var backBtn = stage.querySelector('.stage__back');
   var stagelist = stage.querySelector('.stage__list');
   var types = stage.querySelectorAll('.stage__type');
   var sublists = stage.querySelectorAll('.stage__sublist');
+  var widthCurrent = document.documentElement.clientWidth;
 
   var onClickBackBtn = function () {
     backBtn.classList.add('stage__back--hidden');
@@ -110,15 +113,33 @@
 
   var onClickTypeStage = function (event) {
     var currentElement = [].indexOf.call(types, event.currentTarget);
-    sublists[currentElement].classList.remove('stage__sublist--hidden');
+
     stagelist.classList.add('stage__list--hidden');
+    [].forEach.call(types, function (element) {
+      if (element.classList.contains('stage__type--active')) {
+        element.classList.remove('stage__type--active');
+      }
+    });
+    [].forEach.call(sublists, function (element) {
+      if (!element.classList.contains('stage__sublist--hidden')) {
+        element.classList.add('stage__sublist--hidden');
+      }
+    });
+    event.currentTarget.classList.add('stage__type--active');
+    sublists[currentElement].classList.remove('stage__sublist--hidden');
     backBtn.classList.remove('stage__back--hidden');
   };
 
-  [].forEach.call(types, function (element) {
-    element.addEventListener('click', onClickTypeStage);
-  });
-
-  backBtn.addEventListener('click', onClickBackBtn);
+  if ((widthCurrent < desktopWidth) && (widthCurrent > tabletWidth)) {
+    [].forEach.call(types, function (element) {
+      element.addEventListener('click', onClickTypeStage);
+    });
+  }
+  if (widthCurrent < tabletWidth) {
+    [].forEach.call(types, function (element) {
+      element.addEventListener('click', onClickTypeStage);
+    });
+    backBtn.addEventListener('click', onClickBackBtn);
+  }
 
 })();

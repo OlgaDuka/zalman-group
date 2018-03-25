@@ -49,6 +49,18 @@
   }
 }
 
+.stage__wrapper-full {
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+  }
+}
+
 .stage__list {
   margin: 20px 0 0;
   display: flex;
@@ -59,8 +71,17 @@
     display: none;
   }
 
+  @media (min-width: $tablet-width) {
+    align-items: flex-start;
+    margin-right: 20px;
+
+    &--hidden {
+      display: block;
+    }
+  }
+
   @media (min-width: $desktop-width) {
-    width: 100%;
+    width: $desktop-width;
     padding: 0 140px;
     flex-direction: row;
     margin-top: 6px;
@@ -96,10 +117,29 @@
   }
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+
+    &--active {
+      font-weight: 700;
+      color: $teal-color;
+      background-color: $light-color;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
     margin-bottom: 0;
+    cursor: default;
 
     &:last-child {
       margin-right: 25px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      color: $light-color;
     }
   }
 }
@@ -109,10 +149,16 @@
   flex-direction: column;
 
   @media (min-width: $tablet-width) {
+    width: 600px;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+    margin: 0 auto;
     flex-direction: row;
     justify-content: space-between;
   }
-
 }
 
 .stage__sublist {
@@ -122,6 +168,14 @@
 
   &--hidden {
     display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+    height: 200px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
   }
 
   @media (min-width: $desktop-width) {
@@ -152,6 +206,10 @@
   font-weight: 300;
   color: #aaa9a9;
 
+  @media (min-width: $tablet-width) {
+    padding: 5px 0;
+  }
+
   @media (min-width: $desktop-width) {
     padding: 5px 15px;
   }
@@ -170,6 +228,10 @@
   cursor: pointer;
 
   &--hidden {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }
