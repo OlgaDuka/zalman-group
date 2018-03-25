@@ -2897,6 +2897,8 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .stage__list--hidden {
+    display: none; }
 
 .stage__type {
   margin-bottom: 60px;
@@ -2920,7 +2922,37 @@ ul {
     color: #282828; }
 
 .stage__sublist {
-  display: none; }
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .stage__sublist--hidden {
+    display: none; }
+
+.stage__item {
+  padding: 5px 40px 5px 50px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #aaa9a9; }
+
+.stage__back {
+  margin-top: 15px;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #057d7d;
+  text-decoration: underline;
+  border-color: transparent;
+  background-color: transparent;
+  cursor: pointer; }
+  .stage__back--hidden {
+    display: none; }
 
 .partner {
   width: 320px;

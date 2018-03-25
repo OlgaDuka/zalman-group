@@ -88,4 +88,37 @@
     element.addEventListener('click', onClickButtonCollapse);
   });
 
+  // -----------------------------------------------
+  // Показать список этапов по направлению работ
+  // ------------------------------------------------
+
+  var stage = document.querySelector('.stage');
+  var backBtn = stage.querySelector('.stage__back');
+  var stagelist = stage.querySelector('.stage__list');
+  var types = stage.querySelectorAll('.stage__type');
+  var sublists = stage.querySelectorAll('.stage__sublist');
+
+  var onClickBackBtn = function () {
+    backBtn.classList.add('stage__back--hidden');
+    stagelist.classList.remove('stage__list--hidden');
+    [].forEach.call(sublists, function (element) {
+      if (!element.classList.contains('stage__sublist--hidden')) {
+        element.classList.add('stage__sublist--hidden');
+      }
+    });
+  };
+
+  var onClickTypeStage = function (event) {
+    var currentElement = [].indexOf.call(types, event.currentTarget);
+    sublists[currentElement].classList.remove('stage__sublist--hidden');
+    stagelist.classList.add('stage__list--hidden');
+    backBtn.classList.remove('stage__back--hidden');
+  };
+
+  [].forEach.call(types, function (element) {
+    element.addEventListener('click', onClickTypeStage);
+  });
+
+  backBtn.addEventListener('click', onClickBackBtn);
+
 })();

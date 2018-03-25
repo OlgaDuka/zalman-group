@@ -44,6 +44,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .stage__type {
@@ -75,5 +79,36 @@
 }
 
 .stage__sublist {
-  display: none;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.stage__item {
+  padding: 5px 40px 5px 50px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #aaa9a9;
+}
+
+.stage__back {
+  margin-top: 15px;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  color: $teal-color;
+  text-decoration: underline;
+  border-color: transparent;
+  background-color: transparent;
+  cursor: pointer;
+
+  &--hidden {
+    display: none;
+  }
 }
