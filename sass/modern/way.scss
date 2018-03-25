@@ -2,6 +2,14 @@
   width: $panel-width;
   margin: 0 auto;
   background-color: $bg_main-color;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
 }
 
 .way__title {
@@ -17,16 +25,30 @@
     color: $teal-color;
     font-weight: 700;
   }
+
+  @media (min-width: $tablet-width) {
+
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .way__list {
   padding: 10px 20px 18px;
   display: flex;
   flex-direction: column;
-}
+  align-content: space-between;
 
-.way__item {
-  margin-top: 0;
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 665px;
+    height: 1090px;
+    padding: 20px 0;
+  }
 }
 
 .way__subtitle {
@@ -65,6 +87,93 @@
     left: 10px;
     z-index: 2;
   }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 12px;
+  }
+}
+
+.way__item {
+  margin-top: 0;
+
+
+  @media (min-width: $desktop-width) {
+    width: 665px;
+
+    &:nth-of-type(1) {
+      padding-left: 30px;
+      padding-right: 120px;
+      order: 3;
+    }
+
+    &:nth-of-type(2) {
+      margin-top: 170px;
+      padding-left: 120px;
+      padding-right: 30px;
+      order: 1;
+    }
+
+    &:nth-of-type(3) {
+      margin-top: 50px;
+      padding-left: 30px;
+      padding-right: 120px;
+      order: 4;
+    }
+
+    &:nth-of-type(4) {
+      margin-top: 93px;
+      margin-bottom: 50px;
+      padding-left: 120px;
+      padding-right: 30px;
+      order: 2;
+    }
+
+    &:nth-of-type(5) {
+      margin-top: 95px;
+      padding-left: 30px;
+      padding-right: 120px;
+      order: 5;
+    }
+
+    &:nth-of-type(even) .way__subtitle {
+      text-align: right;
+
+      &::before {
+        left: auto;
+        right: -45px;
+      }
+
+      &::after {
+        width: 330px;
+        left: auto;
+        right: -45px;
+      }
+    }
+
+    &:nth-of-type(odd) .way__subtitle {
+      padding-left: 0;
+
+      &::before {
+        left: -45px;
+      }
+
+      &::after {
+        width: 330px;
+        left: -31px;
+      }
+    }
+
+    &:nth-of-type(1) .way__subtitle {
+
+      &::after {
+        height: 690px;
+        background-color: transparent;
+        border-left: 2px solid $bg_body-color;
+      }
+    }
+  }
 }
 
 .way__wrapper-text {
@@ -78,6 +187,11 @@
     overflow-y: visible;
     transition: height 2s;
   }
+
+  @media (min-width: $desktop-width) {
+    height: auto;
+    overflow-y: visible;
+  }
 }
 
 .way__text {
@@ -90,12 +204,20 @@
   span {
     font-weight: 700;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
 }
 
 .way__container-btn {
   display: flex;
   width: 100%;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .way__readmore {

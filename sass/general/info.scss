@@ -76,6 +76,10 @@
   @media (min-width: $desktop-width) {
     padding: 15px 0;
     font-size: 18px;
+
+    &--modern {
+      padding: 5px 0;
+    }
   }
 }
 

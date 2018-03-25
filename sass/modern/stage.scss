@@ -26,7 +26,13 @@
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
-  border-bottom: 1px solid rgba(232, 232, 232, 0.1);
+  border-bottom: 2px solid rgba(232, 232, 232, 0.1);
+
+  @media (min-width: $desktop-width) {
+    align-self: stretch;
+    font-size: 18px;
+    padding: 18px 0 35px;
+  }
 }
 
 .stage__subtitle {
@@ -37,6 +43,10 @@
   font-weight: 300;
   text-align: center;
   color: #aaa9a9;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 10px;
+  }
 }
 
 .stage__list {
@@ -47,6 +57,14 @@
 
   &--hidden {
     display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding: 0 140px;
+    flex-direction: row;
+    margin-top: 6px;
+    justify-content: space-between;
   }
 }
 
@@ -76,6 +94,25 @@
   &:active {
     color: $darktext-color;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 25px;
+    }
+  }
+}
+
+.stage__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
 }
 
 .stage__sublist {
@@ -86,14 +123,38 @@
   &--hidden {
     display: none;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 210px;
+
+    &--hidden {
+      display: block;
+    }
+  }
+
+  &--sea {
+    padding-left: 15px;
+  }
+
+  &--usability {
+    padding-left: 20px;
+  }
+
+  &--redesign {
+    padding-left: 30px;
+  }
 }
 
 .stage__item {
   padding: 5px 40px 5px 50px;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 19px;
   font-weight: 300;
   color: #aaa9a9;
+
+  @media (min-width: $desktop-width) {
+    padding: 5px 15px;
+  }
 }
 
 .stage__back {
