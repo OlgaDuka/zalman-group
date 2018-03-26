@@ -487,8 +487,9 @@ ul {
     background-image: url("../images/redesign_bg-mobile.jpg"); }
     @media (min-width: 768px) {
       .content__container--stage {
-        min-height: 375px;
-        background-image: url("../images/redesign_bg-tablet.jpg"); } }
+        min-height: 500px;
+        background-image: url("../images/redesign_bg-tablet.jpg");
+        background-position: center; } }
     @media (min-width: 1330px) {
       .content__container--stage {
         min-height: 650px;
@@ -2967,7 +2968,7 @@ ul {
   @media (min-width: 768px) {
     .stage {
       width: 768px;
-      min-height: 375px; } }
+      min-height: 500px; } }
   @media (min-width: 1330px) {
     .stage {
       width: 1330px;
@@ -3021,7 +3022,10 @@ ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
-            flex-direction: row; } }
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
 
 @media (min-width: 1330px) {
   .stage__wrapper-full {
@@ -3053,7 +3057,7 @@ ul {
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start;
-      margin-right: 20px; }
+      margin: 20 20px 0 40px; }
       .stage__list--hidden {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -3094,7 +3098,7 @@ ul {
     color: #282828; }
   @media (min-width: 768px) {
     .stage__type {
-      margin-bottom: 10px; }
+      margin-bottom: 35px; }
       .stage__type--active {
         font-weight: 400;
         background-color: #5c7979;
@@ -3122,13 +3126,6 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-  @media (min-width: 768px) {
-    .stage__wrapper {
-      width: 600px;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row; } }
   @media (min-width: 1330px) {
     .stage__wrapper {
       width: 1050px;
@@ -3156,13 +3153,7 @@ ul {
   @media (min-width: 768px) {
     .stage__sublist {
       width: 100%;
-      height: 210px;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+      height: auto;
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start;
@@ -3171,13 +3162,7 @@ ul {
   @media (min-width: 1330px) {
     .stage__sublist {
       width: 200px;
-      height: 440px;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap; }
+      height: 440px; }
       .stage__sublist--hidden {
         display: -webkit-box;
         display: -ms-flexbox;
