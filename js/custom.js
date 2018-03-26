@@ -130,10 +130,11 @@
     backBtn.classList.remove('stage__back--hidden');
   };
 
-  if ((widthCurrent < desktopWidth) && (widthCurrent > tabletWidth)) {
+  if ((widthCurrent < desktopWidth) && (widthCurrent >= tabletWidth)) {
     [].forEach.call(types, function (element) {
       element.addEventListener('click', onClickTypeStage);
     });
+    sublists[0].classList.remove('stage__sublist--hidden');
   }
   if (widthCurrent < tabletWidth) {
     [].forEach.call(types, function (element) {
