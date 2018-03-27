@@ -24,6 +24,41 @@
       padding: 58px 120px 60px;
     }
   }
+
+  &--support {
+    padding: 0 20px;
+
+    .info__text {
+      padding: 5px 0 5px;
+
+      span {
+        text-transform: none;
+      }
+    }
+
+    .info__list {
+      padding: 5px 0 20px;
+    }
+
+    .info__item {
+      padding-left: 20px;
+
+      span {
+        font-weight: 700;
+      }
+
+      &::before {
+        background-image: none;
+        width: 8px;
+        height: 8px;
+        border: none;
+        background-color: $gray-color;
+        border-radius: 50%;
+        left: 1px;
+        top: 10px;
+      }
+    }
+  }
 }
 
 .info__container {

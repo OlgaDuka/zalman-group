@@ -51,6 +51,10 @@
   width: 320px;
   margin: 30px auto 0;
   padding-bottom: 25px;
+
+  &--support {
+    padding-bottom: 0;
+  }
 }
 
 .creation__accordion input {
@@ -127,6 +131,25 @@
       background-position: center 45px;
     }
 
+    &--9 {
+      background-image: url('../images/providing.png');
+      background-position: center 45px;
+    }
+
+    &--10 {
+      background-image: url('../images/filling.png');
+      background-position: center 45px;
+    }
+
+    &--11 {
+      background-image: url('../images/update.png');
+      background-position: center 45px;
+    }
+
+    &--12 {
+      background-image: url('../images/help.png');
+      background-position: center 45px;
+    }
   }
 }
 
@@ -142,20 +165,18 @@
 .creation__accordion input:checked ~ .creation__desc {
   transition: height 0.5s ease-in-out;
 
-  &--1 {
+  &--1,
+  &--4,
+  &--5,
+  &--6 {
     height: 190px;
   }
 
-  &--2 {
-    height: 150px;
-  }
-
-  &--3 {
-    height: 150px;
-  }
-
-  &--4 {
-    height: 160px;
+  &--2,
+  &--3,
+  &--7,
+  &--8 {
+    height: 170px;
   }
 }
 
@@ -180,19 +201,43 @@
     margin-top: 80px;
     justify-content: space-between;
   }
-}
 
-.creation__tile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 15px 0 0;
+  .creation__tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0 0;
 
-  @media (min-width: $desktop-width) {
-    margin-right: 30px;
+    @media (min-width: $desktop-width) {
+      margin-right: 30px;
 
-    &:nth-child(4n+4) {
-      margin-right: 0;
+      &:nth-child(4n+4) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &--support {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .creation__tile {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .creation__title {
+        flex-shrink: 0;
+      }
+      .creation__wrapper-text {
+        padding-left: 25px;
+
+        .creation__text {
+          width: 100%;
+        }
+      }
     }
   }
 }

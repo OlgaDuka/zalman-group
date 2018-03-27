@@ -94,11 +94,11 @@
 
   var tabletWidth = 768;
   var desktopWidth = 1330;
-  var stage = document.querySelector('.stage');
-  var backBtn = stage.querySelector('.stage__back');
-  var stagelist = stage.querySelector('.stage__list');
-  var types = stage.querySelectorAll('.stage__type');
-  var sublists = stage.querySelectorAll('.stage__sublist');
+
+  var backBtn = document.querySelector('.stage__back');
+  var stagelist = document.querySelector('.stage__list');
+  var types = document.querySelectorAll('.stage__type');
+  var sublists = document.querySelectorAll('.stage__sublist');
   var widthCurrent = document.documentElement.clientWidth;
 
   var onClickBackBtn = function () {
@@ -140,7 +140,9 @@
     [].forEach.call(types, function (element) {
       element.addEventListener('click', onClickTypeStage);
     });
-    backBtn.addEventListener('click', onClickBackBtn);
+    if (backBtn !== null) {
+      backBtn.addEventListener('click', onClickBackBtn);
+    }
   }
 
 })();
