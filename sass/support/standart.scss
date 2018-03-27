@@ -27,10 +27,31 @@
     font-weight: 700;
     color: $teal-color;
   }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.standart__list {
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    margin-top: 35px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .standart__item {
   margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    width: 327px;
+  }
 }
 
 .standart__subtitle {
@@ -66,16 +87,35 @@
   &--decision::before {
     background-image: url('../images/decision.svg');
   }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    font-weight: 700;
+  }
 }
 
 .standart__text {
   padding: 0 10px;
   font-size: 15px;
   font-weight: 300;
+
+  @media (min-width: $desktop-width) {
+    padding: 0 50px;
+  }
 }
 
 .standart__list-info {
   margin: 20px auto 17px;
   padding-left: 10px;
   padding-right: 10px;
+
+  .info__item span {
+    font-weight: 700;
+    color: $teal-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 40px auto 160px;
+    padding-left: 150px;
+  }
 }

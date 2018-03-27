@@ -225,6 +225,7 @@
     align-items: flex-start;
 
     .creation__tile {
+      margin: 20px 0 0;
       flex-direction: row;
       justify-content: space-between;
 
@@ -238,6 +239,10 @@
           width: 100%;
         }
       }
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 27px;
     }
   }
 }

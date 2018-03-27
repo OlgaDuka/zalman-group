@@ -1308,6 +1308,12 @@ ul {
         border-radius: 50%;
         left: 1px;
         top: 10px; }
+    @media (min-width: 1330px) {
+      .info--support .info__container {
+        padding: 5px 100px 90px; }
+        .info--support .info__container .info__list {
+          padding-top: 8px;
+          padding-left: 195px; } }
 
 .info__container {
   width: 100%;
@@ -1637,6 +1643,7 @@ ul {
         -ms-flex-align: start;
             align-items: flex-start; }
     .creation__container--support .creation__tile {
+      margin: 20px 0 0;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
@@ -1651,6 +1658,9 @@ ul {
         padding-left: 25px; }
         .creation__container--support .creation__tile .creation__wrapper-text .creation__text {
           width: 100%; }
+    @media (min-width: 1330px) {
+      .creation__container--support {
+        margin-top: 27px; } }
 
 .creation__mobile-only {
   display: block; }
@@ -3318,9 +3328,32 @@ ul {
   .standart__title span {
     font-weight: 700;
     color: #057d7d; }
+  @media (min-width: 1330px) {
+    .standart__title {
+      font-size: 18px; } }
+
+@media (min-width: 1330px) {
+  .standart__list {
+    width: 100%;
+    margin-top: 35px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
 
 .standart__item {
   margin-bottom: 20px; }
+  @media (min-width: 1330px) {
+    .standart__item {
+      width: 327px; } }
 
 .standart__subtitle {
   padding: 2px 0 7px 56px;
@@ -3347,16 +3380,30 @@ ul {
     background-image: url("../images/response.svg"); }
   .standart__subtitle--decision::before {
     background-image: url("../images/decision.svg"); }
+  @media (min-width: 1330px) {
+    .standart__subtitle {
+      font-size: 18px;
+      font-weight: 700; } }
 
 .standart__text {
   padding: 0 10px;
   font-size: 15px;
   font-weight: 300; }
+  @media (min-width: 1330px) {
+    .standart__text {
+      padding: 0 50px; } }
 
 .standart__list-info {
   margin: 20px auto 17px;
   padding-left: 10px;
   padding-right: 10px; }
+  .standart__list-info .info__item span {
+    font-weight: 700;
+    color: #057d7d; }
+  @media (min-width: 1330px) {
+    .standart__list-info {
+      margin: 40px auto 160px;
+      padding-left: 150px; } }
 
 .partner {
   width: 320px;
