@@ -59,6 +59,17 @@
       }
     }
 
+    @media (min-width: $tablet-width) {
+      .info__container {
+        padding: 5px 50px 20px;
+
+        .info__list {
+          padding: 0 70px;
+          margin: 20px auto 0;
+        }
+      }
+    }
+
     @media (min-width: $desktop-width) {
       .info__container {
         padding: 5px 100px 90px;

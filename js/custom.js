@@ -134,7 +134,9 @@
     [].forEach.call(types, function (element) {
       element.addEventListener('click', onClickTypeStage);
     });
-    sublists[0].classList.remove('stage__sublist--hidden');
+    if (sublists.length !== 0) {
+      sublists[0].classList.remove('stage__sublist--hidden');
+    }
   }
   if (widthCurrent < tabletWidth) {
     [].forEach.call(types, function (element) {

@@ -184,10 +184,16 @@
   margin-top: 10px;
   font-size: 14px;
   line-height: 20px;
+  font-weight: 300;
   text-align: justify;
 
   @media (min-width: $tablet-width) {
     width: 210px;
+    font-size: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
   }
 }
 
