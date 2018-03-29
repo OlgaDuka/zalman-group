@@ -192,3 +192,11 @@
     padding: 0;
   }
 }
+
+.content__map {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}

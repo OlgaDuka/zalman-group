@@ -54,6 +54,14 @@
     font-size: 12px;
     text-transform: uppercase;
     color: $light-color;
+
+    &:hover {
+      color: $teal-color;
+    }
+
+    &:active {
+      color: $tealgray-color;
+    }
   }
 
   .menu-item:nth-child(2) a {

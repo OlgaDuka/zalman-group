@@ -99,6 +99,22 @@
     }
   }
 
+  &--contact {
+    min-height: 140px;
+    background-image: url('../images/banner_contact-mobile.jpg');
+    background-size: cover;
+
+    @media (min-width: $tablet-width) {
+      min-height: 173px;
+      background-image: url('../images/banner_contact-tablet.jpg');
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 300px;
+      background-image: url('../images/banner_contact-desktop.jpg');
+    }
+  }
+
   &--404 {
     min-height: 50px;
     flex: 0 0 auto;
