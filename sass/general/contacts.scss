@@ -110,6 +110,18 @@
   background-color: $teal-color;
   text-align: center;
 
+  &:hover {
+    color: $light-color;
+    background-color: $tealgray-color;
+    border-color: $tealgray-color;
+  }
+
+  &:active {
+    color: $dark-color;
+    background-color: $gray-color;
+    border-color: $gray-color;
+  }
+
   @media (min-width: $desktop-width) {
     margin-bottom: 14px;
   }

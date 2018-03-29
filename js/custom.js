@@ -3,21 +3,27 @@
   // ----------------------------------------------
   // Меню
   // ----------------------------------------------
-  var header = document.querySelector('.header');
-  var toggle = header.querySelector('.header__toggle');
-  var menu = header.querySelector('.menu');
-  var title = header.querySelector('.header__title');
+  var toggle = document.querySelector('.header__toggle');
+  var menu = document.querySelector('.menu');
+  var title = document.querySelector('.header__title');
   // Закрываем меню, если JS работает
   menu.classList.remove('menu--nojs');
-  menu.classList.add('menu--close');
-  toggle.classList.remove('header__toggle--collapse');
-  title.classList.remove('header__title--opacity');
-  // Переключаем состояние меню по кнопке и меняем высоту хедера
-  toggle.addEventListener('click', function () {
+  if (!menu.classList.contains('menu--404')) {
+    menu.classList.add('menu--close');
+  }
+  // Функция обработки клика на кнопке переключения меню
+  var onClickToggleMenu = function () {
     menu.classList.toggle('menu--close');
     toggle.classList.toggle('header__toggle--collapse');
     title.classList.toggle('header__title--opacity');
-  });
+  };
+
+  if (toggle !== null) {
+    toggle.classList.remove('header__toggle--collapse');
+    title.classList.remove('header__title--opacity');
+    // Обработчик события клика на кнопке переключения меню
+    toggle.addEventListener('click', onClickToggleMenu);
+  }
 
   // ----------------------------------------------
   // Слайдер

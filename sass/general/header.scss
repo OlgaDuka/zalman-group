@@ -98,6 +98,20 @@
       background-image: url('../images/banner_about-desktop.jpg');
     }
   }
+
+  &--404 {
+    min-height: 50px;
+    flex: 0 0 auto;
+    background-image: none;
+    background-color: transparent;
+
+    .header__menu {
+      min-height: 50px;
+      height: 50px;
+      top: 0;
+      background-color: transparent;
+    }
+  }
 }
 
 .header__title {
