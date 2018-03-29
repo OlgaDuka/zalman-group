@@ -3631,21 +3631,6 @@ ul {
     .main__title {
       font-size: 30px; } }
 
-.main__img {
-  padding: 10px; }
-
-.main__intro {
-  display: none; }
-  @media (min-width: 768px) {
-    .main__intro {
-      color: #ffffff;
-      font-size: 16px;
-      font-weight: 400px;
-      line-height: 20px; } }
-  @media (min-width: 1330px) {
-    .main__intro {
-      font-size: 18px; } }
-
 .main__link {
   margin-bottom: 40px;
   padding-top: 7px;
@@ -3674,12 +3659,16 @@ ul {
       font-size: 16px; } }
 
 .main__text {
+  display: none;
   padding: 0 20px;
   color: #ffffff;
-  font-size: 11px;
   font-weight: 300px;
   line-height: 20px;
   text-align: center; }
   @media (min-width: 768px) {
     .main__text {
-      font-size: 14px; } }
+      display: block;
+      font-size: 16px; } }
+  @media (min-width: 1330px) {
+    .main__text {
+      font-size: 18px; } }

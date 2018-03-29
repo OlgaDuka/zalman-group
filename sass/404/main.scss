@@ -16,7 +16,6 @@
 }
 
 .main__title {
-
   color: $light-color;
   font-size: 16px;
   font-weight: 400;
@@ -29,25 +28,6 @@
 
   @media (min-width: $desktop-width) {
     font-size: 30px;
-  }
-}
-
-.main__img {
-  padding: 10px;
-}
-
-.main__intro {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    color: $light-color;
-    font-size: 16px;
-    font-weight: 400px;
-    line-height: 20px;
-  }
-
-  @media (min-width: $desktop-width) {
-    font-size: 18px;
   }
 }
 
@@ -86,14 +66,19 @@
 }
 
 .main__text {
+  display: none;
   padding: 0 20px;
   color: $light-color;
-  font-size: 11px;
   font-weight: 300px;
   line-height: 20px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    font-size: 14px;
+    display: block;
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
   }
 }
