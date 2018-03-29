@@ -44,7 +44,11 @@
       </header>
 
       <main class="main">
-        <img class="main__img" src="images/casper.png" alt="">
+        <picture>
+          <source media="(min-width: 1330px)" srcset="images/casper-desktop.png">
+          <source media="(min-width: 768px)" srcset="images/casper-tablet.png">
+          <img  class="main__img" src="images/casper-mobile.png" srcset="images/casper-mobile.png" alt="Casper">
+        </picture>
         <h1 class="main__title">Ой... Такой страницы еще нет...</h1>
         <p class="main__text">Вернитесь, чтобы узнать больше о том, чем ещё мы занимаемся.</p>
         <a class="main__link" href="index.html">Вернуться</a>
