@@ -198,5 +198,10 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 50px;
   }
 }
