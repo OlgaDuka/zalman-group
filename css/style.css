@@ -1638,7 +1638,26 @@ ul {
   outline-offset: -13px;
   border-top: 1px solid #ffffff;
   -webkit-box-shadow: 0 1px 3px 0 rgba(189, 189, 189, 0.8);
-          box-shadow: 0 1px 3px 0 rgba(189, 189, 189, 0.8); }
+          box-shadow: 0 1px 3px 0 rgba(189, 189, 189, 0.8);
+  position: relative; }
+  .creation__title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    width: 10px;
+    height: 10px;
+    border: none;
+    background-color: transparent;
+    width: 0;
+    height: 0;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #057d7d;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-style: none; }
   @media (min-width: 768px) {
     .creation__title {
       width: 210px;
@@ -1652,6 +1671,8 @@ ul {
       cursor: auto;
       background-repeat: no-repeat;
       background-position: center 41px; }
+      .creation__title::after {
+        display: none; }
       .creation__title--1 {
         background-image: url("../images/idea.png"); }
       .creation__title--2 {
@@ -1703,6 +1724,16 @@ ul {
     height: 190px; }
   .creation__accordion input:checked ~ .creation__desc--2, .creation__accordion input:checked ~ .creation__desc--3, .creation__accordion input:checked ~ .creation__desc--7, .creation__accordion input:checked ~ .creation__desc--8 {
     height: 170px; }
+
+.creation__accordion input:checked ~ .creation__title::after {
+  width: 0;
+  height: 0;
+  border-width: 7px;
+  border-style: solid;
+  border-color: #057d7d;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-style: none; }
 
 .creation__text {
   margin-top: 10px;
@@ -3145,8 +3176,8 @@ ul {
 
 .way__collapse {
   display: none;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background-color: #057d7d;
   border: transparent;
@@ -3165,6 +3196,7 @@ ul {
   right: 0;
   bottom: 0;
   margin: auto;
+  bottom: 2px;
   width: 0;
   height: 0;
   border-width: 7px;

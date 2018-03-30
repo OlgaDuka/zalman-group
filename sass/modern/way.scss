@@ -250,8 +250,8 @@
 
 .way__collapse {
   display: none;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background-color: $teal-color;
   border: transparent;
@@ -270,6 +270,7 @@
 
 .way__arrow-up {
   @include zero-centered;
+  bottom: 2px;
   @include triangle-top(7px, $light-color);
 
   &:active {

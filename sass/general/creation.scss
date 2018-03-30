@@ -79,6 +79,20 @@
   outline-offset: -13px;
   border-top: 1px solid $light-color;
   box-shadow: 0 1px 3px 0 rgba(189, 189, 189, 0.8);
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    width: 10px;
+    height: 10px;
+    border: none;
+    background-color: transparent;
+    @include triangle-bottom(7px, $teal-color);
+  }
 
   @media (min-width: $tablet-width) {
     width: 210px;
@@ -92,6 +106,10 @@
     cursor: auto;
     background-repeat: no-repeat;
     background-position: center 41px;
+
+    &::after {
+      display: none;
+    }
 
     &--1 {
       background-image: url('../images/idea.png');
@@ -177,6 +195,13 @@
   &--7,
   &--8 {
     height: 170px;
+  }
+}
+
+.creation__accordion input:checked ~ .creation__title {
+
+  &::after {
+    @include triangle-top(7px, $teal-color);
   }
 }
 
