@@ -3903,22 +3903,22 @@ ul {
     bottom: -16px;
     -webkit-animation-name: flash-reverse;
             animation-name: flash-reverse;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    -webkit-animation-duration: 8s;
+            animation-duration: 8s;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite; }
   .map__marker--1::before, .map__marker--1::after {
     -webkit-animation-delay: 0;
             animation-delay: 0; }
   .map__marker--2::before, .map__marker--2::after {
-    -webkit-animation-delay: 0.5s;
-            animation-delay: 0.5s; }
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s; }
   .map__marker--3::before, .map__marker--3::after {
-    -webkit-animation-delay: 1s;
-            animation-delay: 1s; }
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s; }
   .map__marker--4::before, .map__marker--4::after {
-    -webkit-animation-delay: 1.5s;
-            animation-delay: 1.5s; }
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s; }
   @media (min-width: 1330px) {
     .map__marker--1 {
       top: 150px;
