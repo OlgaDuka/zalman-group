@@ -3179,7 +3179,7 @@ ul {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background-color: #057d7d;
+  background-color: transparent;
   border: transparent;
   cursor: pointer;
   outline: none;
@@ -3196,12 +3196,11 @@ ul {
   right: 0;
   bottom: 0;
   margin: auto;
-  bottom: 2px;
   width: 0;
   height: 0;
-  border-width: 7px;
+  border-width: 10px;
   border-style: solid;
-  border-color: #ffffff;
+  border-color: #057d7d;
   border-right-color: transparent;
   border-left-color: transparent;
   border-top-style: none; }

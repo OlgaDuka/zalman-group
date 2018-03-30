@@ -253,7 +253,7 @@
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background-color: $teal-color;
+  background-color: transparent;
   border: transparent;
   cursor: pointer;
   outline: none;
@@ -270,8 +270,7 @@
 
 .way__arrow-up {
   @include zero-centered;
-  bottom: 2px;
-  @include triangle-top(7px, $light-color);
+  @include triangle-top(10px, $teal-color);
 
   &:active {
     @include triangle-top(7px, $darktext-color);
