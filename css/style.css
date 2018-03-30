@@ -619,7 +619,8 @@ ul {
     line-height: 30px;
     color: #282828;
     text-align: left;
-    position: relative; }
+    position: relative;
+    z-index: 1; }
     .content__title--portfolio::after {
       content: "";
       width: 100%;
@@ -840,7 +841,8 @@ ul {
   transition: 3s;
   position: absolute;
   top: 70px;
-  left: 0; }
+  left: 0;
+  z-index: 100; }
   @media (min-width: 768px) {
     .header__menu {
       margin: 0 auto;
@@ -848,9 +850,7 @@ ul {
       top: 90px;
       left: 50%;
       -webkit-transform: translateX(-50%);
-              transform: translateX(-50%);
-      -webkit-transition: 2s;
-      transition: 2s; } }
+              transform: translateX(-50%); } }
   @media (min-width: 1330px) {
     .header__menu {
       height: 480px;
