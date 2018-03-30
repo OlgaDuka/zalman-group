@@ -107,7 +107,7 @@
 .menu__second-list {
   width: $panel-width;
   padding-bottom: 20px;
-  padding-top: 15px;
+  padding-top: 20px;
   flex-direction: column;
   align-items: flex-start;
   flex-wrap: nowrap;
@@ -171,13 +171,21 @@
   .menu-item a {
     color: $light-color;
     text-transform: uppercase;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   .menu-item {
     margin: 0;
     padding-left: 20px;
-    min-height: 40px;
-    line-height: 40px;
+    min-height: 51px;
+    line-height: 51px;
 
     @media (min-width: $desktop-width) {
       padding: 40px 0 0;
