@@ -87,7 +87,7 @@
     left: -21px;
     bottom: -16px;
     animation-name: flash-reverse;
-    animation-duration: 8s;
+    animation-duration: 2.4s;
     animation-iteration-count: infinite;
   }
 
@@ -98,17 +98,17 @@
 
   &--2::before,
   &--2::after {
-    animation-delay: 2s;
+    animation-delay: 1.2s;
   }
 
   &--3::before,
   &--3::after {
-    animation-delay: 6s;
+    animation-delay: 1.8s;
   }
 
   &--4::before,
   &--4::after {
-    animation-delay: 4s;
+    animation-delay: 0.6s;
   }
 
   @media (min-width: $desktop-width) {
