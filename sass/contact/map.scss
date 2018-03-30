@@ -1,0 +1,147 @@
+.map {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    display: flex;
+    min-height: 289px;
+    flex-direction: column;
+    position: relative;
+    background-image: url('../images/map-tablet.jpg');
+    background-size: cover;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    min-height: 500px;
+    background-image: url('../images/map-desktop.jpg');
+  }
+
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash-reverse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.map__marker {
+  color: $light-color;
+  font-size: 13px;
+  position: absolute;
+  z-index: 2;
+
+  &--1 {
+    top: 85px;
+    left: 498px;
+  }
+
+  &--2 {
+    top: 140px;
+    left: 520px;
+  }
+
+  &--3 {
+    top: 187px;
+    left: 490px;
+  }
+
+  &--4 {
+    top: 157px;
+    left: 130px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: $teal-color;
+    position: absolute;
+    left: -15px;
+    bottom: -10px;
+    animation-name: flash;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid $teal-color;
+    position: absolute;
+    left: -21px;
+    bottom: -16px;
+    animation-name: flash-reverse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @media (min-width: $desktop-width) {
+    &--1 {
+      top: 150px;
+      left: 865px;
+    }
+
+    &--2 {
+      top: 255px;
+      left: 900px;
+    }
+
+    &--3 {
+      top: 335px;
+      left: 850px;
+    }
+
+    &--4 {
+      top: 275px;
+      left: 230px;
+    }
+
+    &::before {
+      width: 13px;
+      height: 13px;
+      left: -25px;
+      bottom: -10px;
+    }
+
+    &::after {
+      width: 31px;
+      height: 31px;
+      left: -36px;
+      bottom: -21px;
+    }
+  }
+
+}
+
+.map__img {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    padding-bottom: 30px;
+    z-index: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 50px;
+  }
+}

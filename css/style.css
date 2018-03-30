@@ -660,16 +660,6 @@ ul {
       line-height: 41px;
       padding: 0; } }
 
-.content__map {
-  display: none; }
-  @media (min-width: 768px) {
-    .content__map {
-      display: block;
-      padding-bottom: 30px; } }
-  @media (min-width: 1330px) {
-    .content__map {
-      padding-bottom: 50px; } }
-
 .header {
   width: 100%;
   min-height: 480px;
@@ -3826,6 +3816,137 @@ ul {
   @media (min-width: 1330px) {
     .link__email {
       font-size: 18px; } }
+
+.map {
+  display: none; }
+  @media (min-width: 768px) {
+    .map {
+      width: 768px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      min-height: 289px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      position: relative;
+      background-image: url("../images/map-tablet.jpg");
+      background-size: cover; } }
+  @media (min-width: 1330px) {
+    .map {
+      width: 1330px;
+      min-height: 500px;
+      background-image: url("../images/map-desktop.jpg"); } }
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes flash {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes flash-reverse {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes flash-reverse {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.map__marker {
+  color: #ffffff;
+  font-size: 13px;
+  position: absolute;
+  z-index: 2; }
+  .map__marker--1 {
+    top: 85px;
+    left: 498px; }
+  .map__marker--2 {
+    top: 140px;
+    left: 520px; }
+  .map__marker--3 {
+    top: 187px;
+    left: 490px; }
+  .map__marker--4 {
+    top: 157px;
+    left: 130px; }
+  .map__marker::before {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #057d7d;
+    position: absolute;
+    left: -15px;
+    bottom: -10px;
+    -webkit-animation-name: flash;
+            animation-name: flash;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+  .map__marker::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #057d7d;
+    position: absolute;
+    left: -21px;
+    bottom: -16px;
+    -webkit-animation-name: flash-reverse;
+            animation-name: flash-reverse;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+  @media (min-width: 1330px) {
+    .map__marker--1 {
+      top: 150px;
+      left: 865px; }
+    .map__marker--2 {
+      top: 255px;
+      left: 900px; }
+    .map__marker--3 {
+      top: 335px;
+      left: 850px; }
+    .map__marker--4 {
+      top: 275px;
+      left: 230px; }
+    .map__marker::before {
+      width: 13px;
+      height: 13px;
+      left: -25px;
+      bottom: -10px; }
+    .map__marker::after {
+      width: 31px;
+      height: 31px;
+      left: -36px;
+      bottom: -21px; } }
+
+.map__img {
+  display: none; }
+  @media (min-width: 768px) {
+    .map__img {
+      display: block;
+      padding-bottom: 30px;
+      z-index: 1; } }
+  @media (min-width: 1330px) {
+    .map__img {
+      padding-bottom: 50px; } }
 
 .main {
   width: 320px;
