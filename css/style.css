@@ -3889,13 +3889,7 @@ ul {
     background-color: #057d7d;
     position: absolute;
     left: -15px;
-    bottom: -10px;
-    -webkit-animation-name: flash;
-            animation-name: flash;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite; }
+    bottom: -10px; }
   .map__marker::after {
     content: "";
     display: block;
