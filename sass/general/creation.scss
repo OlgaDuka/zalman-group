@@ -61,6 +61,24 @@
   display: none;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
 .creation__title {
   width: 320px;
   height: 70px;
@@ -91,7 +109,10 @@
     height: 10px;
     border: none;
     background-color: transparent;
-    @include triangle-bottom(7px, $teal-color);
+    animation-name: spin-reverse;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    @include triangle-bottom(8px, $teal-color);
   }
 
   @media (min-width: $tablet-width) {
@@ -201,7 +222,10 @@
 .creation__accordion input:checked ~ .creation__title {
 
   &::after {
-    @include triangle-top(7px, $teal-color);
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    @include triangle-bottom(8px, $teal-color);
   }
 }
 

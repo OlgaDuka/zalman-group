@@ -19,16 +19,7 @@
 
 }
 
-@keyframes flash {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes flash-reverse {
+@keyframes pulse {
   0% {
     opacity: 1;
   }
@@ -86,27 +77,23 @@
     position: absolute;
     left: -21px;
     bottom: -16px;
-    animation-name: flash-reverse;
+    animation-name: pulse;
     animation-duration: 2.4s;
     animation-iteration-count: infinite;
   }
 
-  &--1::before,
   &--1::after {
     animation-delay: 0;
   }
 
-  &--2::before,
   &--2::after {
     animation-delay: 1.2s;
   }
 
-  &--3::before,
   &--3::after {
     animation-delay: 1.8s;
   }
 
-  &--4::before,
   &--4::after {
     animation-delay: 0.6s;
   }

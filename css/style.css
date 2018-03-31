@@ -1610,6 +1610,38 @@ ul {
 .creation__accordion input {
   display: none; }
 
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); } }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); } }
+
+@-webkit-keyframes spin-reverse {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); } }
+
+@keyframes spin-reverse {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); } }
+
 .creation__title {
   width: 320px;
   height: 70px;
@@ -1640,9 +1672,15 @@ ul {
     height: 10px;
     border: none;
     background-color: transparent;
+    -webkit-animation-name: spin-reverse;
+            animation-name: spin-reverse;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     width: 0;
     height: 0;
-    border-width: 7px;
+    border-width: 8px;
     border-style: solid;
     border-color: #057d7d;
     border-left-color: transparent;
@@ -1716,14 +1754,20 @@ ul {
     height: 170px; }
 
 .creation__accordion input:checked ~ .creation__title::after {
+  -webkit-animation-name: spin;
+          animation-name: spin;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   width: 0;
   height: 0;
-  border-width: 7px;
+  border-width: 8px;
   border-style: solid;
   border-color: #057d7d;
-  border-right-color: transparent;
   border-left-color: transparent;
-  border-top-style: none; }
+  border-right-color: transparent;
+  border-bottom-style: none; }
 
 .creation__text {
   margin-top: 10px;
@@ -3839,25 +3883,13 @@ ul {
       min-height: 500px;
       background-image: url("../images/map-desktop.jpg"); } }
 
-@-webkit-keyframes flash {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes flash {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@-webkit-keyframes flash-reverse {
+@-webkit-keyframes pulse {
   0% {
     opacity: 1; }
   100% {
     opacity: 0; } }
 
-@keyframes flash-reverse {
+@keyframes pulse {
   0% {
     opacity: 1; }
   100% {
@@ -3901,22 +3933,22 @@ ul {
     position: absolute;
     left: -21px;
     bottom: -16px;
-    -webkit-animation-name: flash-reverse;
-            animation-name: flash-reverse;
+    -webkit-animation-name: pulse;
+            animation-name: pulse;
     -webkit-animation-duration: 2.4s;
             animation-duration: 2.4s;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite; }
-  .map__marker--1::before, .map__marker--1::after {
+  .map__marker--1::after {
     -webkit-animation-delay: 0;
             animation-delay: 0; }
-  .map__marker--2::before, .map__marker--2::after {
+  .map__marker--2::after {
     -webkit-animation-delay: 1.2s;
             animation-delay: 1.2s; }
-  .map__marker--3::before, .map__marker--3::after {
+  .map__marker--3::after {
     -webkit-animation-delay: 1.8s;
             animation-delay: 1.8s; }
-  .map__marker--4::before, .map__marker--4::after {
+  .map__marker--4::after {
     -webkit-animation-delay: 0.6s;
             animation-delay: 0.6s; }
   @media (min-width: 1330px) {
