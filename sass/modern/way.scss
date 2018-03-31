@@ -41,6 +41,10 @@
   flex-direction: column;
   align-content: space-between;
 
+  input {
+    display: none;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: column;
@@ -53,12 +57,14 @@
 
 .way__subtitle {
   margin: 19px 0 20px;
+  display: block;
   padding-left: 40px;
   font-size: 15px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
   position: relative;
+  cursor: pointer;
 
   &::before {
     content: attr(data-number);
@@ -88,10 +94,15 @@
     z-index: 2;
   }
 
-  @media (min-width: $desktop-width) {
-    font-size: 18px;
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
     margin-top: 15px;
     margin-bottom: 12px;
+    cursor: default;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
   }
 }
 
@@ -177,19 +188,35 @@
 
 .way__wrapper-text {
   height: 160px;
+  margin-bottom: 10px;
   overflow-y: hidden;
-  transition: height 2s;
+  transition: height 0.5s ease-in-out;
   position: relative;
 
-  &--open {
+  @media (min-width: $tablet-width) {
     height: auto;
     overflow-y: visible;
-    transition: height 2s;
+  }
+}
+
+.way__list input:checked ~ .way__wrapper-text {
+  transition: height 0.5s ease-in-out;
+
+  &--1 {
+    height: 440px;
   }
 
-  @media (min-width: $desktop-width) {
-    height: auto;
-    overflow-y: visible;
+  &--4 {
+    height: 340px;
+  }
+
+  &--2,
+  &--3 {
+    height: 380px;
+  }
+
+  &--5 {
+    height: 500px;
   }
 }
 
@@ -209,19 +236,27 @@
   }
 }
 
-.way__container-btn {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
 
-  @media (min-width: $tablet-width) {
-    display: none;
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }
 
 .way__readmore {
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 400;
   padding: 12px 0 0;
   border-color: transparent;
   color: $teal-color;
@@ -229,10 +264,21 @@
   text-decoration: underline;
   cursor: pointer;
   outline: none;
+  position: relative;
+
+  &::before {
+    content: "Читать далее";
+  }
 
   &::after {
-    content: " >";
-    font-weight: 700;
+    content: "";
+    @include zero-centered;
+    right: -130px;
+    top: 15px;
+    animation-name: spin-reverse;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    @include triangle-bottom(7px, $teal-color);
   }
 
   &:hover {
@@ -243,12 +289,31 @@
     opacity: 0.3;
   }
 
-  &--hidden {
-    color: transparent;
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
-.way__collapse {
+.way__list input:checked ~ .way__readmore {
+
+  &::before {
+    content: "Свернуть текст";
+  }
+
+  &::after {
+    content: "";
+    @include zero-centered;
+    right: -130px;
+    top: 15px;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    @include triangle-bottom(7px, $teal-color);
+  }
+}
+
+
+/* .way__collapse {
   display: none;
   width: 22px;
   height: 22px;
@@ -275,4 +340,4 @@
   &:active {
     @include triangle-top(7px, $darktext-color);
   }
-}
+} */

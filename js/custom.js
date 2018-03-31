@@ -65,36 +65,6 @@
   }
 
   // -----------------------------------------------
-  // Показать текст
-  // ------------------------------------------------
-
-  var readmoreBtns = document.querySelectorAll('.way__readmore');
-  var wrappers = document.querySelectorAll('.way__wrapper-text');
-  var collapseBtns = document.querySelectorAll('.way__collapse');
-
-  var onClickButtonReadmore = function (evt) {
-    var currentElement = [].indexOf.call(readmoreBtns, evt.currentTarget);
-    evt.currentTarget.classList.add('way__readmore--hidden');
-    wrappers[currentElement].classList.add('way__wrapper-text--open');
-    collapseBtns[currentElement].classList.add('way__collapse--visible');
-  };
-
-  var onClickButtonCollapse = function (event) {
-    var currentElement = [].indexOf.call(collapseBtns, event.currentTarget);
-    readmoreBtns[currentElement].classList.remove('way__readmore--hidden');
-    wrappers[currentElement].classList.remove('way__wrapper-text--open');
-    event.currentTarget.classList.remove('way__collapse--visible');
-  };
-
-  [].forEach.call(readmoreBtns, function (element) {
-    element.addEventListener('click', onClickButtonReadmore);
-  });
-
-  [].forEach.call(collapseBtns, function (element) {
-    element.addEventListener('click', onClickButtonCollapse);
-  });
-
-  // -----------------------------------------------
   // Показать список этапов по направлению работ
   // ------------------------------------------------
 
