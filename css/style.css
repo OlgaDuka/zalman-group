@@ -3034,6 +3034,8 @@ ul {
           flex-direction: column;
   -ms-flex-line-pack: justify;
       align-content: space-between; }
+  .way__list input {
+    display: none; }
   @media (min-width: 1330px) {
     .way__list {
       display: -webkit-box;
@@ -3051,12 +3053,14 @@ ul {
 
 .way__subtitle {
   margin: 19px 0 20px;
+  display: block;
   padding-left: 40px;
   font-size: 15px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .way__subtitle::before {
     content: attr(data-number);
     width: 30px;
@@ -3081,11 +3085,15 @@ ul {
     top: 20px;
     left: 10px;
     z-index: 2; }
+  @media (min-width: 768px) {
+    .way__subtitle {
+      font-size: 16px;
+      margin-top: 15px;
+      margin-bottom: 12px;
+      cursor: default; } }
   @media (min-width: 1330px) {
     .way__subtitle {
-      font-size: 18px;
-      margin-top: 15px;
-      margin-bottom: 12px; } }
+      font-size: 18px; } }
 
 .way__item {
   margin-top: 0; }
@@ -3150,19 +3158,27 @@ ul {
 
 .way__wrapper-text {
   height: 160px;
+  margin-bottom: 10px;
   overflow-y: hidden;
-  -webkit-transition: height 2s;
-  transition: height 2s;
+  -webkit-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
   position: relative; }
-  .way__wrapper-text--open {
-    height: auto;
-    overflow-y: visible;
-    -webkit-transition: height 2s;
-    transition: height 2s; }
-  @media (min-width: 1330px) {
+  @media (min-width: 768px) {
     .way__wrapper-text {
       height: auto;
       overflow-y: visible; } }
+
+.way__list input:checked ~ .way__wrapper-text {
+  -webkit-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out; }
+  .way__list input:checked ~ .way__wrapper-text--1 {
+    height: 440px; }
+  .way__list input:checked ~ .way__wrapper-text--4 {
+    height: 340px; }
+  .way__list input:checked ~ .way__wrapper-text--2, .way__list input:checked ~ .way__wrapper-text--3 {
+    height: 380px; }
+  .way__list input:checked ~ .way__wrapper-text--5 {
+    height: 500px; }
 
 .way__text {
   margin: 0;
@@ -3176,39 +3192,96 @@ ul {
     .way__text {
       font-size: 16px; } }
 
-.way__container-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-  @media (min-width: 768px) {
-    .way__container-btn {
-      display: none; } }
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); } }
+
+@keyframes spin-reverse {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); } }
 
 .way__readmore {
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 400;
   padding: 12px 0 0;
   border-color: transparent;
   color: #057d7d;
   background-color: transparent;
   text-decoration: underline;
   cursor: pointer;
-  outline: none; }
+  outline: none;
+  position: relative; }
+  .way__readmore::before {
+    content: "Читать далее"; }
   .way__readmore::after {
-    content: " >";
-    font-weight: 700; }
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    right: -130px;
+    top: 15px;
+    -webkit-animation-name: spin-reverse;
+            animation-name: spin-reverse;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    width: 0;
+    height: 0;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #057d7d;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-style: none; }
   .way__readmore:hover {
     opacity: 0.6; }
   .way__readmore:active {
     opacity: 0.3; }
-  .way__readmore--hidden {
-    color: transparent; }
+  @media (min-width: 768px) {
+    .way__readmore {
+      display: none; } }
 
-.way__collapse {
+.way__list input:checked ~ .way__readmore::before {
+  content: "Свернуть текст"; }
+
+.way__list input:checked ~ .way__readmore::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  right: -130px;
+  top: 15px;
+  -webkit-animation-name: spin;
+          animation-name: spin;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  width: 0;
+  height: 0;
+  border-width: 7px;
+  border-style: solid;
+  border-color: #057d7d;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-style: none; }
+
+/* .way__collapse {
   display: none;
   width: 22px;
   height: 22px;
@@ -3217,37 +3290,25 @@ ul {
   border: transparent;
   cursor: pointer;
   outline: none;
-  position: relative; }
-  .way__collapse:hover {
-    opacity: 0.6; }
-  .way__collapse--visible {
-    display: block; }
+  position: relative;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &--visible {
+    display: block;
+  }
+}
 
 .way__arrow-up {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: 0;
-  height: 0;
-  border-width: 10px;
-  border-style: solid;
-  border-color: #057d7d;
-  border-right-color: transparent;
-  border-left-color: transparent;
-  border-top-style: none; }
-  .way__arrow-up:active {
-    width: 0;
-    height: 0;
-    border-width: 7px;
-    border-style: solid;
-    border-color: #282828;
-    border-right-color: transparent;
-    border-left-color: transparent;
-    border-top-style: none; }
+  @include zero-centered;
+  @include triangle-top(10px, $teal-color);
 
+  &:active {
+    @include triangle-top(7px, $darktext-color);
+  }
+} */
 .stage {
   width: 320px;
   padding: 2px 10px;
