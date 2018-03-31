@@ -44,7 +44,7 @@
       padding-left: 20px;
 
       span {
-        font-weight: 700;
+        font-weight: 400;
       }
 
       &::before {
@@ -126,7 +126,7 @@
   text-align: justify;
 
   span {
-    font-weight: 700;
+    font-weight: 400;
     text-transform: uppercase;
   }
 
@@ -208,7 +208,7 @@
 
 .info__link {
   color: $teal-color;
-  font-weight: 700;
+  font-weight: 400;
 
   &:hover {
     text-decoration: underline;
