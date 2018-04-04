@@ -25,7 +25,13 @@
     }
   }
 
-  &--support {
+  &--mobile {
+    @media (min-width: $desktop-width) {
+      padding: 58px 120px 10px;
+    }
+  }
+
+  &--support  {
     padding: 0 20px;
 
     .info__text {
