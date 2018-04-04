@@ -3706,6 +3706,17 @@ ul {
       margin: 40px auto 160px;
       padding-left: 150px; } }
 
+.reason__title {
+  position: relative; }
+  .reason__title::after {
+    content: attr(data-text);
+    font-size: 14px;
+    font-weight: 300;
+    width: 200px;
+    position: absolute;
+    top: 30px;
+    left: 0; }
+
 .partner {
   width: 320px;
   margin: 0 auto;

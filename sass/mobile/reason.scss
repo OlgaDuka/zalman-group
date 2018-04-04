@@ -1,0 +1,13 @@
+.reason__title {
+  position: relative;
+
+  &::after {
+    content: attr(data-text);
+    font-size: 14px;
+    font-weight: 300;
+    width: 200px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+  }
+}
