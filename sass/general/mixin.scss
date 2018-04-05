@@ -1,0 +1,74 @@
+//--------------------------------------------
+// Центровка
+//--------------------------------------------
+@mixin zero-centered {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+//--------------------------------------------
+// Стрелки с помощью треугольников
+//--------------------------------------------
+@mixin triangle($size, $color) {
+  width: 0;
+  height: 0;
+  border-width: $size;
+  border-style: solid;
+  border-color: $color;
+}
+
+@mixin triangle-top($size, $color) {
+  @include triangle($size, $color);
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-style: none;
+}
+
+@mixin triangle-bottom($size, $color) {
+  @include triangle($size, $color);
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-style: none;
+}
+
+//--------------------------------------------------------------------
+// Зеленые кружки с цифрами
+//--------------------------------------------------------------------
+
+@mixin green-number($top, $left) {
+  &::before {
+    content: attr(data-number);
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: 30px;
+    height: 30px;
+    color: $light-color;
+    text-align: center;
+    font-size: 19px;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: $teal-color;
+    z-index: 100;
+  }
+}
+
+//--------------------------------------------------------------------
+// Наклонная линия
+//--------------------------------------------------------------------
+
+@mixin line-deg($width, $height, $top, $left, $deg, $color-line) {
+  &::after {
+    content: "";
+    width: $width;
+    height: $height;
+    position: absolute;
+    top: $top;
+    left: $left;
+    background-image: linear-gradient($deg, transparent 50%, $color-line 50%, transparent 51%);
+    background-repeat: no-repeat;
+  }
+}

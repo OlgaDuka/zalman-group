@@ -1,0 +1,149 @@
+.step {
+  width: $panel-width;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 810px;
+  color: $light-color;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    min-height: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    min-height: 810px;
+  }
+}
+
+.step__title {
+  margin: 20px 0;
+  padding: 0 50px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+
+  span {
+    color: $teal-color;
+    font-weight: 400;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 30px 0;
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 63px;
+    margin-bottom: 80px;
+    font-size: 18px;
+  }
+}
+
+.step__list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 1px;
+    height: 600px;
+    border-left: 2px solid $bg_body-color;
+    position: absolute;
+    top: 20px;
+    left: 25px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 70px;
+
+    &::after {
+      height: 430px;
+      left: 95px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding: 0 50px 0 0;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.step__item {
+  padding: 20px 5px 20px 60px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
+  position: relative;
+
+  span {
+    text-transform: uppercase;
+  }
+
+  @include green-number(20px, 10px);
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    width: 520px;
+    padding: 20px 0 30px;
+
+    &::before {
+      top: 75px;
+    }
+
+    &::after {
+      content: "";
+      width: 230px;
+      height: 120px;
+      position: absolute;
+      top: 75px;
+      left: 530px;
+      background-image: linear-gradient(23deg, transparent 50%, $bg_main-color 50%, transparent 51%);
+      background-repeat: no-repeat;
+    }
+
+    &:nth-of-type(1),
+    &:nth-of-type(3),
+    &:nth-of-type(5), {
+      align-self: flex-start;
+      text-align: right;
+
+      &::before {
+        left: 520px;
+      }
+
+      @include line-deg(230px, 120px, 75px, 530px, 23deg, $bg_main-color);
+    }
+
+    &:nth-of-type(2),
+    &:nth-of-type(4),
+    &:nth-of-type(6), {
+      align-self: flex-end;
+      text-align: left;
+
+      &::before {
+        left: 0;
+      }
+
+      @include line-deg(230px, 120px, 75px, -210px, 157deg, $bg_main-color)
+    }
+
+    &:nth-of-type(6)::after {
+      display: none;
+    }
+  }
+}

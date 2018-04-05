@@ -66,22 +66,7 @@
   position: relative;
   cursor: pointer;
 
-  &::before {
-    content: attr(data-number);
-    width: 30px;
-    height: 26px;
-    padding-top: 4px;
-    font-size: 18px;
-    font-weight: 700;
-    text-align: center;
-    border-radius: 50%;
-    background-color: $teal-color;
-    color: $light-color;
-    position: absolute;
-    top: 5px;
-    left: 0;
-    z-index: 3;
-  }
+  @include green-number(5px, 0);
 
   &::after {
     content: "";

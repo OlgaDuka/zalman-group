@@ -27,7 +27,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 130px;
+    padding-bottom: 200px;
     justify-content: center;
   }
 }
@@ -61,20 +61,7 @@
   display: flex;
   position: relative;
 
-  &::before {
-    content: attr(data-number);
-    position: absolute;
-    top: 25px;
-    left: 14px;
-    width: 30px;
-    height: 30px;
-    color: $light-color;
-    text-align: center;
-    font-size: 19px;
-    line-height: 30px;
-    border-radius: 50%;
-    background-color: $teal-color;
-  }
+  @include green-number(25px, 14px);
 
   @media (min-width: $tablet-width) {
     width: 360px;

@@ -35,6 +35,21 @@
       background-image: url('../images/redesign_bg-desktop.jpg');
     }
   }
+
+  &--step {
+    background-image: url('../images/step_bg-mobile.jpg');
+
+    @media (min-width: $tablet-width) {
+      min-height: 500px;
+      background-image: url('../images/step_bg-tablet.jpg');
+      background-position: center;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 810px;
+      background-image: url('../images/step_bg-desktop.jpg');
+    }
+  }
 }
 
 .content__block {

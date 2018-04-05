@@ -9,6 +9,7 @@ Version: 1.0
 
 @import "general/normalize";
 @import "general/variables";
+@import "general/mixin";
 @import "general/fonts";
 @import "general/scaffolding";
 @import "general/content";
@@ -28,6 +29,7 @@ Version: 1.0
 @import "modern/stage";
 @import "support/standart";
 @import "mobile/reason";
+@import "mobile/step";
 @import "about/partner";
 @import "contact/link";
 @import "contact/map";
