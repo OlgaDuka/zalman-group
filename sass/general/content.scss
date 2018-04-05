@@ -102,6 +102,18 @@
       padding-top: 118px;
     }
   }
+
+  &--mobile-app {
+    padding-top: 37px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 85px;
+    }
+  }
 }
 
 .content__page-link {

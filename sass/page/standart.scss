@@ -48,6 +48,7 @@
     padding-right: 100px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
   }
 }
 
@@ -68,6 +69,11 @@
 
   @media (min-width: $desktop-width) {
     width: 327px;
+
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      align-self: flex-start;
+    }
   }
 }
 
@@ -105,6 +111,28 @@
     background-image: url('../images/decision.svg');
   }
 
+  &--applied,
+  &--business,
+  &--image {
+      padding-right: 80px;
+  }
+
+  &--applied::before {
+    background-image: url('../images/applied.png');
+  }
+
+  &--business {
+    color: $teal-color;
+
+    &::before {
+      background-image: url('../images/business.png');
+    }
+  }
+
+  &--image::before {
+      background-image: url('../images/image.png');
+  }
+
   @media (min-width: $desktop-width) {
     font-size: 18px;
     font-weight: 700;
@@ -138,5 +166,21 @@
   @media (min-width: $desktop-width) {
     margin: 40px auto 160px;
     padding-left: 150px;
+  }
+
+  &--mobile-app {
+
+    @media (min-width: $desktop-width) {
+      padding-left: 20px;
+      margin: 40px auto 60px;
+    }
+  }
+}
+
+.standart--desctop-only {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
   }
 }

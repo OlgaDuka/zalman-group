@@ -15,12 +15,13 @@
 }
 
 .reason__container {
-  margin-top: 43px;
+  margin-top: 26px;
   display: flex;
   flex-direction: column;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 80px;
+    margin-top: 43px;
+    padding-bottom: 0;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -33,7 +34,7 @@
 }
 
 .reason__title {
-  padding: 15px 0;
+  padding: 0 20px;
   text-align: center;
   font-size: 15px;
   font-weight: 300;
@@ -57,9 +58,13 @@
 }
 
 .reason__tile {
-  margin: 0 10px 70px 15px;
+  margin: 0 10px 71px 20px;
   display: flex;
   position: relative;
+
+  &:last-of-type {
+    margin-bottom: 60px;
+  }
 
   @include green-number(25px, 14px);
 
