@@ -3683,21 +3683,10 @@ ul {
   margin-bottom: 20px; }
   @media (min-width: 768px) {
     .standart__item {
-      width: 300px;
-      /*    &:nth-of-type(2) {
-      align-self: center;
-    }
-
-    &:nth-of-type(3) {
-      align-self: flex-end;
-    } */ } }
+      width: 300px; } }
   @media (min-width: 1330px) {
     .standart__item {
-      width: 327px;
-      /*  &:nth-of-type(2),
-    &:nth-of-type(3) {
-      align-self: flex-start;
-    } */ } }
+      width: 327px; } }
 
 .standart__subtitle {
   padding: 2px 0 7px 56px;
@@ -3725,7 +3714,7 @@ ul {
   .standart__subtitle--decision::before {
     background-image: url("../images/decision.svg"); }
   .standart__subtitle--applied, .standart__subtitle--business, .standart__subtitle--image {
-    padding-right: 80px; }
+    padding-right: 20px; }
   .standart__subtitle--applied::before {
     background-image: url("../images/applied.png"); }
   .standart__subtitle--business {
@@ -3745,7 +3734,7 @@ ul {
   font-weight: 300; }
   @media (min-width: 1330px) {
     .standart__text {
-      padding: 0 50px; } }
+      padding: 0 40px; } }
 
 .standart__list-info {
   margin: 20px auto 17px;
