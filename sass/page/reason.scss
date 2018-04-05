@@ -168,7 +168,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid $dark-color;
+    background-color: #f0f0f0;
+    border: 3px solid $tealgray-color;
     border-radius: 7px;
     position: relative;
 
@@ -179,7 +180,7 @@
       position: absolute;
       top: -16px;
       left: -16px;
-      border: 3px solid $dark-color;
+      border: 3px solid #444444;
       border-radius: 8px;
     }
   }
@@ -188,6 +189,7 @@
 .reason__img {
   width: 58px;
   margin-right: 10px;
+  z-index: 3;
 
   @media (min-width: $tablet-width) {
     margin: 0;
