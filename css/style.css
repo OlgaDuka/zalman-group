@@ -574,7 +574,7 @@ ul {
       .content__restrict-width--modern {
         padding-top: 118px; } }
   .content__restrict-width--mobile-app {
-    padding-top: 37px; }
+    padding-top: 20px; }
     @media (min-width: 768px) {
       .content__restrict-width--mobile-app {
         padding-top: 30px; } }
@@ -3658,7 +3658,10 @@ ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; } }
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
 
 @media (min-width: 1330px) {
   .standart__list {
@@ -3680,19 +3683,21 @@ ul {
   margin-bottom: 20px; }
   @media (min-width: 768px) {
     .standart__item {
-      width: 300px; }
-      .standart__item:nth-of-type(2) {
-        -ms-flex-item-align: center;
-            align-self: center; }
-      .standart__item:nth-of-type(3) {
-        -ms-flex-item-align: end;
-            align-self: flex-end; } }
+      width: 300px;
+      /*    &:nth-of-type(2) {
+      align-self: center;
+    }
+
+    &:nth-of-type(3) {
+      align-self: flex-end;
+    } */ } }
   @media (min-width: 1330px) {
     .standart__item {
-      width: 327px; }
-      .standart__item:nth-of-type(2), .standart__item:nth-of-type(3) {
-        -ms-flex-item-align: start;
-            align-self: flex-start; } }
+      width: 327px;
+      /*  &:nth-of-type(2),
+    &:nth-of-type(3) {
+      align-self: flex-start;
+    } */ } }
 
 .standart__subtitle {
   padding: 2px 0 7px 56px;
@@ -3756,10 +3761,15 @@ ul {
     .standart__list-info {
       margin: 40px auto 160px;
       padding-left: 150px; } }
-  @media (min-width: 1330px) {
-    .standart__list-info--mobile-app {
-      padding-left: 20px;
-      margin: 40px auto 60px; } }
+  .standart__list-info--mobile-app {
+    margin-bottom: 0; }
+    @media (min-width: 768px) {
+      .standart__list-info--mobile-app {
+        margin: 20px auto 40px; } }
+    @media (min-width: 1330px) {
+      .standart__list-info--mobile-app {
+        padding-left: 20px;
+        margin: 40px auto 60px; } }
 
 .standart--desctop-only {
   display: none; }
