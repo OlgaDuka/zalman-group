@@ -200,24 +200,6 @@
     background-position: center;
   }
 
-  &::after {
-    content: '';
-    position: absolute;
-    width: 90%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: -4px;
-    left: 20px;
-    background-color: $teal-color;
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
-  }
-
-  &:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-
   @media (min-width: $tablet-width) {
     padding-left: 28px;
     font-size: 16px;
@@ -236,9 +218,7 @@
   color: $teal-color;
   font-weight: 400;
 
-  &:hover {
-    text-decoration: underline;
-  }
+  @include underline-hover(2px, -4px, 0, $teal-color);
 
   &:active {
     color: $tealgray-color;

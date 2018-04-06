@@ -37,9 +37,7 @@
   color: $teal-color;
   font-weight: 400;
 
-  &:hover {
-    text-decoration: underline;
-  }
+  @include underline-hover(1px, -3px, 0, $teal-color);
 
   &:active {
     color: $tealgray-color;

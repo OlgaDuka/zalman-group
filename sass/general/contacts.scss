@@ -94,6 +94,7 @@
       color: $teal-color;
       font-size: 18px;
       font-weight: 700;
+      position: relative;
     }
   }
 }
@@ -124,5 +125,14 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 14px;
+  }
+}
+
+.contacts__phone,
+.contacts__email {
+
+  @media (min-width: $tablet-width) {
+
+    @include underline-hover(2px, -4px, 0, $teal-color);
   }
 }

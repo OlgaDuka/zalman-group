@@ -72,3 +72,29 @@
     background-repeat: no-repeat;
   }
 }
+
+//--------------------------------------------------------------------
+// Интерактивное подчеркивание по наведению
+//--------------------------------------------------------------------
+
+@mixin underline-hover ($fat, $bottom, $left, $color) {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: $fat;
+    bottom: -4px;
+    left: 0;
+    background-color: $color;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
