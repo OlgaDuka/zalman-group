@@ -85,6 +85,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    transition: transform 1s;
+  }
+
+  &:hover::before {
+    transform: rotate(60deg);
   }
 
   &--control::before {

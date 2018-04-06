@@ -1550,6 +1550,27 @@ ul {
     background-image: url("../images/check-green.png");
     background-repeat: no-repeat;
     background-position: center; }
+  .info__item::after {
+    content: '';
+    position: absolute;
+    width: 90%;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 20px;
+    background-color: #057d7d;
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
+  .info__item:hover::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left; }
   @media (min-width: 768px) {
     .info__item {
       padding-left: 28px;
@@ -1960,11 +1981,15 @@ ul {
   border-radius: 50%;
   color: #e8e8e8;
   background-color: #057d7d;
-  text-align: center; }
+  text-align: center;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s; }
   .contacts__icon:hover {
     color: #ffffff;
-    background-color: #5c7979;
-    border-color: #5c7979; }
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg); }
   .contacts__icon:active {
     color: #181818;
     background-color: #787878;
@@ -3709,7 +3734,14 @@ ul {
     top: 0;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain; }
+    background-size: contain;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s; }
+  .standart__subtitle:hover::before {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg); }
   .standart__subtitle--control::before {
     background-image: url("../images/control.svg"); }
   .standart__subtitle--response::before {

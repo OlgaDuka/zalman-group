@@ -109,11 +109,11 @@
   color: $bg_main-color;
   background-color: $teal-color;
   text-align: center;
+  transition: transform 1s;
 
   &:hover {
     color: $light-color;
-    background-color: $tealgray-color;
-    border-color: $tealgray-color;
+    transform: rotate(60deg);
   }
 
   &:active {
