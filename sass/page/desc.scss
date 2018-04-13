@@ -1,0 +1,41 @@
+.desc {
+  width: 100%;
+  padding: 10px;
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 20px 40px 100px;
+    width: 50%;
+    align-self: flex-start;
+  }
+}
+
+.desc__subtitle,
+.desc__name {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.desc__subtitle {
+  color: $tealgray-color;
+  text-transform: uppercase;
+}
+
+.desc__brief,
+.desc__text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.desc__link {
+  font-size: 18px;
+  font-weight: 300;
+  color: $teal-color;
+
+  @include underline-hover(1px, -1px, 0, $teal-color);
+}
+
+.desc__text {
+  font-weight: 300;
+  text-align: justify;
+}

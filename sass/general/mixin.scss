@@ -86,7 +86,7 @@
     width: 100%;
     transform: scaleX(0);
     height: $fat;
-    bottom: -4px;
+    bottom: $bottom;
     left: 0;
     background-color: $color;
     transform-origin: bottom right;

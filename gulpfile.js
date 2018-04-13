@@ -6,11 +6,14 @@ var plumber = require('gulp-plumber');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var minify = require('gulp-csso');
+var urlAdjuster = require('gulp-css-url-adjuster');
 var rename = require('gulp-rename');
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
 var imagemin = require('gulp-imagemin');
+var cache = require('gulp-cache');
 var uglify = require('gulp-uglify');
+var debug = require('gulp-strip-debug');
 var del = require('del');
 var run = require('run-sequence');
 var server = require('browser-sync').create();
@@ -36,15 +39,15 @@ gulp.task('style', function () {
 // Оптимизация графики
 gulp.task('images', function() {
   return gulp.src('img/**/*.{png,jpg,svg,gif}')
-    .pipe(imagemin([
+    .pipe(cache(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
-    ]))
+    ])))
     .pipe(gulp.dest('images'));
 });
 
-// Создание SVG-спрайта
+// Создание SVG-спрайта с предварительной минификацией
 gulp.task('sprite', function () {
   return gulp.src('images/svg/*.svg')
       .pipe(svgmin())
@@ -55,7 +58,7 @@ gulp.task('sprite', function () {
       .pipe(gulp.dest('images'));
 });
 
-// Создание SVG-спрайта
+// Минификация SVG-файлов вне спрайта
 gulp.task('svg-file', function () {
   return gulp.src('images/svg-file/*.svg')
       .pipe(svgmin())
@@ -66,6 +69,7 @@ gulp.task('svg-file', function () {
 gulp.task('jsmin', function () {
   return gulp.src(['js/*.js',
     '!js/*.min.js'])
+      .pipe(debug())
       .pipe(uglify())
       .pipe(rename({
         suffix: '.min'
@@ -87,6 +91,30 @@ gulp.task('copy', function () {
     base: '.'
   })
       .pipe(gulp.dest('build'));
+});
+
+// Копирование файлов для Wordpress (кроме стилей)
+gulp.task('wp', function () {
+  return gulp.src([
+    'fonts/**',
+    'images/**',
+    '!images/svg{,/**}',
+    '!images/sprite.svg',
+    'js/*.js',
+    '*.html'
+  ], {
+    base: '.'
+  })
+      .pipe(gulp.dest('Y:/domains/zalman-group/wp-content/themes/zalman-group'));
+});
+
+// Копирование стилей для Wordpress с заменой путей на изображения и шрифты
+gulp.task('wp-css', function () {
+  return gulp.src('css/style.css').
+  pipe(urlAdjuster({
+    replace: ['../','']
+  }))
+  .pipe(gulp.dest('Y:/domains/zalman-group/wp-content/themes/zalman-group'));
 });
 
 // Очистка билда

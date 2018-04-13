@@ -114,6 +114,19 @@
       padding-top: 85px;
     }
   }
+
+  &--project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $desktop-width) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+    }
+  }
 }
 
 .content__page-link {

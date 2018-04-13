@@ -61,3 +61,66 @@ ul {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  border: none;
+  border-bottom: 5px solid #d0cfcf;
+  border-right: 5px solid #d0cfcf;
+  border-radius: 3px;
+  background-color: transparent;
+  background-image: none;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s;
+  z-index: 10;
+
+  &--left {
+    transform: rotate(135deg);
+    left: 10px;
+  }
+
+  &--right {
+    transform: rotate(-45deg);
+    right: 10px;
+  }
+
+  &:hover {
+    border-color: $teal-color;
+    opacity: 0.6;
+  }
+
+  &:active {
+    border-color: $tealgray-color;
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 45%;
+
+    &--left {
+      left: 40px;
+    }
+
+    &--right {
+      right: 40px;
+    }
+
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 30px;
+    height: 30px;
+
+    &--left {
+      left: 30px;
+    }
+
+    &--right {
+      right: 30px;
+    }
+  }
+}

@@ -18,6 +18,13 @@
     max-width: $desktop-width;
     padding: 40px 120px;
   }
+
+  &--project {
+    @media (min-width: $desktop-width) {
+      max-width: 50%;
+      width: 50%;
+    }
+  }
 }
 
 .slider__slide {

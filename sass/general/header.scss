@@ -131,6 +131,22 @@
     }
   }
 
+  &--project {
+    min-height: 40px;
+    background-image: url('../images/banner_project-mobile.jpg');
+    background-size: cover;
+
+    @media (min-width: $tablet-width) {
+      min-height: 87px;
+      background-image: url('../images/banner_project-tablet.jpg');
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 150px;
+      background-image: url('../images/banner_project-desktop.jpg');
+    }
+  }
+
   &--contact {
     min-height: 140px;
     background-image: url('../images/banner_contact-mobile.jpg');
@@ -207,6 +223,21 @@
       padding-top: 118px;
       min-height: 300px;
       font-size: 50px;
+    }
+  }
+
+  &--project {
+    padding-top: 7px;
+    height: 40px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 15px;
+      min-height: 87px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 40px;
+      min-height: 150px;
     }
   }
 }
