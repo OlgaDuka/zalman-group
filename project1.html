@@ -5,6 +5,7 @@
     <title>Zalman-group</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <!-- Pixel Glass -->
@@ -118,36 +119,21 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <figure tabindex="1" class="swiper-slide swiper-slide--slide1">
-                <img src="images/project1-img1.jpg" alt="" class="screen__img" width="540" height="600">
-                <figcaption class="screen__caption">
-                  <a href="images/project1-img1-max.jpg" class="screen__btn"></a>
-                </figcaption>
-              </figure>
-              <figure tabindex="1" class="swiper-slide swiper-slide--slide2">
-                <img src="images/project1-img1.jpg" alt="" class="screen__img" width="540" height="600">
-                <figcaption class="screen__caption">
-                  <a href="images/project1-img1-max.jpg" class="screen__btn"></a>
-                </figcaption>
-              </figure>
-              <figure tabindex="1" class="swiper-slide swiper-slide--slide3">
-                <img src="images/project1-img1.jpg" alt="" class="screen__img" width="540" height="600">
-                <figcaption class="screen__caption">
-                  <a href="images/project1-img1-max.jpg" class="screen__btn"></a>
-                </figcaption>
-              </figure>
-              <figure tabindex="1" class="swiper-slide swiper-slide--slide4">
-                <img src="images/project1-img1.jpg" alt="" class="screen__img" width="540" height="600">
-                <figcaption class="screen__caption">
-                  <a href="images/project1-img1-max.jpg" class="screen__btn"></a>
-                </figcaption>
-              </figure>
-              <figure tabindex="1" class="swiper-slide swiper-slide--slide5">
-                <img src="images/project1-img1.jpg" alt="" class="screen__img" width="540" height="600">
-                <figcaption class="screen__caption">
-                  <a href="images/project1-img1-max.jpg" class="screen__btn"></a>
-                </figcaption>
-              </figure>
+              <div tabindex="1" class="swiper-slide swiper-slide--slide1">
+                <a href="images/project1-img1-max.jpg" data-fancybox="gallery" class="fancybox"><img src="images/project1-img1.jpg" alt="" class="screen__img" width="540" height="600"></a>
+              </div>
+              <div tabindex="1" class="swiper-slide swiper-slide--slide2">
+                <a href="images/project1-img1-max.jpg" data-fancybox="gallery" class="fancybox"><img src="images/project1-img1.jpg" alt="" class="screen__img" width="540" height="600"></a>
+              </div>
+              <div tabindex="1" class="swiper-slide swiper-slide--slide3">
+                <a href="images/project1-img1-max.jpg" data-fancybox="gallery" class="fancybox"><img src="images/project1-img1.jpg" alt="" class="screen__img" width="540" height="600"></a>
+              </div>
+              <div tabindex="1" class="swiper-slide swiper-slide--slide4">
+                <a href="images/project1-img1-max.jpg" data-fancybox="gallery" class="fancybox"><img src="images/project1-img1.jpg" alt="" class="screen__img" width="540" height="600"></a>
+              </div>
+              <div tabindex="1" class="swiper-slide swiper-slide--slide5">
+                <a href="images/project1-img1-max.jpg" data-fancybox="gallery" class="fancybox"><img src="images/project1-img1.jpg" alt="" class="screen__img" width="540" height="600"></a>
+              </div>
             </div>
           </div>
           <!-- Add Pagination -->
@@ -261,6 +247,13 @@
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
+      });
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script>
+      $(function() {
+        $(".fancybox").fancybox();
       });
     </script>
     <script src="js/custom.js"></script>
