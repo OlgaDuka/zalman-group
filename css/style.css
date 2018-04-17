@@ -2400,7 +2400,7 @@ ul {
     background-color: rgba(24, 24, 24, 0.6); }
   .portfolio__blind .portfolio__desc {
     display: none; }
-  @media (min-width: 768px) {
+  @media (min-width: 1330px) {
     .portfolio__blind {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
@@ -2412,27 +2412,20 @@ ul {
         .portfolio__blind:hover .portfolio__desc {
           display: block;
           color: #282828;
-          padding-left: 50px;
-          padding-right: 50px;
-          font-size: 16px;
+          padding-top: 40px;
+          padding-left: 100px;
+          padding-right: 100px;
+          font-size: 20px;
           text-align: center; }
         .portfolio__blind:hover .portfolio__link {
           display: block;
-          margin-bottom: 10px;
+          margin-bottom: 40px;
           color: #ffffff;
           background-color: rgba(24, 24, 24, 0.6); }
           .portfolio__blind:hover .portfolio__link:hover {
             background-color: rgba(5, 125, 125, 0.6); }
           .portfolio__blind:hover .portfolio__link:active {
             background-color: rgba(92, 121, 121, 0.6); } }
-  @media (min-width: 1330px) {
-    .portfolio__blind:hover .portfolio__desc {
-      padding-top: 40px;
-      padding-left: 100px;
-      padding-right: 100px;
-      font-size: 20px; }
-    .portfolio__blind:hover .portfolio__link {
-      margin-bottom: 40px; } }
 
 .portfolio__info {
   position: absolute;

@@ -254,9 +254,12 @@
     <script>
       $().fancybox( {
         selector : '[data-fancybox="gallery"]',
+        animationEffect: "zoom",
         transitionEffect: "circular",
         transitionDuration: 1200,
         loop : true,
+        infobar : false,
+        buttons: ["close"],
         btnTpl: {
           arrowLeft:
             '<a data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}" href="javascript:;">' +
