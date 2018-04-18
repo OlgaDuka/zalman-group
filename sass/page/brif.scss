@@ -1,0 +1,70 @@
+.brif__form {
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brif__section {
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+.brif__subsection {
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  border-style: hidden;
+}
+
+.brif__subtitle {
+  padding: 0 7px;
+  font-size: 12px;
+  color: $tealgray-color;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 15px;
+  }
+}
+
+.brif__subsection-title {
+  font-size: 11px;
+  color: $tealgray-color;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+  }
+}
+
+.brif__label {
+  font-size: 12px;
+  padding: 5px 0;
+}
+
+.brif__text,
+.brif__textarea {
+  width: 100%;
+  line-height: 20px;
+  padding-left: 7px;
+  border-color: transparent;
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.5)
+}
+
+.brif__note {
+  font-size: 12px;
+  font-weight: 300;
+  font-style: italic;
+  color: $tealgray-color;
+}

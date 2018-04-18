@@ -1984,6 +1984,9 @@ ul {
     color: #ffffff; }
   .order__btn:active {
     background-color: #5c7979; }
+  .order__btn--brif {
+    -ms-flex-item-align: center;
+        align-self: center; }
 
 .order__info {
   max-width: 320px;
@@ -4781,6 +4784,81 @@ ul {
 .desc__text {
   font-weight: 300;
   text-align: justify; }
+
+.brif__form {
+  padding-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.brif__section {
+  margin: 20px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-color: rgba(0, 0, 0, 0.4); }
+
+.brif__subsection {
+  margin: 20px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-style: hidden; }
+
+.brif__subtitle {
+  padding: 0 7px;
+  font-size: 12px;
+  color: #5c7979;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    .brif__subtitle {
+      font-size: 14px; } }
+  @media (min-width: 1330px) {
+    .brif__subtitle {
+      font-size: 15px; } }
+
+.brif__subsection-title {
+  font-size: 11px;
+  color: #5c7979;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    .brif__subsection-title {
+      font-size: 13px; } }
+  @media (min-width: 1330px) {
+    .brif__subsection-title {
+      font-size: 14px; } }
+
+.brif__label {
+  font-size: 12px;
+  padding: 5px 0; }
+
+.brif__text,
+.brif__textarea {
+  width: 100%;
+  line-height: 20px;
+  padding-left: 7px;
+  border-color: transparent;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.5); }
+
+.brif__note {
+  font-size: 12px;
+  font-weight: 300;
+  font-style: italic;
+  color: #5c7979; }
 
 .main {
   width: 320px;

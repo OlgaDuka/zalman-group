@@ -259,6 +259,10 @@
   &:active {
     background-color: $tealgray-color;
   }
+
+  &--brif {
+    align-self: center;
+  }
 }
 
 .order__info {
