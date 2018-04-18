@@ -99,7 +99,8 @@
     }
   }
 
-  &--about {
+  &--about,
+  &--brif {
     min-height: 140px;
     background-image: url('../images/banner_about-mobile.jpg');
     background-size: cover;
