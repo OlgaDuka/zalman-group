@@ -32,21 +32,10 @@
     &--7 {
       width: 47%;
     }
-
-    &--2 {
-      background-image: url("../images/brif.png");
-      background-position: bottom 30px right 10px;
-      background-repeat: no-repeat;
-      background-size: 25%;
-    }
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 25px;
-
-    &--2 {
-      background-size: 20%;
-    }
 
     &--3 {
       width: 75%;
@@ -142,6 +131,11 @@
 
   &--text {
     padding: 5px 0;
+
+    span {
+      font-weight: 700;
+      color: red;
+    }
   }
 }
 
