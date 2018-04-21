@@ -416,6 +416,10 @@
     opacity: 0.3;
   }
 
+  .header__link:hover::after {
+    display: none;
+  }
+
   &-img {
     width: 60%;
 
@@ -439,6 +443,10 @@
 
     &:hover {
       color: $palegolden-color;
+
+      &::after {
+        display: none;
+      }
     }
 
     &:active {
@@ -451,6 +459,7 @@
     text-transform: uppercase;
     color: $gray-color;
     margin-right: 30px;
+    position: relative;
 
     &:hover,
     &--active,
@@ -469,6 +478,28 @@
     &--phone-number {
       display: none;
     }
+
+    &:hover::after {
+      content: attr(data-title);
+      display: block;
+      position: absolute;
+      width: auto;
+      height: auto;
+      left: 80%; top: -20px;
+      z-index: 1;
+      background: rgba(255, 255, 230, 0.8);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: lowercase;
+      color: $darktext-color;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    &--phone-icon:hover::after {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -478,6 +509,10 @@
       display: block;
       font-size: 20px;
       margin-right: 38px;
+
+      &:hover::after {
+        display: none;
+      }
     }
 
     &--phone-icon {
