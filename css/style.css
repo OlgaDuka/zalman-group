@@ -422,7 +422,7 @@ template {
   font-style: normal;
   src: url("../fonts/tahoma.woff") format("woff"), url("../fonts/tahoma.woff2") format("woff2"); }
 
-body {
+body, html {
   min-width: 320px;
   width: 100%;
   height: 100%;
@@ -436,7 +436,7 @@ body {
   background-color: #e8e8e8;
   overflow-x: hidden; }
   @media (min-width: 1330px) {
-    body {
+    body, html {
       background-color: #d1d1d1; } }
 
 .wrapper {
