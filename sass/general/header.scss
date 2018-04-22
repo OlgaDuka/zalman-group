@@ -404,7 +404,7 @@
   }
 }
 
-.header__logo {
+.header__logo-link {
   margin-right: auto;
   cursor: pointer;
 
@@ -415,21 +415,17 @@
   &:active {
     opacity: 0.3;
   }
+}
 
-  .header__link:hover::after {
-    display: none;
-  }
-
-  &-img {
+.header__logo-img {
     width: 60%;
 
-    @media (min-width: $tablet-width) {
-      width: 80%;
-    }
+  @media (min-width: $tablet-width) {
+    width: 80%;
+  }
 
-    @media (min-width: $desktop-width) {
-      width: 100%;
-    }
+  @media (min-width: $desktop-width) {
+    width: 100%;
   }
 }
 

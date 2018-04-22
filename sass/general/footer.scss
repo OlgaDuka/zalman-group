@@ -20,3 +20,35 @@
     padding-bottom: 17px;
   }
 }
+
+.footer__up-btn {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  margin: 10px;
+  width: 28px;
+  height: 23px;
+  border-radius: 7px;
+  border: 1px solid $tealgray-color;
+  background-color: $bg_main-color;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    @include triangle-top(8px, $teal-color);
+  }
+
+  &:hover {
+    background-color: $light-color;
+  }
+
+  &:active {
+    background-color: $tealgray-color;
+
+    &::after {
+      @include triangle-top(8px, $light-color);
+    }
+  }
+}

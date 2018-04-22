@@ -1114,23 +1114,22 @@ ul {
       margin-left: 75px;
       margin-right: 40px; } }
 
-.header__logo {
+.header__logo-link {
   margin-right: auto;
   cursor: pointer; }
-  .header__logo:hover {
+  .header__logo-link:hover {
     opacity: 0.6; }
-  .header__logo:active {
+  .header__logo-link:active {
     opacity: 0.3; }
-  .header__logo .header__link:hover::after {
-    display: none; }
-  .header__logo-img {
-    width: 60%; }
-    @media (min-width: 768px) {
-      .header__logo-img {
-        width: 80%; } }
-    @media (min-width: 1330px) {
-      .header__logo-img {
-        width: 100%; } }
+
+.header__logo-img {
+  width: 60%; }
+  @media (min-width: 768px) {
+    .header__logo-img {
+      width: 80%; } }
+  @media (min-width: 1330px) {
+    .header__logo-img {
+      width: 100%; } }
 
 .header__link {
   display: none; }
@@ -2043,6 +2042,7 @@ ul {
       max-width: 580px; } }
   @media (min-width: 1330px) {
     .order__info {
+      max-width: 620px;
       font-size: 16px; } }
 
 .contacts {
@@ -2209,6 +2209,43 @@ ul {
     .footer__copyright {
       font-size: 13px;
       padding-bottom: 17px; } }
+
+.footer__up-btn {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  margin: 10px;
+  width: 28px;
+  height: 23px;
+  border-radius: 7px;
+  border: 1px solid #5c7979;
+  background-color: #e8e8e8; }
+  .footer__up-btn::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    width: 0;
+    height: 0;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #057d7d;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-style: none; }
+  .footer__up-btn:hover {
+    background-color: #ffffff; }
+  .footer__up-btn:active {
+    background-color: #5c7979; }
+    .footer__up-btn:active::after {
+      width: 0;
+      height: 0;
+      border-width: 8px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-right-color: transparent;
+      border-left-color: transparent;
+      border-top-style: none; }
 
 .social {
   margin: 15px auto 10px;
