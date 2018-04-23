@@ -2714,6 +2714,10 @@ ul {
       -ms-flex-pack: distribute;
           justify-content: space-around; } }
 
+.slider__logo {
+  margin-bottom: 10px;
+  width: 60%; }
+
 .slider__name {
   font-weight: 700;
   font-size: 14px; }
