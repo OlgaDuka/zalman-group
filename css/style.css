@@ -764,7 +764,7 @@ ul {
 
 .header {
   width: 100%;
-  min-height: 480px;
+  min-height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -775,127 +775,196 @@ ul {
   -webkit-box-pack: space-start;
       -ms-flex-pack: space-start;
           justify-content: space-start;
-  background-image: url("../images/banner_top-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center 70px;
-  background-size: 604px 150px;
+  background-size: auto;
   position: relative; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .header {
-      background-image: url("../images/banner_top-mobile@2x.jpg"); } }
   @media (min-width: 768px) {
     .header {
-      min-height: 285px;
-      background-position: center 90px;
-      background-size: auto;
-      background-image: url("../images/banner_top-tablet@1x.jpg"); } }
-  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
-    .header {
-      background-image: url("../images/banner_top-tablet@2x.jpg"); } }
+      min-height: 173px;
+      background-position: center 90px; } }
   @media (min-width: 1330px) {
     .header {
-      min-height: 1180px;
-      background-position: center 110px;
-      background-image: url("../images/banner_top-desktop@1x.jpg"); } }
+      min-height: 300px;
+      background-position: center 110px; } }
+  .header--main {
+    min-height: 480px;
+    background-image: url("../images/banner_top-mobile@1x.jpg");
+    background-size: 604px 150px; }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .header--main {
+        background-image: url("../images/banner_top-mobile@2x.jpg"); } }
+    @media (min-width: 768px) {
+      .header--main {
+        min-height: 285px;
+        background-size: auto;
+        background-image: url("../images/banner_top-tablet@1x.jpg"); } }
+  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+    .header--main {
+      background-image: url("../images/banner_top-tablet@2x.jpg"); } }
+    @media (min-width: 1330px) {
+      .header--main {
+        min-height: 1180px;
+        background-image: url("../images/banner_top-desktop@1x.jpg"); } }
   @media (min-width: 1330px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1330px) and (min-resolution: 144dpi), (min-width: 1330px) and (min-resolution: 1.5dppx) {
-    .header {
+    .header--main {
       background-image: url("../images/banner_top-desktop@2x.jpg"); } }
   .header--develop {
-    min-height: 70px;
-    background-image: url("../images/banner_develop-mobile.jpg");
-    background-size: cover; }
+    background-image: url("../images/banner_develop-mobile@1x.jpg"); }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .header--develop {
+        background-image: url("../images/banner_develop-mobile@2x.jpg"); } }
     @media (min-width: 768px) {
       .header--develop {
-        min-height: 173px;
-        background-image: url("../images/banner_develop-tablet.jpg"); } }
+        background-image: url("../images/banner_develop-tablet@1x.jpg"); } }
+  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+    .header--develop {
+      background-image: url("../images/banner_develop-tablet@2x.jpg"); } }
     @media (min-width: 1330px) {
       .header--develop {
-        min-height: 300px;
-        background-image: url("../images/banner_develop-desktop.jpg"); } }
+        background-image: url("../images/banner_develop-desktop@1x.jpg"); } }
+  @media (min-width: 1330px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1330px) and (min-resolution: 144dpi), (min-width: 1330px) and (min-resolution: 1.5dppx) {
+    .header--develop {
+      background-image: url("../images/banner_develop-desktop@2x.jpg"); } }
   .header--modern {
-    min-height: 70px;
-    background-image: url("../images/banner_modern-mobile.jpg");
-    background-size: cover; }
+    background-image: url("../images/banner_modern-mobile@1x.jpg"); }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .header--modern {
+        background-image: url("../images/banner_modern-mobile@2x.jpg"); } }
     @media (min-width: 768px) {
       .header--modern {
-        min-height: 173px;
-        background-image: url("../images/banner_modern-tablet.jpg"); } }
+        background-image: url("../images/banner_modern-tablet@1x.jpg"); } }
+  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+    .header--modern {
+      background-image: url("../images/banner_modern-tablet@2x.jpg"); } }
     @media (min-width: 1330px) {
       .header--modern {
-        min-height: 300px;
-        background-image: url("../images/banner_modern-desktop.jpg"); } }
+        background-image: url("../images/banner_modern-desktop@1x.jpg"); } }
+  @media (min-width: 1330px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1330px) and (min-resolution: 144dpi), (min-width: 1330px) and (min-resolution: 1.5dppx) {
+    .header--modern {
+      background-image: url("../images/banner_modern-desktop@2x.jpg"); } }
   .header--support {
-    min-height: 70px;
-    background-image: url("../images/banner_support-mobile.jpg");
-    background-size: cover; }
+    background-image: url("../images/banner_support-mobile@1x.jpg"); }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .header--support {
+        background-image: url("../images/banner_support-mobile@2x.jpg"); } }
     @media (min-width: 768px) {
       .header--support {
-        min-height: 173px;
-        background-image: url("../images/banner_support-tablet.jpg"); } }
+        background-image: url("../images/banner_support-tablet@1x.jpg"); } }
+  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+    .header--support {
+      background-image: url("../images/banner_support-tablet@2x.jpg"); } }
     @media (min-width: 1330px) {
       .header--support {
-        min-height: 300px;
-        background-image: url("../images/banner_support-desktop.jpg"); } }
+        background-image: url("../images/banner_support-desktop@1x.jpg"); } }
+  @media (min-width: 1330px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1330px) and (min-resolution: 144dpi), (min-width: 1330px) and (min-resolution: 1.5dppx) {
+    .header--support {
+      background-image: url("../images/banner_support-desktop@2x.jpg"); } }
   .header--mobile {
-    min-height: 70px;
-    background-image: url("../images/banner_mobile-mobile.jpg");
-    background-size: cover; }
+    background-image: url("../images/banner_mobile-mobile@1x.jpg"); }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .header--mobile {
+        background-image: url("../images/banner_mobile-mobile@2x.jpg"); } }
     @media (min-width: 768px) {
       .header--mobile {
-        min-height: 173px;
-        background-image: url("../images/banner_mobile-tablet.jpg"); } }
+        background-image: url("../images/banner_mobile-tablet@1x.jpg"); } }
+  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+    .header--mobile {
+      background-image: url("../images/banner_mobile-tablet@2x.jpg"); } }
     @media (min-width: 1330px) {
       .header--mobile {
-        min-height: 300px;
-        background-image: url("../images/banner_mobile-desktop.jpg"); } }
-  .header--about, .header--brif {
-    min-height: 140px;
-    background-image: url("../images/banner_about-mobile.jpg");
-    background-size: cover; }
+        background-image: url("../images/banner_mobile-desktop@1x.jpg"); } }
+  @media (min-width: 1330px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1330px) and (min-resolution: 144dpi), (min-width: 1330px) and (min-resolution: 1.5dppx) {
+    .header--mobile {
+      background-image: url("../images/banner_mobile-desktop@2x.jpg"); } }
+  .header--about {
+    background-image: url("../images/banner_about-mobile@1x.jpg"); }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .header--about {
+        background-image: url("../images/banner_about-mobile@2x.jpg"); } }
     @media (min-width: 768px) {
-      .header--about, .header--brif {
-        min-height: 173px;
-        background-image: url("../images/banner_about-tablet.jpg"); } }
+      .header--about {
+        background-image: url("../images/banner_about-tablet@1x.jpg"); } }
+  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+    .header--about {
+      background-image: url("../images/banner_about-tablet@2x.jpg"); } }
     @media (min-width: 1330px) {
-      .header--about, .header--brif {
-        min-height: 300px;
-        background-image: url("../images/banner_about-desktop.jpg"); } }
+      .header--about {
+        background-image: url("../images/banner_about-desktop@1x.jpg"); } }
+  @media (min-width: 1330px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1330px) and (min-resolution: 144dpi), (min-width: 1330px) and (min-resolution: 1.5dppx) {
+    .header--about {
+      background-image: url("../images/banner_about-desktop@2x.jpg"); } }
+  .header--brif {
+    background-image: url("../images/banner_brif-mobile@1x.jpg"); }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .header--brif {
+        background-image: url("../images/banner_brif-mobile@2x.jpg"); } }
+    @media (min-width: 768px) {
+      .header--brif {
+        background-image: url("../images/banner_brif-tablet@1x.jpg"); } }
+  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+    .header--brif {
+      background-image: url("../images/banner_brif-tablet@2x.jpg"); } }
+    @media (min-width: 1330px) {
+      .header--brif {
+        background-image: url("../images/banner_brif-desktop@1x.jpg"); } }
+  @media (min-width: 1330px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1330px) and (min-resolution: 144dpi), (min-width: 1330px) and (min-resolution: 1.5dppx) {
+    .header--brif {
+      background-image: url("../images/banner_brif-desktop@2x.jpg"); } }
   .header--portfolio {
-    min-height: 140px;
-    background-image: url("../images/banner_portfolio-mobile.jpg");
-    background-size: cover; }
+    background-image: url("../images/banner_portfolio-mobile@1x.jpg"); }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .header--portfolio {
+        background-image: url("../images/banner_portfolio-mobile@2x.jpg"); } }
     @media (min-width: 768px) {
       .header--portfolio {
-        min-height: 173px;
-        background-image: url("../images/banner_portfolio-tablet.jpg"); } }
+        background-image: url("../images/banner_portfolio-tablet@1x.jpg"); } }
+  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+    .header--portfolio {
+      background-image: url("../images/banner_portfolio-tablet@2x.jpg"); } }
     @media (min-width: 1330px) {
       .header--portfolio {
-        min-height: 300px;
-        background-image: url("../images/banner_portfolio-desktop.jpg"); } }
+        background-image: url("../images/banner_portfolio-desktop@1x.jpg"); } }
+  @media (min-width: 1330px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1330px) and (min-resolution: 144dpi), (min-width: 1330px) and (min-resolution: 1.5dppx) {
+    .header--portfolio {
+      background-image: url("../images/banner_portfolio-desktop@2x.jpg"); } }
   .header--project {
     min-height: 40px;
-    background-image: url("../images/banner_project-mobile.jpg");
-    background-size: cover; }
+    background-image: url("../images/banner_project-mobile@1x.jpg"); }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .header--project {
+        background-image: url("../images/banner_project-mobile@2x.jpg"); } }
     @media (min-width: 768px) {
       .header--project {
         min-height: 87px;
-        background-image: url("../images/banner_project-tablet.jpg"); } }
+        background-image: url("../images/banner_project-tablet@1x.jpg"); } }
+  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+    .header--project {
+      background-image: url("../images/banner_project-tablet@2x.jpg"); } }
     @media (min-width: 1330px) {
       .header--project {
         min-height: 150px;
-        background-image: url("../images/banner_project-desktop.jpg"); } }
+        background-image: url("../images/banner_project-desktop@1x.jpg"); } }
+  @media (min-width: 1330px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1330px) and (min-resolution: 144dpi), (min-width: 1330px) and (min-resolution: 1.5dppx) {
+    .header--project {
+      background-image: url("../images/banner_project-desktop@2x.jpg"); } }
   .header--contact {
-    min-height: 140px;
-    background-image: url("../images/banner_contact-mobile.jpg");
-    background-size: cover; }
+    background-image: url("../images/banner_contact-mobile@1x.jpg"); }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .header--contact {
+        background-image: url("../images/banner_contact-mobile@2x.jpg"); } }
     @media (min-width: 768px) {
       .header--contact {
-        min-height: 173px;
-        background-image: url("../images/banner_contact-tablet.jpg"); } }
+        background-image: url("../images/banner_contact-tablet@1x.jpg"); } }
+  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+    .header--contact {
+      background-image: url("../images/banner_contact-tablet@2x.jpg"); } }
     @media (min-width: 1330px) {
       .header--contact {
-        min-height: 300px;
-        background-image: url("../images/banner_contact-desktop.jpg"); } }
+        background-image: url("../images/banner_contact-desktop@1x.jpg"); } }
+  @media (min-width: 1330px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1330px) and (min-resolution: 144dpi), (min-width: 1330px) and (min-resolution: 1.5dppx) {
+    .header--contact {
+      background-image: url("../images/banner_contact-desktop@2x.jpg"); } }
   .header--404 {
     min-height: 50px;
     -webkit-box-flex: 0;
@@ -1021,9 +1090,6 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1116,8 +1182,10 @@ ul {
       margin-left: 75px;
       margin-right: 40px; } }
 
+.header__logo {
+  margin-right: auto; }
+
 .header__logo-link {
-  margin-right: auto;
   cursor: pointer; }
   .header__logo-link:hover {
     opacity: 0.6; }
@@ -1152,10 +1220,16 @@ ul {
       color: #787878;
       margin-right: 30px;
       position: relative; }
-      .header__link:hover, .header__link--active, .header__link--phone-number {
+      .header__link:hover, .header__link:active {
+        color: transparent; }
+      .header__link--active {
         color: #ccc039; }
-      .header__link:active {
-        color: #6d6a48; }
+      .header__link--phone-number {
+        color: #ccc039; }
+        .header__link--phone-number:hover {
+          color: #6d6a48; }
+        .header__link--phone-number:active {
+          color: #6d6a48; }
       .header__link:first-of-type {
         margin-right: 40px; }
       .header__link--phone-number {
@@ -1164,19 +1238,15 @@ ul {
         content: attr(data-title);
         display: block;
         position: absolute;
-        width: auto;
-        height: auto;
-        left: 80%;
-        top: -20px;
+        left: 10px;
+        top: 2px;
         z-index: 1;
-        background: rgba(255, 255, 230, 0.8);
+        background: transparent;
         font-size: 14px;
         font-weight: 700;
-        text-transform: lowercase;
-        color: #282828;
-        padding: 5px 10px;
-        border: none;
-        border-radius: 5px; }
+        color: #ccc039; }
+      .header__link:active::after {
+        color: #6d6a48; }
       .header__link--phone-icon:hover::after {
         display: none; } }
   @media (min-width: 1330px) {
