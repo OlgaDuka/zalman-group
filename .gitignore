@@ -12,4 +12,5 @@ node_modules/
 zalman-group/
 npm-debug.*
 maket/*.psd
+maket/*/*.psd
 Thumbs.db
