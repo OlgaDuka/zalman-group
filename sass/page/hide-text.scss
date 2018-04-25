@@ -16,11 +16,11 @@
 }
 
 .hide-text__checkbox:checked ~ .hide-text__wrapper {
-  transition: height 0.5s ease-in-out;
-  height: 360px;
+  transition: all 0.5s ease-in-out;
+  height: 465px;
 
   &--1 {
-    height: 440px;
+    height: 450px;
   }
 
   &--4 {
@@ -29,16 +29,17 @@
 
   &--2,
   &--3 {
-    height: 380px;
+    height: 390px;
   }
 
   &--5 {
-    height: 500px;
+    height: 520px;
   }
 }
 
 .hide-text__text {
   margin: 0;
+  margin-bottom: 7px;
   font-size: 15px;
   line-height: 20px;
   font-weight: 300;

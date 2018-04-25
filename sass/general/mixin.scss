@@ -98,3 +98,39 @@
     transform-origin: bottom left;
   }
 }
+
+@mixin url-img ($project) {
+  background-image: url('../images/banner_project' + $project + '-mobile.jpg');
+
+  @media (min-width: $tablet-width) {
+    background-image: url('../images/banner_project' + $project + '-tablet.jpg');
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url('../images/banner_project' + $project + '-desktop.jpg');
+  }
+}
+
+@mixin header-img ($name-page) {
+  background-image: url('../images/banner_' + $name-page + '-mobile@1x.jpg');
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url('../images/banner_' + $name-page + '-mobile@2x.jpg');
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: url('../images/banner_' + $name-page + '-tablet@1x.jpg');
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url('../images/banner_' + $name-page + '-tablet@2x.jpg');
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url('../images/banner_' + $name-page + '-desktop@1x.jpg');
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url('../images/banner_' + $name-page + '-desktop@2x.jpg');
+    }
+  }
+}
