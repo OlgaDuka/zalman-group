@@ -16,11 +16,11 @@
 }
 
 .hide-text__checkbox:checked ~ .hide-text__wrapper {
-  transition: all 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
   height: 465px;
 
   &--1 {
-    height: 450px;
+    height: 440px;
   }
 
   &--4 {
@@ -29,17 +29,20 @@
 
   &--2,
   &--3 {
-    height: 390px;
+    height: 380px;
   }
 
   &--5 {
-    height: 520px;
+    height: 500px;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: auto;
   }
 }
 
 .hide-text__text {
   margin: 0;
-  margin-bottom: 7px;
   font-size: 15px;
   line-height: 20px;
   font-weight: 300;
