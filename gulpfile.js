@@ -60,9 +60,9 @@ gulp.task('sprite', function () {
 
 // Минификация SVG-файлов вне спрайта
 gulp.task('svg-file', function () {
-  return gulp.src('images/svg-file/*.svg')
+  return gulp.src('images/*.svg')
       .pipe(svgmin())
-      .pipe(gulp.dest('images/svg-file'));
+      .pipe(gulp.dest('images'));
 });
 
 // Минификация JS-скриптов
