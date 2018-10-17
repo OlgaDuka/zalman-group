@@ -87,7 +87,7 @@
     transform: scaleX(0);
     height: $fat;
     bottom: $bottom;
-    left: 0;
+    left: $left;
     background-color: $color;
     transform-origin: bottom right;
     transition: transform 0.3s ease-out;
