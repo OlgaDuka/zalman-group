@@ -16,6 +16,7 @@
     "eslint-config-htmlacademy": "^0.5.2",
     "gulp": "3.9.x",
     "gulp-cache": "^1.0.2",
+    "gulp-concat": "^2.6.1",
     "gulp-css-url-adjuster": "^0.2.3",
     "gulp-csso": "^3.0.1",
     "gulp-imagemin": "^4.1.0",

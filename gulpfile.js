@@ -16,7 +16,15 @@ var uglify = require('gulp-uglify');
 var debug = require('gulp-strip-debug');
 var del = require('del');
 var run = require('run-sequence');
+var concat = require('gulp-concat');
 var server = require('browser-sync').create();
+
+var listJsFiles = [
+  'js/jquery.min.js',
+  'js/jquery.mousewheel.min.js',
+  'js/jquery.fancybox.min.js',
+  'js/swiper.min.js'
+];
 
 gulp.task('style', function () {
   gulp.src('sass/style.scss')
@@ -67,13 +75,9 @@ gulp.task('svg-file', function () {
 
 // Минификация JS-скриптов
 gulp.task('jsmin', function () {
-  return gulp.src(['js/*.js',
-    '!js/*.min.js'])
-      .pipe(debug())
+  gulp.src(listJsFiles)
+      .pipe(concat('all.min.js'))
       .pipe(uglify())
-      .pipe(rename({
-        suffix: '.min'
-      }))
       .pipe(gulp.dest('js'));
 });
 
@@ -93,10 +97,11 @@ gulp.task('copy', function () {
       .pipe(gulp.dest('build'));
 });
 
-// Копирование файлов для Wordpress (кроме стилей)
+// Копирование файлов для Wordpress (style.css заменяется следующей задачей)
 gulp.task('wp', function () {
   return gulp.src([
     'fonts/**',
+    'css/**',
     'images/**',
     '!images/svg{,/**}',
     '!images/sprite.svg',
@@ -108,7 +113,7 @@ gulp.task('wp', function () {
       .pipe(gulp.dest('Y:/domains/zalman-group/wp-content/themes/zalman-group'));
 });
 
-// Копирование стилей для Wordpress с заменой путей на изображения и шрифты
+// Копирование основного файла стилей для Wordpress с заменой путей на изображения и шрифты
 gulp.task('wp-css', function () {
   return gulp.src('css/style.css').
   pipe(urlAdjuster({

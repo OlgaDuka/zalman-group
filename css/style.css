@@ -804,7 +804,6 @@ ul {
       background-image: url("../images/banner_top-tablet@2x.jpg"); } }
     @media (min-width: 1330px) {
       .header--main {
-        min-height: 1180px;
         background-image: url("../images/banner_top-desktop@1x.jpg"); } }
   @media (min-width: 1330px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1330px) and (min-resolution: 144dpi), (min-width: 1330px) and (min-resolution: 1.5dppx) {
     .header--main {
@@ -1260,12 +1259,6 @@ ul {
         color: transparent; }
       .header__link--active {
         color: #ccc039; }
-      .header__link--phone-number {
-        color: #ccc039; }
-        .header__link--phone-number:hover {
-          color: #6d6a48; }
-        .header__link--phone-number:active {
-          color: #6d6a48; }
       .header__link:first-of-type {
         margin-right: 40px; }
       .header__link--phone-number {
@@ -1283,8 +1276,14 @@ ul {
         color: #ccc039; }
       .header__link:active::after {
         color: #6d6a48; }
-      .header__link--phone-icon:hover::after {
-        display: none; } }
+      .header__link--phone-icon {
+        color: #787878; }
+        .header__link--phone-icon:hover {
+          color: #ccc039; }
+        .header__link--phone-icon:active {
+          color: #057d7d; }
+        .header__link--phone-icon:hover::after {
+          display: none; } }
   @media (min-width: 1330px) {
     .header__link {
       margin-right: 126px; }
@@ -1292,6 +1291,10 @@ ul {
         display: block;
         font-size: 20px;
         margin-right: 38px; }
+        .header__link--phone-number:hover {
+          color: #ccc039; }
+        .header__link--phone-number:active {
+          color: #6d6a48; }
         .header__link--phone-number:hover::after {
           display: none; }
       .header__link--phone-icon {

@@ -1,5 +1,21 @@
 'use strict';
 (function () {
+  var limit = $(window).height() / 3;
+  var $backToTop = $('#footer__up-btn');
+  // Появление и исчезновение кнопки "наверх" на первом экране
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > limit) {
+      $backToTop.fadeIn();
+    } else {
+      $backToTop.fadeOut();
+    }
+  });
+  // Мягкий скролл к началу сайта
+  $backToTop.click(function () {
+    $('body,html').animate({scrollTop: 0}, 1500);
+    return false;
+  });
+
   // ----------------------------------------------
   // Меню
   // ----------------------------------------------
@@ -123,4 +139,56 @@
     }
   }
 
+  // Слайдер Партнеры -->
+  var swiper1 = new Swiper('.swiper-container--partner', {
+    slidesPerView: 'auto',
+    spaceBetween: 74,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  // Слайдер Скриншоты проекта -->
+  var swiper2 = new Swiper('.swiper-container--screen', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  $().fancybox({
+    selector: '[data-fancybox="gallery"]',
+    animationEffect: 'zoom',
+    transitionEffect: 'circular',
+    transitionDuration: 1200,
+    loop: true,
+    infobar: false,
+    buttons: ['close'],
+    btnTpl: {
+      arrowLeft:
+        '<a data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}" href="javascript:;">' +
+        '<svg viewBox="0 0 16 16">' +
+        '<path d="M12 13h-2L5 8l5-5h2L7 8z"></path>' +
+        '</svg>' +
+        '</a>',
+
+      arrowRight:
+        '<a data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}" href="javascript:;">' +
+        '<svg viewBox="0 0 16 16">' +
+        '<path d="M4 13h2l5-5-5-5H4l5 5z"></path>' +
+        '</svg>' +
+        '</a>'
+    }
+  });
 })();

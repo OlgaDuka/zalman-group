@@ -39,7 +39,6 @@
     }
 
     @media (min-width: $desktop-width) {
-      min-height: 1180px;
       background-image: url("../images/banner_top-desktop@1x.jpg");
 
       @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -420,18 +419,6 @@
       color: $palegolden-color;
     }
 
-    &--phone-number {
-      color: $palegolden-color;
-
-      &:hover {
-        color: $beige-color;
-      }
-
-      &:active {
-        color: $beige-color;
-      }
-    }
-
     &:first-of-type {
       margin-right: 40px;
     }
@@ -457,8 +444,20 @@
       color: $beige-color;
     }
 
-    &--phone-icon:hover::after {
-      display: none;
+    &--phone-icon {
+      color: $gray-color;
+
+      &:hover {
+        color: $palegolden-color;
+      }
+
+      &:active {
+        color: $teal-color;
+      }
+
+      &:hover::after {
+         display: none;
+      }
     }
   }
 
@@ -469,6 +468,14 @@
       display: block;
       font-size: 20px;
       margin-right: 38px;
+
+      &:hover {
+        color: $palegolden-color;
+      }
+
+      &:active {
+        color: $beige-color;
+      }
 
       &:hover::after {
         display: none;
